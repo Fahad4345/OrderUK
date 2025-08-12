@@ -14,7 +14,7 @@ export default function Popular() {
     {
       category: "Papa Johns",
    
-      imagepath: "/assets/icons/Papajohn.png",
+      imagepath: "/assets/icons/PapaJohn.png",
     },
     {
       category: " KFC West London",
