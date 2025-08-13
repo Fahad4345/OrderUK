@@ -1,9 +1,10 @@
 OrderUK:
  Integrated  :
- - Understand hooks(UseRef, UseContext, UseMemo,UseState,UseEffects,UseReducers)
- - Implemented one program for each Hook
- - Analyze the UI of OrderUK Project
- - Created header for OrderUK
+ - Completed(Banner2 Section ,About us Section ,Footer Section)
+ 
+ Next:
+ - Footer section(remaining), responsiveness,Restaurant Detail page
+ - Functionality Remaining
 
-Loom : ()
-Preview : ()
+Loom : (https://www.loom.com/share/ce64cd37341f4ada85b014a411723cef?sid=e2425ed9-3084-48df-b2d3-5262b2a3928f)
+Preview : (https://order-uk-roan.vercel.app/)

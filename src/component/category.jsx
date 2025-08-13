@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Header from "../component/header";
 import NavBar from "@/component/NavBar";
-import Banner from "@/component/banner";
+import Banner from "@/component/banner2";
 import Deals from "@/component/deals";
 
 export default function Category() {
@@ -40,7 +40,7 @@ export default function Category() {
   return (
     <div className=" max-w-[1528px]  mt-[63px] w-full mx-auto flex flex-col">
       <div>
-        <h1 className=" font-[Poppins] font-[700] text-[32px] leading-[100%] tracking-[0%] text-[#000000]">
+        <h1 className=" font-[Poppins] font-[700] text-[32px] leading-[100%] tracking-[0em] text-[#000000]">
           Order.uk Popular Categories 🤩
         </h1>
       </div>
@@ -60,10 +60,10 @@ export default function Category() {
               />
             </div>
             <div className=" bg-[#000000]/10">
-              <h1 className="font-[Poppins] font-[700] text-[18px]   mt-[9px] ml-[22px] leading-[100%] tracking-[0%] text-[#03081F]">
+              <h1 className="font-[Poppins] font-[700] text-[18px]   mt-[9px] ml-[22px] leading-[100%] tracking-[0em] text-[#03081F]">
                 {categorys.category}
               </h1>
-              <h1 className="font-[Poppins] font-[400] mt-[9px] ml-[22px] mb-[10px] text-[13px] leading-[100%] tracking-[0%] text-[#FC8A06]">
+              <h1 className="font-[Poppins] font-[400] mt-[9px] ml-[22px] mb-[10px] text-[13px] leading-[100%] tracking-[0em] text-[#FC8A06]">
                 {categorys.totalRestaurant} Restaurants
               </h1>
             </div>

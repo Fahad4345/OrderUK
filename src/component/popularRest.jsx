@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Header from "../component/header";
 import NavBar from "@/component/NavBar";
-import Banner from "@/component/banner";
+import Banner from "@/component/banner2";
 import Deals from "@/component/deals";
 
 export default function Popular() {
-  let  popular = [
+  let popular = [
     {
       category: " McDonald's",
 
@@ -13,27 +13,27 @@ export default function Popular() {
     },
     {
       category: "Papa Johns",
-   
+
       imagepath: "/assets/icons/PapaJohn.png",
     },
     {
       category: " KFC West London",
-     
+
       imagepath: "/assets/icons/Kfc.png",
     },
     {
       category: " Texas Chicken",
-      
+
       imagepath: "/assets/icons/Texas.png",
     },
     {
       category: "Burger King",
-      
+
       imagepath: "/assets/icons/BurgerKing.png",
     },
     {
       category: "Shaurma 1",
-    
+
       imagepath: "/assets/icons/Shaurma.png",
     },
   ];
@@ -41,7 +41,7 @@ export default function Popular() {
     <div className=" max-w-[1528px]  mt-[63px] w-full mx-auto flex flex-col">
       <div>
         <h1 className=" font-[Poppins] font-[700] text-[32px] leading-[100%] tracking-[0%] text-[#000000]">
-           Popular Restaurants
+          Popular Restaurants
         </h1>
       </div>
       <div className=" flex flex-row gap-[20px] mt-[51px]">
@@ -62,7 +62,7 @@ export default function Popular() {
             <div className=" bg-[#000000]/10  items-center justify-center py-[18px]">
               <h1 className="font-[Poppins] font-[700] text-[18px]  items-center flex justify-center leading-[100%] tracking-[0%] text-[#03081F]">
                 {populars.category}
-             </h1>
+              </h1>
             </div>
           </div>
         ))}
