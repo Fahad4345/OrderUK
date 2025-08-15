@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Header from "../component/header";
-import NavBar from "@/component/NavBar";
-import Banner from "@/component/banner2";
-import Deals from "@/component/deals";
+import Header from "./header";
+import NavBar from "@/app/component/NavBar";
+import Banner from "@/app/component/banner2";
+import Deals from "@/app/component/deals";
 
 export default function Category() {
   let category = [

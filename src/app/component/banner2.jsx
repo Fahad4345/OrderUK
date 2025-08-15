@@ -1,12 +1,11 @@
 import Image from "next/image";
 import Header from "./header";
-import NavBar from "@/component/NavBar";
-import AppleIcon from "./appleIcon";
-import { FaApple } from "react-icons/fa";
+import NavBar from "@/app/component/NavBar";
+import Button from "./play";
 
 export default function Banner2() {
   return (
-    <div className=" relative max-w-[1528px]  w-full  min-h-[610px]  mt-[94px] rounded-[12px] border-[1px] bg-[#E0E1DC] border-[#00000033] ">
+    <div className=" relative max-w-[1528px]  mx-auto w-full  min-h-[610px]  mt-[94px] rounded-[12px] border-[1px] bg-[#E0E1DC] border-[#00000033] ">
       <Image
         width={720}
         height={600}
@@ -46,32 +45,7 @@ export default function Banner2() {
           Download the Order.uk app for faster ordering
         </p>
       </div>
-      <div className=" items-center flex flex-row mt-[23px] ml-[923px] ">
-        <button>
-          <div className="flex min-w-[203px] w-full items-center gap-3 bg-black text-white px-4 py-2 border-[2px] border-[#A6A6A6] rounded-xl">
-            <FaApple size={40} />
-            <div className=" leading-tight">
-              <h1 className=" block  font-[poppins] text-xs">
-                Download on the{" "}
-              </h1>
-              <h1 className=" block font-[poppins] text-xl font-semibold">
-                App Store
-              </h1>
-            </div>
-          </div>
-        </button>
-        <button>
-          <div className="flex min-w-[203px] w-full items-center gap-3 bg-black text-white px-4 py-2 border-[2px] border-[#A6A6A6] rounded-xl">
-            <AppleIcon classname="w-[30px] h-[30px]" />
-            <div className="leading-tight flex flex-col items-start">
-              <span className="text-xs font-[poppins]">GET IT ON</span>
-              <span className="text-xl  font-[poppins] font-semibold">
-                Google Play
-              </span>
-            </div>
-          </div>
-        </button>
-      </div>
+      <Button className="  mt-[23px] ml-[923px] " />
     </div>
   );
 }

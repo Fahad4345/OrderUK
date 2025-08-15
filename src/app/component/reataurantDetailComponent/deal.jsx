@@ -1,10 +1,8 @@
-import Image from "next/image";
-import Header from "../component/header";
-import NavBar from "@/component/NavBar";
-import Banner from "@/component/banner2";
+import React from 'react'
+import Image from 'next/image';
 
-export default function Deals() {
-  const deals = [
+export default function deal() {
+      const deals = [
     {
       restaurantName: "chef Burgers London",
       Off: "-40%",
@@ -22,27 +20,7 @@ export default function Deals() {
     },
   ];
   return (
-    <div className=" max-w-[1528px] w-full mx-auto mt-[54px]">
-      <div className=" flex  justify-between  items-center">
-        <h1 className=" font-[Poppins] font-[700] text-[32px] leading-[100%] tracking-[0em] text-[#000000]">
-          Up to -40% 🎊 Order.uk exclusive deals
-        </h1>
-        <div className="  max-w-[537px] w-full flex  justify-between">
-          <button className="font-[Poppins] font-[400] text-[16px] leading-[100%] tracking-[0em]">
-            Vegan
-          </button>
-          <button className="font-[Poppins] font-[400] text-[16px] leading-[100%] tracking-[0em]">
-            Sushi
-          </button>
-          <button className="font-[Poppins] font-[400] text-[16px] leading-[100%] tracking-[0em]">
-            Pizza & Fast food
-          </button>
-          <button className="font-[Poppins] font-[400] text-[16px] leading-[100%] tracking-[0em]">
-            Others
-          </button>
-        </div>
-      </div>
-      <div className="grid grid-cols-3 gap-[20px] mt-[60px]">
+    <div className="grid grid-cols-3 gap-[20px] mt-[103px] max-w-[1528px] w-full mx-auto">
         {deals.map((deal, index) => (
           <div
             key={index}
@@ -62,11 +40,13 @@ export default function Deals() {
               <h1 className="font-[Poppins] font-[700] text-[24px] leading-[100%] tracking-[0em] text-[#FFFFFF]">
                 {deal.restaurantName}
               </h1>
-            </div>
+                </div>
+                <div className='absolute flex justify-center item-center w-[97px] h-[89px] right-[0px] bottom-[0px] z-50 bg-[#FFFFFF]/90 rounded-tl-[46px]' >
+                    <Image width={ 49} height={49}   src="/assets/icons/Plus.svg" alt=""/>
+                 </div>
             <div className="absolute  w-[496px] h-[325px] left-[0px] top-[0px] rounded-[12px] [background:linear-gradient(245.7deg,rgba(255,255,255,0)_0.94%,rgba(3,8,31,0.19)_51.68%,rgba(3,8,31,0.89)_87.9%)]"></div>
           </div>
         ))}
       </div>
-    </div>
-  );
+  )
 }

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Header from "./header";
-import NavBar from "@/component/NavBar";
+import NavBar from "@/app/component/NavBar";
 
 export default function Banner1() {
   return (

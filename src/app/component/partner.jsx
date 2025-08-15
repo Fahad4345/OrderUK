@@ -1,10 +1,10 @@
 import Image from "next/image";
-import Header from "../component/header";
-import NavBar from "@/component/NavBar";
-import Banner from "@/component/banner2";
-import Deals from "@/component/deals";
-import Category from "@/component/category";
-import Popular from "@/component/popularRest";
+import Header from "./header";
+import NavBar from "@/app/component/NavBar";
+import Banner from "@/app/component/banner2";
+import Deals from "@/app/component/deals";
+import Category from "@/app/component/category";
+import Popular from "@/app/component/popularRest";
 
 export default function Partner() {
   return (

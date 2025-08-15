@@ -287,7 +287,7 @@ export default function AboutUs() {
 ];
 
   return (
-    <div className="max-w-[1528px] min-h-[882px] h-full w-full bg-[#D9D9D9]/30 rounded-[12px] flex flex-col  ">
+    <div className="max-w-[1528px] min-h-[882px] h-full w-full bg-[#D9D9D9]/30 rounded-[12px] flex flex-col   mx-auto">
       <div className="max-w-[1290px] w-full  mt-[124px] ml-[138px]">
         <div className="flex flex-row justify-between">
         <h1 className="font-[700] font-[poppins] text-[32px] leading-[100%] text-[#000000]">

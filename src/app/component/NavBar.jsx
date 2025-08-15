@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Poppins } from "next/font/google";
+import Button from "./play";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "500", "600", "700"],
@@ -22,6 +23,7 @@ export default function NavBar() {
               <Image width={30.97} height={27} src={"/assets/icons/Male User.svg"} alt="" className=' w-[30.97px] h-[27px]' />
              Login/Signup </button>
       </div>
+   
           
     </div>
   );

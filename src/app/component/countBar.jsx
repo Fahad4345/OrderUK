@@ -2,7 +2,7 @@ import React from "react";
 
 export default function CountBar() {
   return (
-    <div className=" max-w-[1528px] rounded-[12px] min-h-[158px] h-full w-full mx-auto bg-[#FC8A06] mt-[44px] mb-[400px] flex flex-row items-center justify-center">
+    <div className=" max-w-[1528px] rounded-[12px] min-h-[158px] h-full w-full mx-auto bg-[#FC8A06] mt-[44px] mb-[45px] flex flex-row items-center justify-center">
       <div className="mx-auto  flex flex-col mt-[20px] gap-[13px] item-center  max-h-[90px] h-full">
         <h1 className="font-[300] text-white text-[64px] font-[Poppins] leading-[38px] tracking-[0em] text-center">
           0+
