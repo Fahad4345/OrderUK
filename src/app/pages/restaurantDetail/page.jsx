@@ -9,22 +9,25 @@ import Menu from "@/app/component/reataurantDetailComponent/menu";
 import RestInfo from "@/app/component/reataurantDetailComponent/RestInfo";
 import CustReview from "@/app/component/reataurantDetailComponent/custReview";
 import SimilarRest from "@/app/component/reataurantDetailComponent/similarRest";
+import Banner from "@/app/component/reataurantDetailComponent/banner";
 
 
 export default function RestaurantDetail() {
 
   return (
     <div className=" mx-auto">
+
       <Header />
       <NavBar />
+      <Banner />
       <SubNav />
       <Deals />
       <Menu />
-      <RestInfo/>
+      <RestInfo />
       <Maps />
       <CustReview />
-      <SimilarRest heading="Similar Restaurants"/>
-      <Footer/>
+      <SimilarRest heading="Similar Restaurants" />
+      <Footer />
     </div>
   );
 }

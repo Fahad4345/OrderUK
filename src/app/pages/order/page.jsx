@@ -17,8 +17,6 @@ export default function Order() {
     <div>
       <Header />
       <NavBar />
-   
-    
       <Ordermenu />
       <RestInfo />
       <Maps />

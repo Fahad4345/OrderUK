@@ -3,9 +3,9 @@ import { useState } from "react";
 import { MyContext } from "./MyContext";
 
 export default function MyProvider({ children }) {
-  const [Restname, setRestname] = useState("");
+  const [index, setIndex] = useState(0);
   return (
-    <MyContext.Provider value={{ Restname, setRestname }}>
+    <MyContext.Provider value={{ index, setIndex }}>
       {children}
     </MyContext.Provider>
   );

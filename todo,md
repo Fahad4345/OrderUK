@@ -1,10 +1,14 @@
 OrderUK:
- Integrated  :
- - Completed(Banner2 Section ,About us Section ,Footer Section)
- 
- Next:
- - Footer section(remaining), responsiveness,Restaurant Detail page
- - Functionality Remaining
+Integrated :
 
-Loom : (https://www.loom.com/share/2f53d03300af4a6b9f14bb4b5e98d5ad?sid=0f85c4fa-b6bd-433e-8775-6d468f6f2aab)
+- Restaurant order page Completed
+- Popups completed
+- Added restaurants and their menu using array and map restaurant and menuon screens
+
+Next:
+
+- Functionality Remaining
+- Responsiveness
+
+Loom : (https://www.loom.com/share/19ad2d9b4e5846a0a8ff9b8ede67deb8?sid=5f3b1b6f-9c1e-4cef-aaba-2e3143e57b85)
 Preview : (https://order-uk-roan.vercel.app/)

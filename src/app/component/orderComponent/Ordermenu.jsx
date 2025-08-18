@@ -4,6 +4,7 @@ import Basket from "./basket";
 import MidTile from "./midTile";
 
 export default function Ordermenu() {
+
   return (
     <div className=" max-w-[1528px] mx-auto justify-between flex flex-col">
       <div className=" mt-[64px] justify-between flex mx-auto  max-w-[1528px] w-full">
@@ -20,9 +21,9 @@ export default function Ordermenu() {
         </div>
       </div>
       <div className=" flex flex-row  gap-[20px] mt-[49px]">
-              <Leftmenu />
-               <MidTile/>
-              <Basket/>
+        <Leftmenu />
+        <MidTile />
+        <Basket />
       </div>
     </div>
   );
