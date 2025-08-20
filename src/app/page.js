@@ -10,11 +10,13 @@ import Partner from "@/app/component/partner";
 import AboutUs from "@/app/component/aboutUs";
 import CountBar from "@/app/component/countBar";
 import Footer from "@/app/component/footer";
+import SmHeader from "./component/smHeader";
 
 export default function Home() {
   return (
-    <div className=" mx-auto">
+    <div className="">
       <Header />
+      <SmHeader />
       <NavBar />
       <Banner1 />
       <Deals />

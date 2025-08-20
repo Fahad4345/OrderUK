@@ -1,38 +1,53 @@
 "use client"
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MyContext } from "../../context/MyContext";
-import { restaurants } from '../restaurants';
+import { restaurants } from '../../lib/restaurants';
 
 export default function Menu() {
-  const { index, setIndex } = useContext(MyContext);
+  const { index, setIndex, cart, setCart } = useContext(MyContext);
+  useEffect(() => {
+    const savedCart = localStorage.getItem("cart") || [];
+    setCart(JSON.parse(savedCart));
+  }, [])
+  useEffect(() => {
+    const loadCart = localStorage.setItem("cart", JSON.stringify(cart))
+    console.log(loadCart);
+  }, [cart])
+
+  function addtoCart(items) {
+    setCart((Prev) => [...Prev, items])
+    console.log(cart);
+
+  }
 
 
 
 
   return (
-    <div>
+    <div className=" sm:max-w-[calc(100vw_-_22px)] lg:max-w-[1528px]  mx-auto flex flex-col flex-wrap">
       {Object.keys(restaurants[index].menu).map((category, catindex) => (
         <div
-          className=" flex flex-wrap gap-[40px] mt-[60px] max-w-[1528px] w-full mx-auto  "
+          className=" flex flex-wrap gap-[40px]  max-w-[1528px] w-full mx-auto  "
           key={catindex}
         >
-          <h1
+          <Link rel="stylesheet" href="/pages/order"> <h1
 
             className={`font-[Poppins] 
                      ${category === "Burger" ? "mt-[71px]  text-black" : ""}
                      ${category === "Fries" ? "mt-[124px]" : ""}
-                     ${category === "ColdDrink" ? "mt-[119px]" : ""
-              } font-[700] text-[44px] leading-[100px] tracking-[0em] text-[#FC8A06]`}
+                     ${category === "ColdDrink" ? "mt-[119px]" : ""}
+                     ${category === "Pizza" ? "mt-[119px]" : ""}
+                     font-[700] text-[44px] leading-[100px] tracking-[0em] text-[#FC8A06]`}
           >
             {category}
-          </h1>
-          <div className="  grid grid-cols-3 gap-y-[40px] gap-x-[20px]">
+          </h1></Link>
+          <div className="  flex flex-wrap flex-row  sm:justify-center items-center gap-y-[40px] gap-x-[20px]">
             {restaurants[index].menu[category].map((items, idx) => (
-              <Link key={idx} rel="stylesheet" href="/pages/order"><div
+              <div key={idx}
 
-                className=" flex-row flex    items-center min-w-[496px] w-full  max-h-[245px] rounded-[12px] h-full shadow-[5px_5px_34px_0px_rgba(0,0,0,0.25)] px-[25px] py-[25px] "
+                className=" flex-row flex    items-center max-w-[496px] w-full  max-h-[245px] rounded-[12px] h-full shadow-[5px_5px_34px_0px_rgba(0,0,0,0.25)] px-[25px] py-[25px] "
               >
                 <div className="flex flex-col gap-[10px] max-w-[220px] w-full">
                   <h1 className="font-[Poppins] font-[600] text-[20px] leading-[23px] tracking-[0em] text-[#000000]">
@@ -41,7 +56,10 @@ export default function Menu() {
                   <h1 className="font-[Poppins] font-[400] text-[14px] leading-[25px] tracking-[0em] text-[#000000]">
                     {items.description}
                   </h1>
-                  <h1 className="font-[Poppins] font-[700] text-[18px] leading-[100%] tracking-[0em] text-[#000000]">{`GBP ${items.price}`}</h1>
+
+                  <h1 className="font-[Poppins] font-[700] text-[18px] leading-[100%] tracking-[0em] text-[#000000]">{`GBP ${items.sizes[0].price}`}</h1>
+
+
                 </div>
                 <div className=" relative">
                   <Image
@@ -51,7 +69,8 @@ export default function Menu() {
                     alt=""
                     className=" w-[232px] h-[199px]"
                   />
-                  <div className="absolute flex justify-center item-center w-[97px] h-[89px] right-[0px] bottom-[-1px] z-50 bg-[#FFFFFF]/90 rounded-tl-[46px]">
+                  <div className="absolute flex justify-center item-center w-[97px] h-[89px] right-[0px] bottom-[-1px] z-50 bg-[#FFFFFF]/90 rounded-tl-[46px]"
+                    onClick={() => addtoCart(items)}>
                     <Image
                       width={49}
                       height={49}
@@ -60,7 +79,7 @@ export default function Menu() {
                     />
                   </div>
                 </div>
-              </div></Link>
+              </div>
             ))}
           </div>
         </div>

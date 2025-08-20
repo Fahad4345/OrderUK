@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useContext } from "react";
 import { MyContext } from "../context/MyContext.jsx";
-import { restaurants } from './restaurants';
+import { restaurants } from '../lib/restaurants.js';
 
 
 export default function Popular({ heading }) {
@@ -12,14 +12,14 @@ export default function Popular({ heading }) {
 
 
   return (
-    <div className=" max-w-[1528px]  mt-[63px] w-full mx-auto flex flex-col">
+    <div className=" sm:max-w-[calc(100vw_-_22px)] lg:max-w-[1528px] mt-[63px] w-full mx-auto flex flex-col">
       <div>
-        <h1 className=" font-[Poppins] font-[700] text-[32px] leading-[100%] tracking-[0%] text-[#000000]">
+        <h1 className=" font-[Poppins] font-[700] lg:text-[32px] sm:text-[16px] leading-[100%] tracking-[0%] text-[#000000]">
           {heading}
         </h1>
       </div>
 
-      <div className=" flex flex-row gap-[20px] mt-[51px]">
+      <div className=" flex flex-row lg:gap-[20px] sm:gap-[9px] mt-[51px] sm:min-h-[156px]  overflow-x-auto ">
         {restaurants.map((rest, index) => (
           <Link
             key={index}
@@ -29,7 +29,7 @@ export default function Popular({ heading }) {
             {" "}
             <div
               key={index}
-              className=" border-b-[1px]  border-[#0000001A] flex flex-col max-w-[238px] w-full bg-cover bg-center relative rounded-[12px] overflow-hidden "
+              className=" border-b-[1px]  border-[#0000001A] flex flex-col lg:w-[238px] lg:h-[266px]  sm:w-[122px] sm:h-[156px]  w-full bg-cover bg-center relative rounded-[12px] overflow-hidden "
             >
               <div>
                 <Image
@@ -37,11 +37,11 @@ export default function Popular({ heading }) {
                   height={600}
                   src={rest.image}
                   alt=""
-                  className="w-[238px] h-[203px] bg-cover bg-center"
+                  className="lg:w-[238px] lg:h-[203px] sm:w-[121.68px] sm:h-[103.79px] bg-cover bg-center"
                 />
               </div>
-              <div className=" bg-[#FC8A06]  items-center justify-center py-[18px]">
-                <h1 className="font-[Poppins] font-[700] text-[18px]  items-center flex justify-center leading-[100%] tracking-[0%] text-white">
+              <div className=" bg-[#FC8A06] w-full h-full flex  items-center justify-center px-[10px] ">
+                <h1 className="font-[Poppins] text-center font-[700] lg:text-[18px] lg:leading-[100%] sm:text-[13px] sm:leading-[16px] items-center flex justify-center  tracking-[0%] text-white">
                   {rest.name}
                 </h1>
               </div>

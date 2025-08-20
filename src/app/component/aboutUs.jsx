@@ -287,13 +287,13 @@ export default function AboutUs() {
   ];
 
   return (
-    <div className="max-w-[1528px] min-h-[882px] h-full w-full bg-[#D9D9D9]/30 rounded-[12px] flex flex-col   mx-auto">
-      <div className="max-w-[1290px] w-full  mt-[124px] ml-[138px]">
-        <div className="flex flex-row justify-between">
-          <h1 className="font-[700] font-[poppins] text-[32px] leading-[100%] text-[#000000]">
+    <div className=" sm:max-w-[calc(100vw_-_22px)] lg:max-w-[1528px] h-full w-full lg:bg-[#D9D9D9]/30 rounded-[12px] flex flex-col   mx-auto">
+      <div className="max-w-[1290px] w-full  flex flex-col justify-center items-center lg:mt-[124px] lg:ml-[138px] lg:mx-[0px] sm:mx-auto">
+        <div className="flex flex-row lg:justify-between sm: justify-center w-full ">
+          <h1 className="font-[700] font-[poppins] lg:text-[32px] sm:text-[26px] leading-[100%]  text-[#000000]">
             Know more about us!
           </h1>
-          <div className="max-w-[643px] w-full flex justify-between">
+          <div className="max-w-[643px] w-full flex justify-between sm:hidden lg:flex sm:mx-auto lg:mx-[0px]">
             {["Frequent Questions", "Who we are?", "Partner Program", "Help & Support"].map((option) => (
               <button
                 key={option}
@@ -306,16 +306,16 @@ export default function AboutUs() {
         </div>
 
 
-        <div className="mt-[69px] flex flex-row    max-w-[1290px]  max-h-[526px] w-full rounded-[12px]  bg-[#FFFFFF]">
+        <div className="lg:mt-[69px] sm:mt-[46px] flex flex-row  justify-center items-center  flex-wrap  max-w-[1290px]   w-full rounded-[12px]  bg-[#FFFFFF]">
 
-          <div className="flex flex-col items-center  mt-[78px] mb-[115px]  gap-[10px]  max-w-[474px]  w-full ">
+          <div className="flex flex-col items-center justify-center  lg:mt-[78px] lg:mb-[115px]  sm:mb-[53px] gap-[10px]  max-w-[474px]  w-full ">
             {questions.map((q, index) => (
               <button
                 key={index}
                 onClick={() => setSelected(index)}
                 className={`items-center max-w-[352px] w-full h-[62px] rounded-[120px] font-[Poppins] font-[700] text-[18px] tracking-[-0.02em] leading-[100%] ${selected === index
-                    ? "bg-[#FC8A06] text-black  "
-                    : "bg-transparent text-black hover:bg-[#FC8A06]/40"
+                  ? "bg-[#FC8A06] text-black  "
+                  : "bg-transparent text-black hover:bg-[#FC8A06]/40"
                   }`}
               >
                 {q.question}
@@ -323,12 +323,12 @@ export default function AboutUs() {
             ))}
           </div>
 
-          <div className=" ml-[33px] flex flex-col items-center">
-            <div className="flex   flex-row justify-center gap-x-[20px]  max-w-[815px]  w-full">
+          <div className=" lg:ml-[33px] flex flex-col   lg:pt-[0px] sm:pt-[62px] items-center">
+            <div className="flex   flex-row  flex-wrap justify-center gap-x-[20px] sm:gap-y-[34px]  max-w-[815px]  w-full">
               {questions[selected].answer.map((ans, index) => (
                 <div
                   key={index}
-                  className="flex flex-col p-[25px] mt-[88px] bg-[#D9D9D9] items-center justify-between rounded-[12px]  max-w-[238px] w-full h-[285px] text-center "
+                  className="flex flex-col p-[25px] lg:mt-[88px] bg-[#D9D9D9] items-center justify-between rounded-[12px]  max-w-[238px] w-full h-[285px] text-center "
                 >   <h3 className="font-[Poppins] font-[700] text-[18px] tracking-[-0.02em] leading-[100%] ">{ans.title}</h3>
                   <Image
                     src={ans.icon}

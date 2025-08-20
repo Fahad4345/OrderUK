@@ -9,7 +9,7 @@ const poppins = Poppins({
 
 export default function NavBar() {
   return (
-    <div className=" max-w-[1528px] w-full mx-auto mt-[38px] flex flex-row  items-center">
+    <div className="  sm:hidden lg:flex max-w-[1528px] w-full mx-auto mt-[38px] flex flex-row  items-center">
       <Image width={25} height={25} src={"/assets/icons/LOGO 1.svg"} alt="" className=' w-[215px] h-[53px]' />
       <div className="ml-[202px] mr-[79.38px]  max-w-[824px] w-full flex  justify-between">
         <button className='font-[Poppins] font-[500px] text-[18px] leading-[100%] tracking-[0%]'>Home</button>

@@ -4,38 +4,45 @@ import NavBar from "@/app/component/NavBar";
 
 export default function Banner1() {
   return (
-    <div className=" max-w-[1528px] w-full h-[610px]  rounded-[12px] border-[1px] bg-[#FBFBFB] border-[#00000033] mx-auto flex flex-row justify-between mt-[41px]">
-      <div className="ml-[57px] mt-[134px]">
+    <div className=" sm:max-w-[calc(100vw_-_22px)] lg:max-w-[1528px] w-full max-h-[610px]  rounded-[12px] border-[1px] lg:bg-[#FBFBFB] sm:bg-[#E2E2E2] border-[#00000033] lg:mx-auto flex flex-row lg:justify-between sm:justify-center items-center sm:mx-auto mt-[41px]">
+      <div className="lg:ml-[57px] lg:mt-[134px]">
         <div>
-          <p className="font-[Poppins] font-[400] text-[16px] leading-[66px] tracking-[-0.06em] text-[#03081F]">
+          <p className="font-[Poppins] font-[400] lg:text-[16px] sm:text-[12px] leading-[66px] tracking-[-0.06em] text-[#03081F]">
             Order Restaurant food, takeaway and groceries.
           </p>
-          <p className="font-[Poppins] font-[600] text-[54px] leading-[66px] tracking-[-0.06em] text-[#03081F]">
+          <p className="font-[Poppins] font-[600] lg:text-[54px] lg:leading-[66px] sm:text-[34px] sm:leading-[36px] tracking-[-0.06em] text-[#03081F]">
             Feast Your Senses,
           </p>
-          <p className="font-[Poppins] font-[600] text-[54px] leading-[66px] tracking-[-0.06em] text-[#FC8A06]">
+          <p className="font-[Poppins] font-[600]  lg:text-[54px] lg:leading-[66px] sm:text-[34px] sm:leading-[36px] tracking-[-0.06em] text-[#FC8A06]">
             Fast and Fresh
           </p>
         </div>
-        <div>
-          <p className="font-[Poppins] font-[400] text-[13px] leading-[66px] text-[#03081F] tracking-[-0.06em]">
+        <div className="sm: mb-[43px]">
+          <p className="font-[Poppins] font-[400] text-[13px] leading-[66px] text-[#03081F] tracking-[0em]">
             Enter a postcode to see what we deliver
           </p>
 
-          <div className="flex flex-row w-[360px]   rounded-l-full  rounded-r-full  border-r-[#FC8A06] border-[1px]  border-[#00000066]  border-opacity-[20%]">
+          <div className="flex  sm: bg-white flex-row  lg:max-w-[360px] sm:max-w-[293px] sm-max-h-[51px]   rounded-l-full  rounded-r-full  border-r-[#FC8A06] border-[1px]  border-[#00000066]  border-opacity-[20%]">
             <input
               type="text"
               placeholder="e.g. EC4R 3TE"
               className="px-4 py-3 text-[#000000CC]"
             />
-            <button className=" z-50 items-center left-[209px] top-[-0.5px]  max-w-[188px] w-full h-[49.5px] rounded-[120px]  bg-[#FC8A06] font-[Poppins] font-[700] text-[16px] text-[#FFFFFF]">
-              Search
+            <button className=" z-50 items-center justify-center flex left-[209px] top-[-0.5px]  max-w-[188px] w-full h-[49.5px] rounded-[120px]  bg-[#FC8A06] font-[Poppins] font-[700] text-[16px] text-[#FFFFFF]">
+              <p className=" sm:hidden lg:flex">Search</p>
+              <Image
+                width={34}
+                height={34}
+                src={"/assets/icons/Next Page.svg"}
+                alt=""
+                className="  lg:hidden sm:flex w-[34px] h-[34px]"
+              />
             </button>
           </div>
         </div>
       </div>
 
-      <div>
+      <div className=" sm:hidden lg:flex">
         <div className="  bg-[#FC8A06] w-[626px] relative  h-[565px]  rounded-tl-[282.5px] rounded-br-[12px] mt-[44px]">
           <div className="  z-50 absolute top-[70px] left-[130px] bg-white max-w-[370px]   w-full   flex flex-row  justify-between  rounded-[12px] px-[20px] py-[20px]">
             <Image

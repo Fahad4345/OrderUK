@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <div className=" max-w-[1530px]  mx-auto w-full max-h-[70px]  flex  flex-row bg-[#FAFAFA] border-[1px]  rounded-bl-[12px] rounded-br-[12px] border-[#0000001A] items-center">
+    <div className=" sm:hidden lg:flex max-w-[1530px]  mx-auto w-full max-h-[70px]  flex  flex-row bg-[#FAFAFA] border-[1px]  rounded-bl-[12px] rounded-br-[12px] border-[#0000001A] items-center">
       <div className=" flex flex-row items-center gap-[12px] ml-[37px]">
         <p className="font-[Poppins] font-[500] text-[25px] leading-[100%] tracking-[0em]">
           🌟

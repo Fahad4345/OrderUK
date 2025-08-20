@@ -12,7 +12,7 @@ export default function Basket() {
   { Price: "£27.90", type: "12” Vegitarian Pizza ", message: "No Mushrooms + green peppers" },
   { Price: "£27.90", type: "12” Vegitarian Pizza ", message: "No Mushrooms + green peppers" }]
   return (
-    <div>
+    <div className='sm:hidden lg:flex  flex flex-col'>
       <div className=' mb-[21px] bg-[#FC8A06]  flex min-h-[125px] flex-row rounded-[12px] items-center justify-center'>
         <Image src="/assets/icons/Clock (1).svg" width={58} height={58} alt="" />
         <h1 className=' font-[Poppins] font-[600]  text-[18px]  leading-[66px] tracking-[0em] text-white'>Open until 3:00 am</h1>

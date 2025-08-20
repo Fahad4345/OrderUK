@@ -42,10 +42,10 @@ export default function RestInfo() {
   ];
 
   return (
-    <div className="max-w-[1528px]  min-h-[659px] w-full rounded-[12px]  flex flex-row mx-auto mt-[151px] shadow-[5px_5px_14px_0px_rgba(0,0,0,0.25)] bg-[#FBFBFB]">
-      <div className=' flex flex-wrap justify-between items-center w-full'>
+    <div className=" sm:max-w-[calc(100vw_-_22px)] lg:max-w-[1528px]  h-full  rounded-[12px]  flex   mx-auto lg:mt-[151px] sm:mt-[28px] shadow-[5px_5px_14px_0px_rgba(0,0,0,0.25)] bg-[#FBFBFB]">
+      <div className=' flex    max-w-[1528px]   w-full flex-row  flex-wrap  sm:justify-center sm: items-center  gap-x-[19px] h-full  '>
         {restaurantInfo.map((section, index) => (
-          <div key={index} className={` flex flex-col pt-[122px] max-w-[496px] w-full  h-full  pl-[63px] rounded-[12px] ${section.category === "Operational Times" ? "bg-black text-white" : ""
+          <div key={index} className={` flex flex-col gap-y-[20px]  lg:pt-[122px] lg:min-h-[659px]  sm: min-h-[549px] sm:pt-[69px] max-w-[496px] w-full  lg:pl-[63px] sm:pl-[26px] rounded-[12px] ${section.category === "Operational Times" ? "bg-black text-white" : ""
             }`}>
             <div className="flex items-center  mb-[42px]">
               <Image src={section.icon} alt={section.category} width={45} height={45} />

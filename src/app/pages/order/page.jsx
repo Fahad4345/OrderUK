@@ -11,16 +11,20 @@ import RestInfo from "@/app/component/reataurantDetailComponent/RestInfo";
 import CustReview from "@/app/component/reataurantDetailComponent/custReview";
 import SimilarRest from "@/app/component/reataurantDetailComponent/similarRest";
 import Ordermenu from "@/app/component/orderComponent/Ordermenu";
+import Banner from "@/app/component/reataurantDetailComponent/banner";
+import SmHeader from "@/app/component/smHeader";
 
 export default function Order() {
   return (
     <div>
       <Header />
       <NavBar />
+      <SmHeader />
+      <Banner />
       <Ordermenu />
       <RestInfo />
       <Maps />
-      <CustReview />
+      {/* <CustReview /> */}
       <SimilarRest heading="Similar Restaurants" />
       <Footer />
     </div>
