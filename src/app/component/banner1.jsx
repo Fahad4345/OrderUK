@@ -4,32 +4,32 @@ import NavBar from "@/app/component/NavBar";
 
 export default function Banner1() {
   return (
-    <div className=" sm:max-w-[calc(100vw_-_22px)] lg:max-w-[1528px] w-full max-h-[610px]  rounded-[12px] border-[1px] lg:bg-[#FBFBFB] sm:bg-[#E2E2E2] border-[#00000033] lg:mx-auto flex flex-row lg:justify-between sm:justify-center items-center sm:mx-auto mt-[41px]">
+    <div className=" sm:max-w-[calc(100vw_-_22px)] lg:max-w-[1528px] dark:bg-[#03081F] w-full max-h-[610px]  rounded-[12px] border-[1px] lg:bg-[#FBFBFB] sm:bg-[#E2E2E2] border-[#00000033] lg:mx-auto flex flex-row lg:justify-between sm:justify-center items-center sm:mx-auto mt-[41px]">
       <div className="lg:ml-[57px] lg:mt-[134px]">
         <div>
-          <p className="font-[Poppins] font-[400] lg:text-[16px] sm:text-[12px] leading-[66px] tracking-[-0.06em] text-[#03081F]">
+          <p className="font-[Poppins] font-[400] lg:text-[16px] dark:text-white sm:text-[12px] leading-[66px]  text-[#03081F]">
             Order Restaurant food, takeaway and groceries.
           </p>
-          <p className="font-[Poppins] font-[600] lg:text-[54px] lg:leading-[66px] sm:text-[34px] sm:leading-[36px] tracking-[-0.06em] text-[#03081F]">
+          <p className="font-[Poppins] font-[600] dark:text-white lg:text-[54px] lg:leading-[66px] sm:text-[34px] sm:leading-[36px]  text-[#03081F]">
             Feast Your Senses,
           </p>
-          <p className="font-[Poppins] font-[600]  lg:text-[54px] lg:leading-[66px] sm:text-[34px] sm:leading-[36px] tracking-[-0.06em] text-[#FC8A06]">
+          <p className="font-[Poppins] font-[600] dark:text-[#FC8A06]  lg:text-[54px] lg:leading-[66px] sm:text-[34px] sm:leading-[36px]  text-[#FC8A06]">
             Fast and Fresh
           </p>
         </div>
         <div className="sm: mb-[43px]">
-          <p className="font-[Poppins] font-[400] text-[13px] leading-[66px] text-[#03081F] tracking-[0em]">
+          <p className="font-[Poppins] font-[400] dark:text-white text-[13px] leading-[66px] text-[#03081F] ">
             Enter a postcode to see what we deliver
           </p>
 
-          <div className="flex  sm: bg-white flex-row  lg:max-w-[360px] sm:max-w-[293px] sm-max-h-[51px]   rounded-l-full  rounded-r-full  border-r-[#FC8A06] border-[1px]  border-[#00000066]  border-opacity-[20%]">
+          <div className="flex  sm: bg-white flex-row   justify-between lg:max-w-[466px] sm:max-w-[293px] sm-max-h-[51px]   rounded-l-full  rounded-r-full  border-r-[#FC8A06] border-[1px]  border-[#00000066]  border-opacity-[20%]">
             <input
               type="text"
               placeholder="e.g. EC4R 3TE"
               className="px-4 py-3 text-[#000000CC]"
             />
-            <button className=" z-50 items-center justify-center flex left-[209px] top-[-0.5px]  max-w-[188px] w-full h-[49.5px] rounded-[120px]  bg-[#FC8A06] font-[Poppins] font-[700] text-[16px] text-[#FFFFFF]">
-              <p className=" sm:hidden lg:flex">Search</p>
+            <button className=" z-50 items-center justify-center flex   max-w-[188px] w-full h-[49.5px] rounded-[120px]  bg-[#FC8A06] font-[Poppins] font-[700] text-[16px] text-[#FFFFFF]">
+              <p className=" sm:hidden lg:flex font-[700] text-[16px] leading-[66px] font-[Poppins]">Search</p>
               <Image
                 width={34}
                 height={34}

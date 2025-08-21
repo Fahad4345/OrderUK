@@ -287,8 +287,8 @@ export default function AboutUs() {
   ];
 
   return (
-    <div className=" sm:max-w-[calc(100vw_-_22px)] lg:max-w-[1528px] h-full w-full lg:bg-[#D9D9D9]/30 rounded-[12px] flex flex-col   mx-auto">
-      <div className="max-w-[1290px] w-full  flex flex-col justify-center items-center lg:mt-[124px] lg:ml-[138px] lg:mx-[0px] sm:mx-auto">
+    <div className=" sm:max-w-[calc(100vw_-_22px)] lg:max-w-[1528px] h-full w-full lg:bg-[#D9D9D9]/30 rounded-[12px] flex flex-col  mx-auto">
+      <div className="max-w-[1290px] w-full  flex flex-col justify-center items-center lg:mt-[124px] sm:mx-auto">
         <div className="flex flex-row lg:justify-between sm: justify-center w-full ">
           <h1 className="font-[700] font-[poppins] lg:text-[32px] sm:text-[26px] leading-[100%]  text-[#000000]">
             Know more about us!
@@ -306,16 +306,16 @@ export default function AboutUs() {
         </div>
 
 
-        <div className="lg:mt-[69px] sm:mt-[46px] flex flex-row  justify-center items-center  flex-wrap  max-w-[1290px]   w-full rounded-[12px]  bg-[#FFFFFF]">
+        <div className="lg:mt-[69px] sm:mt-[46px]  lg:mb-[115px] flex flex-row lg:dark:bg-[#03081F] justify-center items-center  flex-wrap  max-w-[1290px]   w-full rounded-[12px] ">
 
-          <div className="flex flex-col items-center justify-center  lg:mt-[78px] lg:mb-[115px]  sm:mb-[53px] gap-[10px]  max-w-[474px]  w-full ">
+          <div className="flex  flex-col items-center justify-center  lg:mt-[78px] lg:mb-[115px]  sm:mb-[53px] gap-[10px]  max-w-[474px]  w-full ">
             {questions.map((q, index) => (
               <button
                 key={index}
                 onClick={() => setSelected(index)}
-                className={`items-center max-w-[352px] w-full h-[62px] rounded-[120px] font-[Poppins] font-[700] text-[18px] tracking-[-0.02em] leading-[100%] ${selected === index
-                  ? "bg-[#FC8A06] text-black  "
-                  : "bg-transparent text-black hover:bg-[#FC8A06]/40"
+                className={`items-center max-w-[352px] w-full  h-[62px] rounded-[120px] font-[Poppins] font-[700] text-[18px] tracking-[-0.02em] leading-[100%] ${selected === index
+                  ? "bg-[#FC8A06] dark: text-black  "
+                  : "bg-transparent text-black lg:dark:text-white hover:bg-[#FC8A06]/40"
                   }`}
               >
                 {q.question}
@@ -323,13 +323,13 @@ export default function AboutUs() {
             ))}
           </div>
 
-          <div className=" lg:ml-[33px] flex flex-col   lg:pt-[0px] sm:pt-[62px] items-center">
+          <div className=" lg:ml-[33px] flex flex-col   rounded-[12px] lg:pt-[0px] sm:pt-[62px] items-center dark:bg-[#03081F]">
             <div className="flex   flex-row  flex-wrap justify-center gap-x-[20px] sm:gap-y-[34px]  max-w-[815px]  w-full">
               {questions[selected].answer.map((ans, index) => (
                 <div
                   key={index}
                   className="flex flex-col p-[25px] lg:mt-[88px] bg-[#D9D9D9] items-center justify-between rounded-[12px]  max-w-[238px] w-full h-[285px] text-center "
-                >   <h3 className="font-[Poppins] font-[700] text-[18px] tracking-[-0.02em] leading-[100%] ">{ans.title}</h3>
+                >   <h3 className=" font-[Poppins] font-[700] text-[18px] tracking-[-0.02em] leading-[100%] dark:text-[#03081F]">{ans.title}</h3>
                   <Image
                     src={ans.icon}
                     alt={ans.title}
@@ -343,7 +343,7 @@ export default function AboutUs() {
 
               ))}
 
-            </div> <p className="text-[#000000] font-[Poppins] font-[400] text-[18px] tracking-[-0.02em]  mt-[25px]  max-w-[700px] text-center">Order.UK simplifies the food ordering process. Browse through our diverse menu, select your favorite dishes, and proceed to checkout. Your delicious meal will be on its way to your doorstep in no time!</p>
+            </div> <p className="text-[#000000] font-[Poppins] font-[400] text-[18px] tracking-[-0.02em]  mt-[25px]  max-w-[700px] text-center dark:text-white sm:px-[37px] lg:px-[0px]  sm:pb-[43px] lg:pb-[0px]">Order.UK simplifies the food ordering process. Browse through our diverse menu, select your favorite dishes, and proceed to checkout. Your delicious meal will be on its way to your doorstep in no time!</p>
           </div>
 
         </div>

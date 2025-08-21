@@ -1,9 +1,13 @@
+"use client"
 import Image from "next/image";
 import Header from "./header";
 import NavBar from "@/app/component/NavBar";
 import Banner from "@/app/component/banner2";
+import { useState } from "react";
 
 export default function Deals() {
+  const [selectedTab, setseletedTab] = useState("");
+  const navs = ["Vegan", "  Sushi", " Pizza & Fast food", " Others"]
   const deals = [
     {
       restaurantName: "chef Burgers London",
@@ -22,28 +26,24 @@ export default function Deals() {
     },
   ];
   return (
-    <div className="sm:max-w-[calc(100vw_-_22px)] lg:max-w-[1528px] w-full mx-auto mt-[54px] ">
-      <div className=" flex  justify-between  items-center">
+    <div className="sm:max-w-[calc(100vw_-_22px)] lg:max-w-[1528px] w-full  mx-auto mt-[54px] ">
+      <div className=" flex  justify-between  max-w-[1528px] items-center">
         <h1 className=" font-[Poppins] font-[700] lg:text-[32px]  sm:text-[16px] leading-[100%] tracking-[0em] text-[#000000]">
           Up to -40% 🎊 Order.uk exclusive deals
         </h1>
-        <div className="  sm:hidden lg:flex  max-w-[537px] w-full flex  justify-between">
-          <button className="font-[Poppins] font-[400] text-[16px] leading-[100%] tracking-[0em]">
-            Vegan
-          </button>
-          <button className="font-[Poppins] font-[400] text-[16px] leading-[100%] tracking-[0em]">
-            Sushi
-          </button>
-          <button className="font-[Poppins] font-[400] text-[16px] leading-[100%] tracking-[0em]">
-            Pizza & Fast food
-          </button>
-          <button className="font-[Poppins] font-[400] text-[16px] leading-[100%] tracking-[0em]">
-            Others
-          </button>
+        <div className="  sm:hidden lg:flex  justify-end  flex   ">
+          {navs.map((tab, id) => (
+            <button key={id} className={`font-[Poppins] w-[170px] font-[400] text-[16px] leading-[100%] tracking-[0em]  ${selectedTab == tab ? " rounded-[120px] text-[#FC8A06]  px-3 py-[18px]  border-[1px] border-[#FC8A06]  flex justify-center items-center" : ""}`}
+              onClick={() => setseletedTab(tab)}>
+              {tab}
+            </button>
+          ))}
+
+
         </div>
       </div>
 
-      <div className="  h-[205px] flex-row  lg:gap-[20px] sm:gap-[14px] mt-[60px]   flex overflow-x-auto overflow-hidden">
+      <div className="  flex-row  lg:gap-[20px] sm:gap-[14px] mt-[60px]   flex overflow-x-auto overflow-hidden">
         {deals.map((deal, index) => (
           <div key={index}>
             <div

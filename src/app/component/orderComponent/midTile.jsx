@@ -1,72 +1,143 @@
 "use client"
 import React, { useState, useContext } from 'react'
+import { FaPepperHot } from "react-icons/fa";
 import Image from 'next/image';
 import { MyContext } from "../../context/MyContext";
 import { restaurants } from '../../lib/restaurants';
 
 export default function MidTile() {
   const { index, selectedCategory, setIndex } = useContext(MyContext);
-  const [size, setSize] = useState("Small")
-  const menuItems = [
-    {
-      name: "Farm House Xtreme Pizza",
-      spiceLevel: 2,
-      description: [
-        "1 McChicken™",
-        "1 Big Mac™",
-        "1 Royal Cheeseburger",
-        "3 medium sized French Fries",
-        "3 cold drinks"
-      ],
-      sizes: [
-        { label: "Small", price: 21.90, currency: "£", isSelected: true },
-        { label: "Medium", price: 25.90, currency: "£", isSelected: false },
-        { label: "Large", price: 27.90, currency: "£", isSelected: false },
-        { label: "XL Large with Sauces", price: 32.90, currency: "£", isSelected: false }
-      ],
-      image: "/path/to/pizza-image.png"
-    }
-  ];
+  const [size, setSize] = useState("Small");
+  const max = 5;
+  const SpiceLevel = 2;
+
 
   return (
-    <div className=' max-w-[754px] '>
-      <div className="  justify-between flex max-w-[754px] ">
-        <h1 className="font-[Poppins] ml-[32px] font-[600] text-[32px] leading-[100%] tracking-[0em] text-[#03081F]">{selectedCategory}
+    <div className='sm:max-w-[calc(100vw_-_22px)] lg:min-w-[754px]  '>
+      <div className="  justify-between flex sm:max-w-[calc(100vw_-_22px)] lg:max-w-[754px] max-w-[754px] ">
+        <h1 className="font-[Poppins] lg:ml-[32px] font-[600] text-[32px] leading-[100%] tracking-[0em] text-[#03081F]">{selectedCategory}
         </h1>
-        <div className="flex flex-row w-[274px] mr-[19px]  rounded-l-full  rounded-r-full border-[1px]  border-[#00000066]  border-opacity-[20%]">
+        <div className=" px-4 py-3 flex flex-row lg:w-[274px]  justify-between sm:w-[207px] lg:mr-[19px]  rounded-l-full  rounded-r-full border-[1px]  border-[#00000066]  border-opacity-[20%]">
           <input
             type="text"
             placeholder="Sort by Pricing"
-            className="px-4 py-3 text-[#000000CC]"
-          />  <Image src="/assets/icons/Forward Button (1).svg" className=" rotate-y-180 opacity-[40%]" width={30} height={30} alt="" />
+            className=" lg:w-[274px]  sm:w-[114px] text-[#000000CC]"
+          />  <Image src="/assets/icons/Forward Button (1).svg" className=" rotate-y-180 " width={30} height={30} alt="" />
 
         </div>
       </div>
-      {restaurants[index].menu[selectedCategory].map((item, id) => (<div key={id} className='shadow-[5px_5px_34px_0px_#00000040] rounded-[8px] mt-[45px] '>
+      <div className='items-center flex justify-between gap-[20px] mt-[49px] sm:flex lg:hidden rounded-[12px]  px-[20px] py-[12px] border-[1px] border-[#0000004D]'>
+        <div className='flex flex-row items-center'>
+          <Image src="/assets/icons/Menu.svg" width={55} height={55} alt="" />
+          <h1 className='  ml-[20px] font-[Poppins] fonty-[600]  text-[32px]  leading-[100%] tracking-[0em] '>Menu</h1>
+        </div>
+        <div className='flex flex-row items-center'>
+          <h1 className=' font-[Poppins] font-[400]  mr-[34px] text-[16px]  leading-[100%] tracking-[0em] '>{selectedCategory}</h1>
+          <Image src="/assets/icons/Forward Button (1).svg" width={30} height={30} alt="" />
+        </div>
 
-        <div className='py-[28px] px-[32px]'>
-          <div className=' flex justify-between  gap-x-[189px]'>
-            <div>
-              <h1 className="font-[Poppins]  font-[600] text-[24px] leading-[100%] tracking-[0em] text-[#03081F]">{item.name}</h1>
-              <h1 className="font-[Poppins] mt-[55px] font-[400] text-[14px] leading-[25px] tracking-[0em] text-[#03081F]">{item.description}</h1>
+      </div>
+      {restaurants[index].menu[selectedCategory].map((item, id) => (<div key={id}>
+
+        <div className=' lg:py-[28px] sm:py-[33px] lg:px-[32px] sm:px-[12px] shadow-[5px_5px_34px_0px_#00000040] rounded-[8px] mt-[31px] '>
+
+          <div className='sm:hidden lg:flex '>
+            <div className=' flex justify-between  w-full'>
+              <div className=''>
+                <div className='flex flex-col'>
+                  <h1 className="font-[Poppins]  font-[600] text-[24px] leading-[200%] tracking-[0em] text-[#03081F]">{item.name}</h1>
+                  <div className="flex items-center">
+                    {[...Array(max)].map((_, i) => (
+                      <Image
+                        key={i}
+                        src={i < SpiceLevel ? "/assets/icons/redChilli.svg" : "/assets/icons/greyChilli.svg"}
+                        alt=""
+                        width={720}
+                        height={600}
+                        className="w-[20px] h-[20px]"
+                      />
+                    ))}
+                  </div>
+
+                </div>
+
+                <h1 className="font-[Poppins] mt-[27.96px] font-[400] text-[14px] leading-[25px] tracking-[0em] text-[#03081F]">{item.description}</h1>
+              </div>
+              <div className=' rounded-full'><Image src="/assets/icons/Pizza1.png" width={191} height={191} alt="" className=' w-[117px] h-[117px]' /></div>
             </div>
-            <div className=' rounded-full'><Image src="/assets/icons/Pizza1.png" width={191} height={191} alt="" className=' w-[117px] h-[117px]' /></div>
+          </div>
+
+          <div className='sm:flex lg:hidden flex-col '>
+            <div className=' flex justify-between '>
+              <div className=''>
+                <h1 className="font-[Poppins]  font-[600] text-[24px] leading-[100%] tracking-[0em] text-[#03081F]">{item.name}</h1>
+                <div className="flex items-center">
+                  {[...Array(max)].map((_, i) => (
+                    <Image
+                      key={i}
+                      src={i < SpiceLevel ? "/assets/icons/redChilli.svg" : "/assets/icons/greyChilli.svg"}
+                      alt=""
+                      width={720}
+                      height={600}
+                      className="w-[20px] h-[20px]"
+                    />
+                  ))}
+                </div>
+                <h1 className="font-[Poppins] mt-[19px] mb-[19px] font-[400] text-[14px] leading-[25px] tracking-[0em] text-[#03081F]">{item.description}</h1>
+
+              </div>
+              <div className=' rounded-full'><Image src="/assets/icons/Pizza1.png" width={191} height={191} alt="" className=' w-[117px] h-[117px]' /></div>
+            </div>
+          </div>
+
+          <div className=' flex flex-wrap  gap-x-[6px] gap-y-[19px] flex-row  mt-[31px]'>
+            {item.sizes.map((s, id) => (
+              <div key={id} onClick={() => setSize(s.label)} className={`flex flex-row   py-[10px] px-[8px]  gap-x-[21px] items-center rounded-[4px] border-[1px] border-[#03081F] ${s.label === size ? "bg-[#03081F]" : ""}`}>
+                <div className='flex justify-center items-center'> <h1 className={`font-[Poppins] font-[700] text-[14px] leading-[25px] tracking-[0em] ${s.label === size ? "text-white" : "text-[#03081F]"
+                  }`}>{s.label}</h1></div>
+                <div className='  min-h-[39px] min-w-[90px] bg-[#028643] flex justify-center items-center'><h1 className="font-[Poppins]  font-[700] text-[14px] leading-[25px] tracking-[0em] text-[#FFFFFF] ">{s.price}</h1></div>
+              </div >
+            ))}
+
           </div>
         </div>
 
-        <div className=' flex flex-wrap  gap-x-[6px] gap-y-[19px] flex-row pb-[28px] px-[32px]'>
-          {item.sizes.map((s, id) => (
-            <div key={id} onClick={() => setSize(s.label)} className={`flex flex-row   py-[10px] px-[8px]  gap-x-[21px] items-center rounded-[4px] border-[1px] border-[#03081F] ${s.label === size ? "bg-[#03081F]" : ""}`}>
-              <div className='flex justify-center items-center'> <h1 className={`font-[Poppins] font-[700] text-[14px] leading-[25px] tracking-[0em] ${s.label === size ? "text-white" : "text-[#03081F]"
-                }`}>{s.label}</h1></div>
-              <div className='  min-h-[39px] min-w-[90px] bg-[#028643] flex justify-center items-center'><h1 className="font-[Poppins]  font-[700] text-[14px] leading-[25px] tracking-[0em] text-[#FFFFFF] ">{s.price}</h1></div>
-            </div >
-          ))}
-
-        </div>
       </div>
 
+
       ))}
+      <div
+
+        style={{
+          backgroundImage: ` linear-gradient(245.7deg, rgba(255, 255, 255, 0) 0.94%, rgba(3, 8, 31, 0.19) 51.68%, rgba(3, 8, 31, 0.89) 87.9%),
+                          url('/assets/icons/Rectangle8.png')` }}
+        className=" relative mt-[27px] sm:max-w-[388px] sm:min-h-[325px]  mx-auto  sm:flex lg:hidden  bg-cover bg-center  rounded-[12px] flex flex-col   "
+      >
+        {" "}
+        <div className="   z-50 lg:w-[88px] sm:w-[68.84px] lg:ml-[22px] sm:ml-[23.26px]  lg:h-[66px] sm:h-[66px] h-full bg-[#03081F]   lg:rounded-b-[12px] sm:rounded-b-[4px] lg:mr-[20px] sm:mr-[16px]  flex justify-center items-center">
+          <h1 className="font-[Poppins] font-[700] lg:text-[18px] sm:text-[15px] leading-[100%] tracking-[0em] text-white">
+            20%
+          </h1>
+        </div>
+        <div className="  mt-[170px] flex flex-col  lg:flex  ml-[22px] mb-[26px] ">
+          <h1 className="font-[Poppins] font-[500] text-[18px] leading-[200%] tracking-[0em] text-[#FC8A06]">
+            Special offer
+          </h1>
+          <h1 className="font-[Poppins] font-[700] text-[24px] leading-[150%] tracking-[0em]  text-[#FFFFFF]">
+            First Order Discount
+          </h1>
+        </div>
+        <div className="absolute flex justify-center item-center w-[71.77px] h-[89px] right-[0px] bottom-[-1px] z-50 bg-[#FFFFFF]/90 rounded-tl-[46px]"
+          onClick={() => addtoCart(items)}>
+          <Image
+            width={36.26}
+            height={49}
+            src="/assets/icons/Plus.svg"
+            alt=""
+          />
+        </div>
+
+      </div>
 
 
     </div>

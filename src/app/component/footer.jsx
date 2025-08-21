@@ -5,7 +5,7 @@ import Button from "./play";
 export default function Footer() {
   return (
     <div className=" ">
-      <div className=" bg-[#D9D9D9]/60   w-full flex flex-row    flex-wrap min-h-[371px]  h-full">
+      <div className=" bg-[#D9D9D9]/60     lg:gap-x-[20px]   sm:gap-x-[0px] lg:items-start  sm:justify-center sm:items-center   max-w-[1728px] mx-auto flex flex-row    flex-wrap min-h-[371px]  h-full">
 
         <div className="   flex flex-col  lg:justify-start lg:items-start  sm:justify-center sm:items-center lg:mt-[93px] lg:ml-[115px]">
           <Image
@@ -44,7 +44,8 @@ export default function Footer() {
             <Image width={45} height={45} src="/assets/icons/Snapchat.svg" alt="" />
           </div>
         </div>
-        <div className=" flex flex-col lg:mt-[81px] lg:ml-[40px] sm:mt-[46px] sm:ml-[45px]">
+
+        <div className=" flex flex-col lg:mt-[81px] lg:ml-[40px] sm:mt-[46px] sm:ml-[0px]  sm:mb-[45px]   lg:mb-[0px] sm:mr-[100px] lg:mr-[0px]">
           <h1 className="font-[Poppins] font-[700] text-[18px] leading-[43px] tracking-[0em] ">Legal Pages</h1>
           <p className="font-[Poppins] font-[400] text-[15px] leading-[43px] tracking-[0em] underline ">Terms and conditions</p>
           <p className="font-[Poppins] font-[400] text-[15px] leading-[43px] tracking-[0em] underline ">Privacy</p>
@@ -53,7 +54,7 @@ export default function Footer() {
 
 
         </div>
-        <div className=" flex flex-col lg:mt-[81px] lg:ml-[50px] sm:mb-[45px] lg:mb-[0px] sm:ml-[45px]">
+        <div className=" flex flex-col lg:mt-[81px] lg:ml-[50px] sm:mb-[45px] lg:mb-[0px] sm:mr-[100px] lg:mr-[0px]">
           <h1 className="font-[Poppins] font-[700] text-[18px] leading-[43px] tracking-[0em] ">Imporatant Links</h1>
           <p className="font-[Poppins] font-[400] text-[15px] leading-[43px] tracking-[0em] underline ">Get help</p>
           <p className="font-[Poppins] font-[400] text-[15px] leading-[43px] tracking-[0em] underline ">Add your restaurant</p>

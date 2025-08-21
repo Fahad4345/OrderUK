@@ -59,11 +59,11 @@ export default function Category() {
                 className="lg:w-[238px] lg:h-[203px] sm:w-[189px] sm:h-[162px] bg-cover bg-center"
               />
             </div>
-            <div className=" bg-[#000000]/10  sm:pl-[18px]  lg:pl-[22px]  pb-[10px]">
-              <h1 className="font-[Poppins] font-[700] lg:text-[18px] sm:text-[13px]   lg:mt-[9px] sm:mt-[7px] leading-[100%] tracking-[0em] lg:text-[#03081F] sm:text-[#FC8A06]">
+            <div className=" bg-[#000000]/10  dark:bg-[#03081F] dark:text-white  sm:pl-[18px]  lg:pl-[22px]  pb-[10px]">
+              <h1 className="font-[Poppins] font-[700] lg:text-[18px] sm:text-[13px] dark:text-[#FC8A06]   lg:mt-[9px] sm:mt-[7px] leading-[100%] tracking-[0em] lg:text-[#03081F] sm:text-[#FC8A06]">
                 {categorys.category}
               </h1>
-              <h1 className="font-[Poppins] font-[400]  mb-[10px] lg:mt-[9px] sm:mt-[7px] lg:text-[18px] sm:text-[13px]  leading-[100%] tracking-[0em] sm:text-black lg:text-[#FC8A06]">
+              <h1 className="font-[Poppins] font-[400]  dark:text-white mb-[10px] lg:mt-[9px] sm:mt-[7px] lg:text-[18px] sm:text-[13px]  leading-[100%] tracking-[0em] sm:text-black lg:text-[#FC8A06]">
                 {categorys.totalRestaurant} Restaurants
               </h1>
             </div>

@@ -22,8 +22,8 @@ export default function SubNav() {
   ];
   return (
     <div>
-      <div className="  sm:mt-[23px] lg:mt-[64px] lg:justify-between items-center flex mx-auto  max-w-[1528px] w-full  sm:flex-col-reverse">
-        <h1 className="font-[Poppins] font-[700] lg:text-[32px]  sm:mt-[32px] lg:mt-[0px] lg:mt-[0px] sm:text-[18px] leading-[100%] tracking-[0em] text-[#03081F]">{`All Offers from ${restaurants[index].name}`}</h1>
+      <div className="  sm:mt-[23px] lg:mt-[64px] lg:justify-between items-center flex mx-auto  max-w-[1528px] w-full lg:flex-row sm:flex-col-reverse">
+        <h1 className="font-[Poppins] font-[700] lg:text-[32px]  sm:mt-[32px] lg:mt-[0px] sm:text-[18px] leading-[100%] tracking-[0em] text-[#03081F]">{`All Offers from ${restaurants[index].name}`}</h1>
         <div className="flex flex-row lg:w-[360px] sm:w-[344px]   rounded-l-full  rounded-r-full border-[1px]  border-[#00000066]  border-opacity-[20%]">
           <input
             type="text"

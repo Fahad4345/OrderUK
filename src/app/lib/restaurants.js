@@ -1,6 +1,6 @@
 export const restaurants = [
   {
-    name: "McDonald's London",
+    name: "McDonald's",
     image: "/assets/restImage/McDonald.png",
     menu: {
       Burger: [

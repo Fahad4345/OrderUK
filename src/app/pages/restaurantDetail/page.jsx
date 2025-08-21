@@ -27,7 +27,7 @@ export default function RestaurantDetail() {
       <Menu />
       <RestInfo />
       <Maps />
-      {/* <CustReview /> */}
+      <CustReview />
       <SimilarRest heading="Similar Restaurants" />
       <Footer />
     </div>

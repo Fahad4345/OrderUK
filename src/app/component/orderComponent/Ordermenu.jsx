@@ -11,8 +11,8 @@ export default function Ordermenu() {
 
   return (
     <div className=" max-w-[1528px] mx-auto justify-between flex flex-col">
-      <div className="  sm:mt-[23px] lg:mt-[64px] lg:justify-between items-center flex mx-auto  max-w-[1528px] w-full  sm:flex-col-reverse">
-        <h1 className="font-[Poppins] font-[700] lg:text-[32px]  sm:mt-[32px] lg:mt-[0px] lg:mt-[0px] sm:text-[18px] leading-[100%] tracking-[0em] text-[#03081F]">{`All Offers from ${restaurants[index].name}`}</h1>
+      <div className="  sm:mt-[23px] lg:mt-[64px] lg:justify-between items-center flex mx-auto  max-w-[1528px] w-full lg:flex-row sm:flex-col-reverse">
+        <h1 className="font-[Poppins] font-[600] lg:text-[32px]  sm:mt-[32px] lg:mt-[0px]  sm:text-[18px] leading-[100%] tracking-[0em] text-[#03081F]">{`Order from ${restaurants[index].name}`}</h1>
         <div className="flex flex-row lg:w-[360px] sm:w-[344px]   rounded-l-full  rounded-r-full border-[1px]  border-[#00000066]  border-opacity-[20%]">
           <input
             type="text"
@@ -21,7 +21,7 @@ export default function Ordermenu() {
           />
         </div>
       </div>
-      <div className=" flex flex-row  gap-[20px] mt-[49px]">
+      <div className=" flex flex-row    justify-center lg:gap-x-[20px] mt-[49px]">
         <Leftmenu />
         <MidTile />
         <Basket />
