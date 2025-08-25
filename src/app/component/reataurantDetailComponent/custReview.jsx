@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 export default function CustReview() {
   const reviews = [
@@ -105,7 +105,7 @@ export default function CustReview() {
 
 
         <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
+          modules={[Autoplay]}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           speed={800}
 
@@ -137,10 +137,10 @@ export default function CustReview() {
                     </div>
                     <div className="w-[2px] h-[50px] bg-[#FC8A06]" />
                     <div className="flex flex-col">
-                      <h2 className="font-poppins font-[600] text-[18px] text-[#03081F]">
+                      <h2 className="font-[Poppins] font-[600] text-[18px] text-[#03081F]">
                         {review.name}
                       </h2>
-                      <h3 className="font-poppins font-[400] text-[16px] text-[#FC8A06]">
+                      <h3 className="font-[Poppins] font-[400] text-[16px] text-[#FC8A06]">
                         {review.location}
                       </h3>
                     </div>
@@ -165,14 +165,14 @@ export default function CustReview() {
                         width={23}
                         height={23}
                       />
-                      <p className="ml-[10px] font-poppins text-[15px] text-black">
+                      <p className="ml-[10px] font-[Poppins] text-[15px] text-black">
                         {review.date}
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <p className="mt-[20px] font-poppins text-[16px] leading-[27px] text-black">
+                <p className="mt-[20px] font-[Poppins] text-[16px] leading-[27px] text-black">
                   {review.text}
                 </p>
               </article>

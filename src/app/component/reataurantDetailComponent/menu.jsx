@@ -1,24 +1,33 @@
 "use client"
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MyContext } from "../../context/MyContext";
 import { restaurants } from '../../lib/restaurants';
+import Menupopup from "../popup/menupopup";
 
 export default function Menu() {
   const { index, setIndex, cart, setCart } = useContext(MyContext);
+  const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
-    const savedCart = localStorage.getItem("cart") || [];
-    setCart(JSON.parse(savedCart));
+
+    setCart(JSON.parse(localStorage.getItem("cart") || "[]"));
+
   }, [])
   useEffect(() => {
-    const loadCart = localStorage.setItem("cart", JSON.stringify(cart))
-    console.log(loadCart);
+    localStorage.setItem("cart", JSON.stringify(cart))
+
+
   }, [cart])
 
   function addtoCart(items) {
-    setCart((Prev) => [...Prev, items])
-    console.log(cart);
+    const itemWithRestName = {
+      items, restaurants: restaurants[index].name
+    };
+
+
+    setCart((Prev) => [...Prev, itemWithRestName])
+
 
   }
 
@@ -57,7 +66,7 @@ export default function Menu() {
                     {items.description}
                   </h1>
 
-                  <h1 className="font-[Poppins] font-[700] text-[18px] leading-[100%] tracking-[0em] text-[#000000]">{`GBP ${items.sizes[0].price}`}</h1>
+                  <h1 className="font-[Poppins] font-[700] text-[18px] leading-[100%] tracking-[0em] text-[#000000]">  {items.sizes[0].price}</h1>
 
 
                 </div>
@@ -70,7 +79,10 @@ export default function Menu() {
                     className=" w-[232px] h-[199px]"
                   />
                   <div className="absolute flex justify-center item-center w-[97px] h-[89px] right-[0px] bottom-[-1px] z-50 bg-[#FFFFFF]/90 rounded-tl-[46px]"
-                    onClick={() => addtoCart(items)}>
+                    onClick={() => {
+                      addtoCart(items);
+                      setIsOpen(true);
+                    }}>
                     <Image
                       width={49}
                       height={49}
@@ -79,11 +91,17 @@ export default function Menu() {
                     />
                   </div>
                 </div>
+                {isOpen && (
+
+                  <Menupopup itemid={idx} catid={catindex} onBasketClose={() => { setIsOpen(false) }} />
+                )}
               </div>
             ))}
           </div>
+
         </div>
       ))}
+
     </div>
   );
 }

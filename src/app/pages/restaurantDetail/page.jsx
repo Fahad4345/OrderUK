@@ -16,7 +16,7 @@ import SmHeader from "@/app/component/smHeader";
 export default function RestaurantDetail() {
 
   return (
-    <div className="">
+    <div >
 
       <Header />
       <SmHeader />

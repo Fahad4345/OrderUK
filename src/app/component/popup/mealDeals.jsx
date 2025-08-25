@@ -1,11 +1,12 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { ChevronRight } from "lucide-react";
 
-export default function MealDeals() {
+import { useRouter } from "next/navigation";
+
+
+export default function MealDeals({ onClose }) {
+  const [selectedoption, setselectedoption] = useState(false);
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {
@@ -31,14 +32,14 @@ export default function MealDeals() {
       icon: "/assets/PopupImage/Carrot.svg",
       items: [
         { id: 1, name: "Cheese", selected: true },
-        { id: 2, name: "Green peppers", selected: false },
-        { id: 3, name: "Tomato", selected: false },
-        { id: 4, name: "Mushrooms", selected: false },
-        { id: 5, name: "Sweetcorn", selected: false },
-        { id: 6, name: "Jalapenos", selected: false },
-        { id: 7, name: "Olives", selected: false },
-        { id: 8, name: "Pineapples", selected: false },
-        { id: 9, name: "Onions", selected: true },
+
+        { id: 2, name: "Tomato", selected: false },
+        { id: 3, name: "Mushrooms", selected: false },
+        { id: 4, name: "Sweetcorn", selected: false },
+        { id: 5, name: "Jalapenos", selected: false },
+        { id: 6, name: "Olives", selected: false },
+        { id: 7, name: "Pineapples", selected: false },
+        { id: 8, name: "Onions", selected: true },
       ],
     },
     {
@@ -74,11 +75,11 @@ export default function MealDeals() {
   const [step, setStep] = useState(1);
 
   return (
-    <div className="fixed inset-0 z-70 flex items-center justify-center bg-black/50">
-      <div className="relative max-w-[1270px] h-[1986px] w-full scroll-auto rounded-[12px] bg-white ">
+    <div className="fixed inset-0 overflow-y-scroll z-70 flex items-center justify-center bg-black/50">
+      <div className="relative  sm:max-w-[392px] sm:max-h-[1099px] lg:max-w-[1270px] lg:max-h-[1986px] w-full  rounded-[12px] bg-white ">
         <button
-          onClick={() => router.push("/")}
-          className="absolute z-50 -top-10 -right-14 w-[116px] h-[116px] bg-[#FC8A06] rounded-full flex items-center justify-center rotate-180"
+          onClick={() => onClose()}
+          className="absolute z-50 -top-10 -right-14 lg:w-[116px] lg:h-[116px] sm:w-[80px] sm:h-[80px] bg-[#FC8A06] rounded-full flex items-center justify-center rotate-180"
           aria-label="Close"
         >
           <Image
@@ -86,6 +87,7 @@ export default function MealDeals() {
             height={55}
             src="/assets/PopupImage/Close.svg"
             alt=""
+            className="lg:w-[55px] lg:h-[55px] sm:w-[38px] sm:h-[38px]"
           />
         </button>
 
@@ -94,10 +96,10 @@ export default function MealDeals() {
           alt=""
           width={1270}
           height={280}
-          className="w-full"
+          className="lg:w-[1270px] lg:max-h-[280px] sm:w-[392px] sm:max-h-[188px]"
         />
 
-        <div className="flex items-center justify-between px-[113px] py-4">
+        <div className="flex items-center justify-between sm:hidden lg:px-[113px] lg:py-4">
           <div className="flex items-center gap-3">
             <nav className="flex items-center space-x-2 text-[14px] font-[600] text-[#03081F]">
               {crumbs.slice(0, step + 1).map((crumb, index) => (
@@ -105,7 +107,7 @@ export default function MealDeals() {
                   <h1
 
                     className="text-[#03081F] font-[700]">
-                    <p className=" ml-[11px] font-poppins font-[700] text-[24px] leading-[58px]">{crumb.name}</p>
+                    <p className=" ml-[11px] font-poppins font-[700] lg:text-[24px] sm:text-[15px] leading-[58px]">{crumb.name}</p>
                   </h1>
                   {index < step && (
                     <span className="font-[Poppins] ml-[18px] font-[700] text-[24px] leading-[58px]">{">"}</span>
@@ -118,10 +120,18 @@ export default function MealDeals() {
 
         <div className="mx-auto max-w-[1045px] mt-[12px] mb-[32px] px-6">
           {step == 1 && (
-            <div className="  mx-auto max-w-[1045px]   mt-[36px] flex  flex-col">
+            <div className="  mx-auto max-w-[1045px]   lg:mt-[36px] flex  flex-col">
+              <h1 className=" font-[Poppins]  sm:flex lg:hidden sm:font-[700]  text-[24px]   leading-[58px] tracking-[0em]">
+                {" "}
+                Special Offer{" > "}
+              </h1>
+              <h1 className=" font-[Poppins] lg:font-[400] sm:font-[700]   sm:flex lg:hidden lg:text-[32px] sm:text-[34px]  leading-[58px] tracking-[0em]">
+                {" "}
+                Meal Deal 1
+              </h1>
               <div className=" flex justify-start ">
                 {" "}
-                <h1 className=" mb-[53px]  ml-[36px] font-[Poppins] font-[400] text-[32px]  leading-[40px] tracking-[0em]">
+                <h1 className=" mb-[53px] sm:hidden lg:flex  ml-[36px] font-[Poppins] font-[400] text-[32px]  leading-[40px] tracking-[0em]">
                   Please select your first Pizza
                 </h1>
               </div>
@@ -139,17 +149,17 @@ export default function MealDeals() {
                     alt=""
                     width={113}
                     height={113}
-                    className=" px-[22px] py-[28px]"
+                    className=" lg:w-[113px] lg:h-[113px] sm:w-[39px] sm:h-[39px] lg:px-[22px] lg:py-[28px] sm:px-[9px] sm:py-[8px]"
                   />
-                  <div className=" w-[1px] h-[93px] bg-[#00000033]"></div>
+                  <div className=" w-[1px] h-[39px] bg-[#00000033]"></div>
                   <div className="flex justify-between items-center w-full">
                     <h1
-                      className={` ml-[41px] font-[Poppins] font-[700]  text-[32px]  leading-[58px] tracking-[0em] ${quantity > 1 ? "text-white" : "text-[#03081F]"
+                      className={` lg:ml-[41px] sm:ml-[12px] font-[Poppins] font-[700]  lg:text-[32px] sm:text-[15px]  leading-[58px] tracking-[0em] ${quantity > 1 ? "text-white" : "text-[#03081F]"
                         }`}
                     >
                       {item.name}
                     </h1>
-                    <div className=" mr-[27px] flex flex-row  gap-[22px] items-center">
+                    <div className=" lg:mr-[27px] flex flex-row   sm:gap-[8px] lg:gap-[22px] items-center">
                       <Image
                         src={
                           quantity > 1
@@ -160,9 +170,10 @@ export default function MealDeals() {
                         width={45}
                         height={45}
                         onClick={decrease}
+                        className=" lg:w-[45px] lg:h-[45px] sm:w-[35px] sm:h-[35px]"
                       />
-                      <div className="px-[26px] py-[17px] bg-white rounded-[12px] w-[86px] h-[92px] justify-center items-center flex ">
-                        <h1 className="font-[Poppins] font-[700]  text-[32px]  leading-[58px] tracking-[0em]">
+                      <div className="lg:px-[26px] lg:py-[17px] bg-white rounded-[4px] lg:w-[86px] lg:h-[92px] sm:w-[29px] sm:h-[31px] justify-center items-center flex ">
+                        <h1 className="font-[Poppins] font-[700]   sm:text-[15px] lg:text-[32px]  lg:leading-[58px] sm:leading-[18px]  tracking-[0em]">
                           {quantity}
                         </h1>
                       </div>
@@ -176,6 +187,7 @@ export default function MealDeals() {
                         width={45}
                         height={45}
                         onClick={increase}
+                        className="lg:w-[45px] lg:h-[45px] sm:w-[35px] sm:h-[35px]"
                       />
                     </div>
                   </div>
@@ -186,56 +198,74 @@ export default function MealDeals() {
 
           {step == 2 && (
             <div>
-              <h1 className=" font-[Poppins] font-[400]  text-[32px]  leading-[40px] tracking-[0em]">
+              <h1 className=" font-[Poppins]  sm:flex lg:hidden sm:font-[700]  text-[24px]   leading-[58px] tracking-[0em]">
                 {" "}
-                Customise your chicken Pizza
+                Special Offer{" > "}
               </h1>
-              <div className=" flex flex-row items-center">
+              <h1 className=" font-[Poppins] lg:font-[400] sm:font-[700]  lg:text-[32px] sm:text-[34px]  leading-[40px] tracking-[0em]">
+                {" "}
+                Customise  Pizza
+              </h1>
+              <div className=" flex flex-row items-center mt-[32px]">
                 <Image
                   src="/assets/PopupImage/pizzaicon.svg"
                   alt=""
                   width={118}
                   height={118}
-                  className=" px-[22px] py-[28px]"
+                  className="  sm:mr-[36px]"
                 />
                 <div className=" w-[1px] h-[99px] bg-[#00000033]"></div>
                 <div className="flex justify-between items-center w-full">
                   <h1
-                    className={` ml-[41px] font-[Poppins] font-[700]  text-[44px]  leading-[40px] tracking-[0em] text-[#FC8A06]`}
+                    className={` ml-[41px] font-[Poppins] font-[700]  lg:text-[44px] sm:text-[16px]  sm:text-center lg:text-start lg:leading-[40px] sm:leading-[24px] tracking-[0em] text-[#FC8A06]`}
                   >
                     Please select up to 4 options free!
                   </h1>
                 </div>
               </div>
 
-              <div className="  flex flex-col  mt-[57px] gap-[70px]">
+              <div className="  flex flex-col   sm:mt-[51px] lg:mt-[57px] lg:gap-[70px]">
                 {toppingCategories.map((category, index) => (
                   <div
                     key={index}
-                    className=" border-[1px] border-[#0000004D] relative rounded-[12px]  gap-y-[40px] gap-x-[33px] max-w-[1005px] pb-[71px] pl-[32px] pt-[95px]  grid  grid-cols-3 "
+                    className={`${category.category == "Meat Toppings" || category.category == "Seafood Toppings" ? " sm:hidden lg:grid" : ""}  border-[1px] border-[#0000004D] relative rounded-[12px] lg:gap-y-[40px] sm:gap-y-[13px] sm:gap-x-[35px] lg:gap-x-[33px] max-w-[1005px] lg:pb-[71px] sm:pb-[20px] lg:pl-[32px] sm:px-[20px]  sm:pt-[70px] lg:pt-[95px]  grid  lg:grid-cols-3 sm:grid-cols-2 `}
                   >
                     <div className="absolute top-[-40px] left-[49px]">
-                      <div className="flex flex-row w-[467px]  justify-center  relative h-[81px] rounded-[12px] bg-[#03081F] items-center ">
-                        <button className=" z-50 top-[-5px] left-[-20px]  flex justify-center absolute items-center  w-[93px] h-[93px] rounded-full bg-[#FC8A06] font-[Poppins] ">
+                      <div className="flex flex-row lg:w-[467px] sm:w-[276px]  justify-center  relative lg:h-[81px] sm:h-[55px] rounded-[12px] bg-[#03081F] items-center ">
+                        <button className=" z-50 top-[-5px] left-[-20px]  flex justify-center absolute items-center  lg:w-[93px] lg:h-[93px] sm:w-[65px] sm:h-[65px] rounded-full bg-[#FC8A06] font-[Poppins] ">
                           <Image
                             width={45}
                             height={45}
                             alt=""
                             src={category.icon}
+                            className="lg:w-[45px] lg:h-[45px] sm:w-[31px] sm:h-[31px]"
                           />
                         </button>
-                        <h1 className="font-[Poppins] ml-[85px] font-[700] text-[32px] leading-[40px] text-white">
+                        <h1 className={` font-[Poppins] lg:ml-[85px] sm:ml-[44px] font-[700] lg:text-[32px] sm:text-[18px] leading-[40px] text-white`}>
                           {category.category}
                         </h1>
                       </div>
                     </div>
                     {category.items.map((item, index) => (
-                      <div key={index} className=" ">
-                        <label htmlFor="">
+                      <div key={index} className="  " onClick={() => setselectedoption(true)}>
+                        <label htmlFor="" className="flex flex-row gap-[10px]">
+
                           <input type="radio" className="  hidden peer" />
-                          <div className=" flex-row flex items-center gap-[11px] ">
-                            <div className="w-[45px] h-[45px] border-[7px] border-[#D8D8D8] rounded-[12px] peer-checked:border-green-600 transition-all"></div>
-                            <span className="font-[Poppins] font-[700] text-[32px] leading-[40px]">
+                          {selectedoption ?
+                            (<Image
+                              width={35}
+                              height={35}
+                              src="/assets/icons/Tick Box.svg"
+                              alt=""
+                              className="  ml-[20px]   "
+                            />)
+                            :
+                            (<div className="lg:w-[45px] lg:h-[45px] sm:w-[25px] sm:h-[25px] border-[7px] border-[#D8D8D8] rounded-full peer-checked:border-green-600 transition-all"></div>)
+
+                          }
+                          <div className=" flex-row flex items-center lg:gap-[23px] sm:gap-[11px] ">
+
+                            <span className="font-[Poppins] lg:font-[700] lg:text-[32px] sm:font-[400] sm:text-[16px] leading-[40px]">
                               {item.name}
                             </span>
                           </div>
@@ -250,33 +280,39 @@ export default function MealDeals() {
 
           {step === 3 && (
             <div>
-              <h1 className=" font-[Poppins] font-[400]  text-[32px]  leading-[40px] tracking-[0em]">
+              <h1 className=" font-[Poppins]  sm:flex lg:hidden sm:font-[700]  text-[24px]   leading-[58px] tracking-[0em]">
                 {" "}
-                Customise your chicken Pizza
+                Special Offer{" > "}
               </h1>
-              <div className=" flex flex-row items-center">
+              <h1 className=" font-[Poppins] lg:font-[400] sm:font-[700]  lg:text-[32px] sm:text-[34px]  leading-[40px] tracking-[0em]">
+                {" "}
+                Customise  Pizza
+              </h1>
+              <div className=" flex flex-row items-center mt-[32px]">
                 <Image
                   src="/assets/PopupImage/pizzaicon.svg"
                   alt=""
                   width={118}
                   height={118}
-                  className=" px-[22px] py-[28px]"
+                  className="  sm:mr-[36px]"
                 />
                 <div className=" w-[1px] h-[99px] bg-[#00000033]"></div>
                 <div className="flex justify-between items-center w-full">
                   <h1
-                    className={` ml-[41px] font-[Poppins] font-[700]  text-[44px]  leading-[40px] tracking-[0em] text-[#FC8A06]`}
+                    className={` ml-[41px] font-[Poppins] font-[700]  lg:text-[44px] sm:text-[16px]  sm:text-center lg:text-start lg:leading-[40px] sm:leading-[24px] tracking-[0em] text-[#FC8A06]`}
                   >
-                    Please select up to 4 options free!
+                    Add your Special request
                   </h1>
                 </div>
               </div>
               <textarea
+                value="Write your instrction here"
+                onChange={() => { }}
                 name=""
                 id=""
-                className="w-[994px] h-[419px] border-[1px] resize-none border-[#0000004D] rounded-[12px] pt-[38px] pl-[49px]"
+                className="max-w-[994px] w-full lg:h-[419px] sm:h-[300px]  border-[1px] mt-[69px] resize-none border-[#0000004D] rounded-[12px] pt-[38px] pl-[49px]"
               >
-                Write your instrction here
+
               </textarea>
             </div>
           )}
@@ -290,27 +326,37 @@ export default function MealDeals() {
                 £127.90
               </span>
             </div>
-            <p className="font-[Poppins] text-[15px] text-[#6B7280]">
+            <p className="font-[Poppins]  sm:hidden lg:flex text-[15px] text-[#6B7280]">
               Delivery & Tax will be calculated in the next step
             </p>
           </div>
 
-          <div className="flex items-center ml-[520px] gap-6 mt-[32px]">
+          <div className="flex  items-center lg:ml-[520px] gap-3 mt-[32px]">
             <button
               onClick={() => setStep(step - 1)}
-              className="underline font-[Poppins] font-[600] text-[20px]"
+              className="underline  w-[172px] font-[Poppins]  lg:flex  sm:hidden font-[600] text-[20px]"
             >
               Take me Back
             </button>
 
             <button
-              onClick={() => setStep(step + 1)}
+              onClick={() => {
+                if (step < 3)
+                  setStep(step + 1)
+                else {
+                  alert("added");
+
+                  onClose();
+                }
+              }
+
+              }
               className="items-center w-[342px] h-[70px] mx-auto flex rounded-[8px] bg-[#028643] hover:brightness-110 "
             >
               <Image
                 width={35}
                 height={35}
-                src="/assets/icons/Forward Button.svg"
+                src="/assets/icons/ForwardButtonWhite.svg"
                 alt=""
                 className="  ml-[20px] rotate-270  "
               />

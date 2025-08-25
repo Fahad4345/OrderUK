@@ -1,15 +1,16 @@
 OrderUK:
 Integrated :
 
-- Functionality of add to cart implemented using local storage
-- Map all data of restaurants
-- Responsiveness of (Home page, Restaurant page , order page) completed
+- Adjusted responsiveness of pages and popups
+- Added Select effect in all nav buttons
+- Added functionality of cart that store selected item in local storage
+- Added cart popups for large screen
+- Added popup to add menu item but there is issue in functionality
 
 Next:
 
-- Some issues in reponsiveness of large screen
-- Responsiveness of Popup
-- Functionality remaining
+- Popups functionalities
+- Some other functionalities
 
-Loom : (https://www.loom.com/share/7e4c04b62d8b4fe690bac087cbc76474?sid=72039ade-45bd-4e10-b1e6-65b6081b5f4b)
+Loom : (https://www.loom.com/share/deb751df4f0a443cba4a84ddbc00f2c7?sid=26f83c81-087b-40f1-be98-0853d8a636fb)
 Preview : (https://order-uk-roan.vercel.app/)

@@ -7,7 +7,7 @@ import Image from "next/image.js";
 export default function Banner() {
     const { index, setIndex } = useContext(MyContext);
     return (
-        <div className='sm:max-w-[calc(100vw_-_22px)] lg:max-w-[1528px]  mt-[41px] w-full   sm:mx-auto rounded-[12px]'
+        <div className='sm:max-w-[calc(100vw_-_22px)]  lg:max-w-[1528px]  mt-[41px] w-full   sm:mx-auto rounded-[12px]'
             style={{ backgroundImage: ` url("/assets/icons/Rectangle 43.png")` }}>
 
             <div className='max-w-[1528px] flex-wrap   sm:justify-center lg:justify-start flex flex-row w-full lg:h-[477px] sm:h-[593px] mx-auto rounded-[12px] bg-[#E2E2E2E5]/90 dark:bg-[#03081F]/90 '>
@@ -15,9 +15,12 @@ export default function Banner() {
                     <Image alt="" src="/assets/icons/Rectangle 44.png" className=" lg:w-[581] lg:h-[361px] sm:w-[228px] sm:h-[142px]" width={581} height={361} />
                     <Image width={153} height={178} src="/assets/icons/Review bar.png" alt="" className="  lg:w-[153px] lg:h-[178px] sm:w-[53px] sm:h-[62px]  absolute   lg:top-[250px] lg:right-[501px]" />
                 </div>
-                <div className=" items-center  justify-center flex gap-[13px] mr-[62px] h-[61px]  sm:flex lg:hidden w-[335px]  bg-[#FC8A06] rounded-r-[12px] mt-[34px]">
-                    <Image alt="" src="/assets/icons/Clock (1).svg" className=" w-[29px] h-[29px]" width={581} height={361} />
-                    <p className=" text-white font-[Poppins] font-[600] lg:text-[20px] sm:text-[18px]  sm:text-center lg:text-start    leading-[66px] tracking-[0em] ">Open at 3:00 am</p></div>
+                <div className=" w-full ">
+                    <div className=" items-center  justify-center flex gap-[13px] mr-[62px] h-[61px]  sm:flex lg:hidden w-[335px]  bg-[#FC8A06] rounded-r-[12px] mt-[34px]">
+                        <Image alt="" src="/assets/icons/Clock (1).svg" className=" w-[29px] h-[29px]" width={581} height={361} />
+                        <p className=" text-white font-[Poppins] font-[600] lg:text-[20px] sm:text-[18px]  sm:text-center lg:text-start    leading-[66px] tracking-[0em] ">Open at 3:00 am</p></div>
+                </div>
+
 
                 <div className=" lg:ml-[57px] lg:pt-[171px] "><p className=" font-[Poppins] font-[400] lg:text-[20px] sm:text-[13px]  sm:text-center lg:text-start   text-[#000000] dark:text-white">Desi Flavours with a blend of Italian aesthetics!</p>
                     <h1 className=" font-[Poppins] font-[700] lg:text-[44px] sm:text-[28px] sm:text-center lg:text-start leading-[66px] tracking-[0em] text-[#000000] dark:text-white">{restaurants[index].name}</h1>

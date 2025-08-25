@@ -5,7 +5,7 @@ import Button from "./play";
 export default function Footer() {
   return (
     <div className=" ">
-      <div className=" bg-[#D9D9D9]/60     lg:gap-x-[20px]   sm:gap-x-[0px] lg:items-start  sm:justify-center sm:items-center   max-w-[1728px] mx-auto flex flex-row    flex-wrap min-h-[371px]  h-full">
+      <div className=" bg-[#D9D9D9]/60     lg:gap-x-[20px]   sm:gap-x-[0px] lg:items-start  lg:justify-start sm:justify-center sm:items-center   max-w-[1728px] mx-auto flex flex-row    flex-wrap min-h-[371px]  h-full">
 
         <div className="   flex flex-col  lg:justify-start lg:items-start  sm:justify-center sm:items-center lg:mt-[93px] lg:ml-[115px]">
           <Image
@@ -13,7 +13,7 @@ export default function Footer() {
             height={25}
             src={"/assets/icons/LOGO 2.svg"}
             alt=""
-            className=" lg:w-[215px] lg:h-[53px] sm:w-[266px] sm:h-[66px] sm:mt-[58px]"
+            className=" lg:w-[215px] lg:h-[53px] sm:w-[266px] sm:h-[66px] sm:mt-[58px] lg:mt-[0px]"
           />
           <Button className=" mt-[33px]" />
           <p className="font-[Poppins] sm:text-center max-w-[320px] w-full lg:mt-[22px] sm:mt-[20px] font-[400] text-[15px] leading-[100%] tracking-[0em] ">
@@ -25,7 +25,7 @@ export default function Footer() {
           <div>
 
 
-            <div className="flex flex-row  bg-[#D9D9D9]  rounded-l-full  rounded-r-full lg:mt-[23px] sm:mt-[13px]">
+            <div className="flex flex-row  lg:min-w-[485px]  w-full bg-[#D9D9D9]  rounded-l-full  rounded-r-full lg:mt-[23px] sm:mt-[13px]">
               <input
                 type="text"
                 placeholder="youremail@gmail.com"

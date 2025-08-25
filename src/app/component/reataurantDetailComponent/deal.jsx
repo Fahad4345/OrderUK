@@ -28,7 +28,7 @@ export default function deal() {
           <div key={index}>
             <div
 
-              style={{ backgroundImage: `url(${deal.imagepath})` }}
+              style={{ backgroundImage: `linear-gradient(245.7deg, rgba(255,255,255,0) 0.94%, rgba(3,8,31,0.19) 51.68%, rgba(3,8,31,0.89) 87.9%),url(${deal.imagepath})` }}
               className=" relative sm:min-w-[150px] sm:min-h-[150px] lg:max-w-[496px] lg:min-h-[325px] bg-cover bg-center  rounded-[12px] flex flex-col   lg:gap-[160px]  "
             >
               {" "}
@@ -37,7 +37,7 @@ export default function deal() {
                   {deal.Off}
                 </h1>
               </div>
-              <div className="  flex flex-col sm:hidden lg:flex z-50 ml-[48px] mb-[36px] ">
+              <div className="  flex flex-col sm:hidden lg:flex ml-[48px] mb-[36px] ">
                 <h1 className="font-[Poppins] font-[500] text-[18px] leading-[100%] tracking-[0em] text-[#FC8A06]">
                   Restaurant
                 </h1>
@@ -46,7 +46,7 @@ export default function deal() {
                 </h1>
               </div>
 
-              <div className="absolute lg:w-[496px] lg:h-[325px] sm:w-[150px] sm:h-[150px] left-[0px] top-[0px] rounded-[12px] [background:linear-gradient(245.7deg,rgba(255,255,255,0)_0.94%,rgba(3,8,31,0.19)_51.68%,rgba(3,8,31,0.89)_87.9%)]"></div>
+
             </div>
             <div className="  justify-start items-start flex flex-col lg:hidden sm:flex ml-[10px] mt-[10px] ">
               <h1 className="font-[Poppins] font-[500] text-[13px] leading-[100%] tracking-[0em] text-[#FC8A06]">

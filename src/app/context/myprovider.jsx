@@ -6,8 +6,9 @@ export default function MyProvider({ children }) {
   const [index, setIndex] = useState(0);
   const [selectedCategory, setCategory] = useState("Burger");
   const [cart, setCart] = useState([]);
+  const [popopen, setpopopen] = useState(false)
   return (
-    <MyContext.Provider value={{ index, setIndex, selectedCategory, setCategory, cart, setCart }}>
+    <MyContext.Provider value={{ index, setIndex, selectedCategory, setCategory, cart, setCart, popopen, setpopopen }}>
       {children}
     </MyContext.Provider>
   );

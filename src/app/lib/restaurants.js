@@ -621,7 +621,15 @@ export const restaurants = [
             { label: "Large", price: "£9.99" },
           ],
         },
-        { name: "Water", description: "Bottled mineral water.", price: 0.99 },
+        {
+          name: "Water",
+          description: "Bottled mineral water.",
+          sizes: [
+            { label: "Small", price: "£5.99" },
+            { label: "Medium", price: "£7.99" },
+            { label: "Large", price: "£9.99" },
+          ],
+        },
       ],
       Pizza: [
         {
@@ -843,7 +851,15 @@ export const restaurants = [
             { label: "Large", price: "£9.99" },
           ],
         },
-        { name: "Water", description: "Bottled water.", price: 0.99 },
+        {
+          name: "Water",
+          description: "Bottled water.",
+          sizes: [
+            { label: "Small", price: "£5.99" },
+            { label: "Medium", price: "£7.99" },
+            { label: "Large", price: "£9.99" },
+          ],
+        },
       ],
       Pizza: [
         {
@@ -1061,7 +1077,15 @@ export const restaurants = [
             { label: "Large", price: "£9.99" },
           ],
         },
-        { name: "Water", description: "Bottled mineral water.", price: 0.99 },
+        {
+          name: "Water",
+          description: "Bottled mineral water.",
+          sizes: [
+            { label: "Small", price: "£5.99" },
+            { label: "Medium", price: "£7.99" },
+            { label: "Large", price: "£9.99" },
+          ],
+        },
       ],
       Pizza: [
         {
@@ -1274,7 +1298,15 @@ export const restaurants = [
             { label: "Large", price: "£9.99" },
           ],
         },
-        { name: "Water", description: "Bottled water.", price: 0.99 },
+        {
+          name: "Water",
+          description: "Bottled water.",
+          sizes: [
+            { label: "Small", price: "£5.99" },
+            { label: "Medium", price: "£7.99" },
+            { label: "Large", price: "£9.99" },
+          ],
+        },
         {
           name: "Pomegranate Juice",
           description: "Fresh pomegranate juice.",

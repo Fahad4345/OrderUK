@@ -11,17 +11,17 @@ const Navs = ["Home", "Browser Menu", "Special Offer", "Restaurants", "Track Ord
 
 
 export default function NavBar() {
-  const [seletedTab, setselectedTab] = useState("")
+  const [seletedTab, setselectedTab] = useState("Home")
   return (
-    <div className="  sm:hidden lg:flex max-w-[1528px] w-full mx-auto mt-[38px] flex flex-row  items-center">
+    <div className="  sm:hidden lg:flex max-w-[1528px] w-full mx-auto mt-[38px] flex flex-row  justify-between items-center">
       <Image width={25} height={25} src={"/assets/icons/LOGO 1.svg"} alt="" className=' w-[215px] h-[53px]' />
 
 
 
-      <div className="ml-[168px] mr-[53px]  md:hidden lg:flex sm:flex  w-full flex  justify-between">
+      <div className="2xl:ml-[168px] mr-[53px]  xl:hidden 2xl:flex  overflow-hidden  sm:flex  w-full flex  justify-between">
         {Navs.map((tab, index) => (
-          <div className="items-center justify-center flex ">
-            <button key={index} className={`font-[Poppins]  w-[160px] h-[45px]  px-3 py-4 font-[500px] text-[18px] leading-[100%] tracking-[0%]  ${seletedTab == tab ? " rounded-[120px] text-white  px-3 py-2 bg-[#FC8A06]  flex justify-center items-center" : ""}`}
+          <div key={index} className="items-center justify-center flex ">
+            <button className={`font-[Poppins]  w-[160px] h-[45px]  px-3 py-4 font-[500px] text-[18px] leading-[100%] tracking-[0%]  ${seletedTab == tab ? " rounded-[120px] text-white  px-3 py-2 bg-[#FC8A06]  flex justify-center items-center" : ""}`}
               onClick={() => setselectedTab(tab)}
             >{tab}</button>
           </div>

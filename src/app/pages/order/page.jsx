@@ -16,7 +16,7 @@ import SmHeader from "@/app/component/smHeader";
 
 export default function Order() {
   return (
-    <div>
+    <div className="">
       <Header />
       <NavBar />
       <SmHeader />
@@ -24,7 +24,7 @@ export default function Order() {
       <Ordermenu />
       <RestInfo />
       <Maps />
-      {/* <CustReview /> */}
+      <CustReview />
       <SimilarRest heading="Similar Restaurants" />
       <Footer />
     </div>

@@ -4,7 +4,7 @@ import NavBar from "@/app/component/NavBar";
 
 export default function Banner1() {
   return (
-    <div className=" sm:max-w-[calc(100vw_-_22px)] lg:max-w-[1528px] dark:bg-[#03081F] w-full max-h-[610px]  rounded-[12px] border-[1px] lg:bg-[#FBFBFB] sm:bg-[#E2E2E2] border-[#00000033] lg:mx-auto flex flex-row lg:justify-between sm:justify-center items-center sm:mx-auto mt-[41px]">
+    <div className=" xl:max-w-[calc(100vw_-_35px)] sm:max-w-[calc(100vw_-_22px)]  2xl:max-w-[calc(1540px_-_22px)] max-w-[1528px] dark:bg-[#03081F] w-full max-h-[610px]  rounded-[12px] border-[1px] lg:bg-[#FBFBFB] sm:bg-[#E2E2E2] border-[#00000033] lg:mx-auto flex flex-row lg:justify-between sm:justify-center items-center sm:mx-auto mt-[41px]">
       <div className="lg:ml-[57px] lg:mt-[134px]">
         <div>
           <p className="font-[Poppins] font-[400] lg:text-[16px] dark:text-white sm:text-[12px] leading-[66px]  text-[#03081F]">
@@ -28,7 +28,7 @@ export default function Banner1() {
               placeholder="e.g. EC4R 3TE"
               className="px-4 py-3 text-[#000000CC]"
             />
-            <button className=" z-50 items-center justify-center flex   max-w-[188px] w-full h-[49.5px] rounded-[120px]  bg-[#FC8A06] font-[Poppins] font-[700] text-[16px] text-[#FFFFFF]">
+            <button className=" items-center justify-center flex   max-w-[188px] w-full h-[49.5px] rounded-[120px]  bg-[#FC8A06] font-[Poppins] font-[700] text-[16px] text-[#FFFFFF]">
               <p className=" sm:hidden lg:flex font-[700] text-[16px] leading-[66px] font-[Poppins]">Search</p>
               <Image
                 width={34}
@@ -44,7 +44,7 @@ export default function Banner1() {
 
       <div className=" sm:hidden lg:flex">
         <div className="  bg-[#FC8A06] w-[626px] relative  h-[565px]  rounded-tl-[282.5px] rounded-br-[12px] mt-[44px]">
-          <div className="  z-50 absolute top-[70px] left-[130px] bg-white max-w-[370px]   w-full   flex flex-row  justify-between  rounded-[12px] px-[20px] py-[20px]">
+          <div className="  z-20 absolute top-[70px] left-[130px] bg-white max-w-[370px]   w-full   flex flex-row  justify-between  rounded-[12px] px-[20px] py-[20px]">
             <Image
               width={25}
               height={102}
@@ -71,7 +71,7 @@ export default function Banner1() {
               now
             </h1>
           </div>
-          <div className="  z-50 absolute top-[235px] left-[250] bg-white max-w-[370px]   w-full   flex flex-row  justify-between p-[30px] rounded-[12px] px-[20px] py-[20px]">
+          <div className="  z-20 absolute top-[235px] left-[250] bg-white max-w-[370px]   w-full   flex flex-row  justify-between p-[30px] rounded-[12px] px-[20px] py-[20px]">
             <Image
               width={40}
               height={102}
@@ -98,7 +98,7 @@ export default function Banner1() {
               now
             </h1>
           </div>
-          <div className="  z-50 absolute top-[410px] left-[200px]  bg-white max-w-[370px]   w-full   flex flex-row  justify-between  rounded-[12px] px-[20px] py-[20px]">
+          <div className="  z-20 absolute top-[410px] left-[200px]  bg-white max-w-[370px]   w-full   flex flex-row  justify-between  rounded-[12px] px-[20px] py-[20px]">
             <Image
               width={41}
               height={102}

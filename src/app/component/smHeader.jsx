@@ -1,7 +1,11 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
+
 import Image from 'next/image'
+import SmBasket from './popup/basket';
 
 export default function SmHeader() {
+    const [isOpen, setIsOpen] = useState(false);
     return (
         <div className='lg:hidden sm:flex flex flex-col'>
             <div className='flex  justify-between w-full'>
@@ -19,7 +23,8 @@ export default function SmHeader() {
 
                 </div>
 
-                <div className='bg-[#028643] w-full flex  justify-center items-center'>
+                <div className='bg-[#028643] w-full flex  justify-center items-center'
+                    onClick={() => { setIsOpen(true); console.log(isOpen) }}>
                     <Image
                         width={45}
                         height={45}
@@ -31,6 +36,9 @@ export default function SmHeader() {
                         GBP 79.89
                     </p>
                 </div>
+
+
+
             </div>
             <div className='flex items-center gap-x-[8px] justify-end mt-[14px] mr-[34px]'>
                 <Image
@@ -44,6 +52,11 @@ export default function SmHeader() {
                     Lution Street, N4G-00....
                 </p>
             </div>
+            {isOpen && (
+
+                <SmBasket onBasketClose={() => { setIsOpen(false) }} />
+            )}
+
 
         </div>
     )

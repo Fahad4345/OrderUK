@@ -11,7 +11,7 @@ export default function Banner2() {
         height={600}
         alt=""
         src="/assets/icons/friendlaughing.png"
-        className="  z-50 absolute lg:top-[-40px] lg:left-[20px] sm:top-[270px] sm:left-[23px] lg:w-[832px] lg:h-[651px]  sm:w-[322px] sm:h-[253px]"
+        className="  z-20 absolute lg:top-[-40px] lg:left-[20px] sm:top-[270px] sm:left-[23px] lg:w-[832px] lg:h-[651px]  sm:w-[322px] sm:h-[253px]"
       />
       <Image
         width={720}

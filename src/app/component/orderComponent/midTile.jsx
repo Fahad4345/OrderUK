@@ -50,7 +50,7 @@ export default function MidTile() {
                     {[...Array(max)].map((_, i) => (
                       <Image
                         key={i}
-                        src={i < SpiceLevel ? "/assets/icons/redChilli.svg" : "/assets/icons/greyChilli.svg"}
+                        src={i < SpiceLevel ? "/assets/icons/redchilli.svg" : "/assets/icons/greychilli.svg"}
                         alt=""
                         width={720}
                         height={600}

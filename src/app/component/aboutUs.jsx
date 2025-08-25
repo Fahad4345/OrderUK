@@ -1,178 +1,3 @@
-// import Image from "next/image";
-
-// export default function AboutUs() {
-//   const questions = [
-//     {
-//       question: "How does Order.UK work?",
-//       answer: [
-//         {
-//           title1: "Place an Order!",
-//           icon1: "/assets/icons/order-food 1.png",
-//           text1:"Place order through ourwebsite or Mobile app"
-
-//         },
-//          {
-//           title2: "Track Progress",
-//           icon2: "/assets/icons/food 1.png",
-//           text2:"Your can track your orderstatus with delivery time"
-
-//         }
-//          ,
-//          {
-//           title3: "Get your Order!",
-//           icon3: "/assets/icons/order 1.png",
-//           text3:"Receive your order at alighting fast speed!"
-
-//       }
-//       ]
-//     },
-//     //  {
-//     //   question: "What payment methods are accepted?",
-//     //   answer: [
-//     //     {
-//     //       title1: "",
-//     //       icon1: "",
-//     //       text1:""
-
-//     //     },
-//     //      {
-//     //       title2: "",
-//     //       icon2: "",
-//     //       text2:""
-
-//     //     }
-//     //      ,
-//     //      {
-//     //       title3: "",
-//     //       icon3: "",
-//     //       text3:""
-
-//     //   }
-//     //   ]
-//     // },
-//     //   {
-//     //   question:    "Can I track my order in real-time?",
-//     //   answer: [
-//     //     {
-//     //       title1: "",
-//     //       icon1: "",
-//     //       text1:""
-
-//     //     },
-//     //      {
-//     //       title2: "",
-//     //       icon2: "",
-//     //       text2:""
-
-//     //     }
-//     //      ,
-//     //      {
-//     //       title3: "",
-//     //       icon3: "",
-//     //       text3:""
-
-//     //   }
-//     //   ]
-//     // },
-//     //    {
-//     //   question:    "Are there any special discounts orpromotions available?",
-//     //   answer: [
-//     //     {
-//     //       title1: "",
-//     //       icon1: "",
-//     //       text1:""
-
-//     //     },
-//     //      {
-//     //       title2: "",
-//     //       icon2: "",
-//     //       text2:""
-
-//     //     }
-//     //      ,
-//     //      {
-//     //       title3: "",
-//     //       icon3: "",
-//     //       text3:""
-
-//     //   }
-//     //   ]
-//     // },
-//     //     {
-//     //   question:"Is Order.UK available in my area?",
-//     //   answer: [
-//     //     {
-//     //       title1: "",
-//     //       icon1: "",
-//     //       text1:""
-
-//     //     },
-//     //      {
-//     //       title2: "",
-//     //       icon2: "",
-//     //       text2:""
-
-//     //     }
-//     //      ,
-//     //      {
-//     //       title3: "",
-//     //       icon3: "",
-//     //       text3:""
-
-//     //   }
-//     // ]},
-
-
-
-
-//   ];
-//   return (
-//     <div className="max-w-[1528px] w-full bg-[#D9D9D9]/30 rounded-[12px] flex flex-col px-[248px] py-[120px]">
-//       <div className=" flex flex-row justify-between">
-//         <h1 className="font-[700] font-[poppins] text-[32px] leading-[100%] tracking-[0em] text-[#000000]">
-//           Know more about us!
-//         </h1>
-//         <div className="  max-w-[537px] w-full flex  justify-between">
-//           <button className="font-[Poppins] font-[400] text-[16px] leading-[100%] tracking-[0em]">
-//             Vegan
-//           </button>
-//           <button className="font-[Poppins] font-[400] text-[16px] leading-[100%] tracking-[0em]">
-//             Sushi
-//           </button>
-//           <button className="font-[Poppins] font-[400] text-[16px] leading-[100%] tracking-[0em]">
-//             Pizza & Fast food
-//           </button>
-//           <button className="font-[Poppins] font-[400] text-[16px] leading-[100%] tracking-[0em]">
-//             Others
-//           </button>
-//         </div>
-//       </div>
-//       <div className=" mt-[69px] flex flex-row ">
-//         <div className=" flex flex-col gap-[34px]">
-//           {questions.map((question, index) => (
-//             <div key={index} className="">
-//               <button className=" items-center max-w-[346px] w-full h-[62px] rounded-[120px]  bg-[#FC8A06] font-[Poppins] font-[700] text-[18px] tracking-[-0.02em] leading-[100%] text-[#000000]">
-//                 {question}
-//               </button>
-//               <h1 className="font-[Poppins] font-[700] text-[18px] tracking-[-0.02em] leading-[100%] text-[#000000]"></h1>
-//             </div>
-//           ))}
-//         </div>
-//         <div className=" flex flex-col">
-//           {questions[0].answer.map((answer, index) => (
-//             <div key={index} className=" flex flex-row gap-[20px] mt
-//           <div className=" flex flex-row">
-//             <div>
-//               <h1></h1>
-//               <Image />
-//               <p></p>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
 
 
 
@@ -182,6 +7,7 @@ import Image from "next/image";
 
 export default function AboutUs() {
   const [selected, setSelected] = useState(0);
+  const [selectedTab, setseletedTab] = useState("Frequent Questions");
 
   const questions = [
     {
@@ -297,7 +123,8 @@ export default function AboutUs() {
             {["Frequent Questions", "Who we are?", "Partner Program", "Help & Support"].map((option) => (
               <button
                 key={option}
-                className="font-[Poppins] font-[400] text-[16px] leading-[100%]"
+                onClick={() => setseletedTab(option)}
+                className={`font-[Poppins] font-[400] text-[16px]  leading-[100%]   ${selectedTab == option ? " rounded-[120px] text-black font-[700] px-[10px] py-[18px]  border-[1px] border-[#FC8A06]  flex justify-center items-center" : ""}`}
               >
                 {option}
               </button>

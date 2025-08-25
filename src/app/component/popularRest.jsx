@@ -20,15 +20,15 @@ export default function Popular({ heading }) {
       </div>
 
       <div className=" flex flex-row lg:gap-[20px] sm:gap-[9px] mt-[51px] sm:min-h-[156px]  overflow-x-auto ">
-        {restaurants.map((rest, index) => (
+        {restaurants.map((rest, id) => (
           <Link
-            key={index}
+            key={id}
             href="/pages/restaurantDetail"
-            onClick={() => setIndex(index)}
+            onClick={() => { setIndex(id); console.log(index) }}
           >
             {" "}
             <div
-              key={index}
+
               className=" border-b-[1px]  border-[#0000001A] flex flex-col lg:w-[238px] lg:h-[266px]  sm:w-[122px] sm:h-[156px]  w-full bg-cover bg-center relative rounded-[12px] overflow-hidden "
             >
               <div>
