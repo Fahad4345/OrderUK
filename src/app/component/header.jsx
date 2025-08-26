@@ -19,7 +19,7 @@ export default function Header() {
           </span>
         </p>
       </div>
-      <div className="  xl:hidden 2xl:flex  flex flex-row  justify-end pr-[30px] overflow-hidden">
+      <div className="  xl:hidden 2xl:flex  flex flex-row items-center  justify-end pr-[30px] overflow-hidden">
         <Image
           width={25}
           height={25}
