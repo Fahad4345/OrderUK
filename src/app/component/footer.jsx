@@ -16,7 +16,7 @@ export default function Footer() {
             className=" lg:w-[215px] lg:h-[53px] sm:w-[266px] sm:h-[66px] sm:mt-[58px] lg:mt-[0px]"
           />
           <Button className=" mt-[33px]" />
-          <p className="font-[Poppins] sm:text-center max-w-[320px] w-full lg:mt-[22px] sm:mt-[20px] font-[400] text-[15px] leading-[100%] tracking-[0em] ">
+          <p className="font-[Poppins] sm:text-center lg:text-start max-w-[320px] w-full lg:mt-[22px] sm:mt-[20px] font-[400] text-[15px] leading-[100%] tracking-[0em] ">
             Company # 490039-445, Registered with House of companies.
           </p>
         </div>
