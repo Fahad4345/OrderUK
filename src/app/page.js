@@ -11,12 +11,12 @@ import AboutUs from "@/app/component/aboutUs";
 import CountBar from "@/app/component/countBar";
 import Footer from "@/app/component/footer";
 import SmHeader from "./component/smHeader";
-
+import { Poppins } from "next/font/google";
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "500", "600", "700"],
+});
 export default function Home() {
-  const poppins = poppins({
-    subsets: ["latin"],
-    weight: ["300", "500", "600", "700"],
-  });
   return (
     <div className="">
       <Header />
