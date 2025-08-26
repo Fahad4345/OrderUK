@@ -10,21 +10,20 @@ export default function PopUpBasket({ onBasketClose }) {
     const [isOpen, setIsOpen] = useState(true);
     const [opendeal, setopendeal] = useState(false)
     const { cart, setCart } = useContext(MyContext)
-    console.log(cart)
+
 
 
     const subTotal = calSubTotal(cart)
 
     function calSubTotal(cart) {
+        console.log(cart)
+
         let sum = 0;
         cart.forEach((item) => {
-            let Price = parseFloat(
-                item.items.sizes[0].price.replace("£", "")
+            sum += item.Price ? Number(item.Price.toString().replace("£", "")) : 0
 
-            )
-
-            sum = sum + Price
         });
+
         return sum;
 
 
@@ -35,12 +34,7 @@ export default function PopUpBasket({ onBasketClose }) {
 
     }
 
-    useEffect(() => {
-        document.body.style.overflow = "hidden";
-        return () => {
-            document.body.style.overflow = "auto";
-        };
-    }, []);
+
 
 
     return (<div onClick={() => {
@@ -62,9 +56,9 @@ export default function PopUpBasket({ onBasketClose }) {
                 {cart.map((item, id) => (<div key={id} className=' flex flex-row justify-center items-center  pt-[25px] border-b-[1px]  border-[#00000033]'>
                     <button className=" w-[45px] h-[45px]  justify-center bg-[#FC8A06] rounded-full items-center  font-[Poppins] font-[700]  text-[24px]  leading-[100%] tracking-[0em]  text-white  flex ">1x</button>
                     <div className=' ml-[27px] flex flex-col gap-y-[6px] max-w-[178px] mb-[24px]'>
-                        <h1 className=' font-[Poppins] font-[600]  text-[20px]  leading-[25px] tracking-[0em] text-[#028643]'>{item.items.sizes[0].price}</h1>
-                        <h1 className=' font-[Poppins] font-[600]  text-[16px]  leading-[100%] tracking-[0em]'>{item.items.name}</h1>
-                        <h1 className=' font-[Poppins] font-[400]  text-[15px]  leading-[18px] tracking-[0em] '>{item.items.description}</h1>
+                        <h1 className=' font-[Poppins] font-[600]  text-[20px]  leading-[25px] tracking-[0em] text-[#028643]'>{item.Price}</h1>
+                        <h1 className=' font-[Poppins] font-[600]  text-[16px]  leading-[100%] tracking-[0em]'>{item.Name}</h1>
+                        <h1 className=' font-[Poppins] font-[400]  text-[15px]  leading-[18px] tracking-[0em] '>{item.Description}</h1>
                     </div>
 
                     <Image src="/assets/icons/Remove.svg" className='ml-[42px]' width={35} height={35} alt="" onClick={() => removeItemfromCart(id)} />

@@ -7,29 +7,12 @@ import { restaurants } from '../../lib/restaurants';
 import Menupopup from "../popup/menupopup";
 
 export default function Menu() {
-  const { index, setIndex, cart, setCart } = useContext(MyContext);
+  const { index } = useContext(MyContext);
   const [isOpen, setIsOpen] = useState(false);
-  useEffect(() => {
-
-    setCart(JSON.parse(localStorage.getItem("cart") || "[]"));
-
-  }, [])
-  useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cart))
+  const [selecteditem, setSelectedItem] = useState(null);
+  console.log(index)
 
 
-  }, [cart])
-
-  function addtoCart(items) {
-    const itemWithRestName = {
-      items, restaurants: restaurants[index].name
-    };
-
-
-    setCart((Prev) => [...Prev, itemWithRestName])
-
-
-  }
 
 
 
@@ -79,10 +62,9 @@ export default function Menu() {
                     className=" w-[232px] h-[199px]"
                   />
                   <div className="absolute flex justify-center item-center w-[97px] h-[89px] right-[0px] bottom-[-1px] z-50 bg-[#FFFFFF]/90 rounded-tl-[46px]"
-                    onClick={() => {
-                      addtoCart(items);
-                      setIsOpen(true);
-                    }}>
+
+                    onClick={() => { setSelectedItem(items); setIsOpen(true); }}
+                  >
                     <Image
                       width={49}
                       height={49}
@@ -93,7 +75,8 @@ export default function Menu() {
                 </div>
                 {isOpen && (
 
-                  <Menupopup itemid={idx} catid={catindex} onBasketClose={() => { setIsOpen(false) }} />
+                  <Menupopup item={selecteditem}
+                    onMenuPopupClose={() => setIsOpen(false)} />
                 )}
               </div>
             ))}

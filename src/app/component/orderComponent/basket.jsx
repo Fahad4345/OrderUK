@@ -144,7 +144,7 @@ export default function RightBasket() {
       </div>
 
     </div>
-    {opendeal && <MealDeals onClose={() => { setopendeal(false); setIsOpen(false); onBasketClose(); }} />}
+    {opendeal && <MealDeals onClose={() => { setopendeal(false); setIsOpen(false); }} />}
   </div>
 
   )

@@ -954,7 +954,11 @@ export const restaurants = [
         {
           name: "Veggie King",
           description: "Plant-based patty with BK sauce.",
-          price: 4.79,
+          sizes: [
+            { label: "Small", price: "£5.99" },
+            { label: "Medium", price: "£7.99" },
+            { label: "Large", price: "£9.99" },
+          ],
         },
         {
           name: "Bacon King",
