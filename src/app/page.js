@@ -13,6 +13,10 @@ import Footer from "@/app/component/footer";
 import SmHeader from "./component/smHeader";
 
 export default function Home() {
+  const poppins = poppins({
+    subsets: ["latin"],
+    weight: ["300", "500", "600", "700"],
+  });
   return (
     <div className="">
       <Header />

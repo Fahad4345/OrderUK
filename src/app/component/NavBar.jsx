@@ -3,10 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { Poppins } from "next/font/google";
 import Button from "./play";
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "500", "600", "700"],
-});
+
 const Navs = ["Home", "Browser Menu", "Special Offer", "Restaurants", "Track Order"]
 
 
