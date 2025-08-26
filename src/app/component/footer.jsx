@@ -4,8 +4,8 @@ import Button from "./play";
 
 export default function Footer() {
   return (
-    <div className=" ">
-      <div className=" bg-[#D9D9D9]/60     lg:gap-x-[20px]   sm:gap-x-[0px] lg:items-start  lg:justify-start sm:justify-center sm:items-center   max-w-[1728px] mx-auto flex flex-row    flex-wrap min-h-[371px]  h-full">
+    <div>
+      <div className=" bg-[#D9D9D9]/60     sm:gap-x-[30px] lg:gap-x-[10px]   gap-y-[10px]    lg:items-start  lg:justify-start sm:justify-center sm:items-center   max-w-[1728px] mx-auto flex flex-row    flex-wrap min-h-[371px]  h-full">
 
         <div className="   flex flex-col  lg:justify-start lg:items-start  sm:justify-center sm:items-center lg:mt-[93px] lg:ml-[115px]">
           <Image
@@ -44,6 +44,7 @@ export default function Footer() {
             <Image width={45} height={45} src="/assets/icons/Snapchat.svg" alt="" />
           </div>
         </div>
+
 
         <div className=" flex flex-col lg:mt-[81px] lg:ml-[40px] sm:mt-[46px] sm:ml-[0px]  sm:mb-[45px]   lg:mb-[0px] sm:mr-[100px] lg:mr-[0px]">
           <h1 className="font-[Poppins] font-[700] text-[18px] leading-[43px] tracking-[0em] ">Legal Pages</h1>

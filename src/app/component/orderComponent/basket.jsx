@@ -44,7 +44,7 @@ export default function PopUpBasket({ onBasketClose }) {
 
   return (<div  >
 
-    {isOpen && !opendeal && (<div className=' sm:hidden lg:flex flex flex-col items-center '>
+    {isOpen && !opendeal && (<div className=' sm:hidden xl:hidden 2xl:flex flex flex-col items-center '>
       <div className=' mb-[21px] bg-[#FC8A06]  w-full flex min-h-[125px] flex-row rounded-[12px] items-center justify-center'>
         <Image src="/assets/icons/Clock (1).svg" width={58} height={58} alt="" />
         <h1 className=' font-[Poppins] font-[600]  text-[18px]  leading-[66px] tracking-[0em] text-white'>Open until 3:00 am</h1>

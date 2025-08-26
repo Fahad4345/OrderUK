@@ -20,7 +20,7 @@ export default function deal() {
     },
   ];
   return (
-    <div className="sm:max-w-[calc(100vw_-_22px)] lg:max-w-[1528px] w-full mx-auto mt-[54px] ">
+    <div className="sm:max-w-[calc(100vw_-_22px)] lg:max-w-[calc(100vw_-_22px)]  2xl:max-w-[1528px]  w-full mx-auto mt-[54px] ">
 
 
       <div className="  sm:h-[205px] lg:h-full flex-row  lg:gap-[20px] sm:gap-[14px] mt-[60px]   flex overflow-x-auto ">

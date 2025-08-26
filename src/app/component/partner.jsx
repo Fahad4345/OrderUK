@@ -8,7 +8,7 @@ import Popular from "@/app/component/popularRest";
 
 export default function Partner() {
   return (
-    <div className="  sm:max-w-[calc(100vw_-_22px)] lg:max-w-[1528px] mx-auto w-full  justify-items-center grid lg:grid-cols-2 sm:grid-cols- gap-[19px] mt-[53px] mb-[63px]">
+    <div className="  sm:max-w-[calc(100vw_-_22px)] lg:max-w-[calc(100vw_-_22px)]  2xl:max-w-[1528px]  mx-auto w-full  justify-items-center grid lg:grid-cols-2 sm:grid-cols- gap-[19px] mt-[53px] mb-[63px]">
       <div
         style={{
           backgroundImage: 'url("/assets/icons/Partner.png")',

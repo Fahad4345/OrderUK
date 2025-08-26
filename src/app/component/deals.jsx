@@ -26,7 +26,7 @@ export default function Deals() {
     },
   ];
   return (
-    <div className="sm:max-w-[calc(100vw_-_22px)] lg:max-w-[1528px] w-full  mx-auto mt-[54px] ">
+    <div className="sm:max-w-[calc(100vw_-_22px)] lg:max-w-[calc(100vw_-_22px)]  2xl:max-w-[1528px] w-full  mx-auto mt-[54px] ">
       <div className=" flex  justify-between  max-w-[1528px] items-center">
         <h1 className=" font-[Poppins] font-[700] lg:text-[32px]  sm:text-[16px] leading-[100%] tracking-[0em] text-[#000000]">
           Up to -40% 🎊 Order.uk exclusive deals

@@ -42,7 +42,7 @@ export default function RestInfo() {
   ];
 
   return (
-    <div className=" sm:max-w-[calc(100vw_-_22px)] lg:max-w-[1528px]  h-full  rounded-[12px]  flex   mx-auto lg:mt-[151px] sm:mt-[28px] shadow-[5px_5px_14px_0px_rgba(0,0,0,0.25)] bg-[#FBFBFB]">
+    <div className="sm:max-w-[calc(100vw_-_22px)] lg:max-w-[calc(100vw_-_22px)]  2xl:max-w-[1528px]   h-full  rounded-[12px]  flex   mx-auto 2xl:mt-[151px] sm:mt-[28px] shadow-[5px_5px_14px_0px_rgba(0,0,0,0.25)] bg-[#FBFBFB]">
       <div className=' flex    max-w-[1528px]  sm:px-[23px] lg:px-[0px] sm:pt-[11px] lg:pt-[0px] sm:mb-[36px] lg:mb-[0px] w-full flex-row  flex-wrap  sm:justify-center sm: items-center  lg:gap-x-[19px] sm:gap-y-[47px] h-full  '>
         {restaurantInfo.map((section, index) => (
           <div key={index} className={` flex flex-col lg:gap-y-[20px]  lg:pt-[122px] lg:min-h-[659px]   sm:pt-[19px]   lg:pb-[0px] sm:pb-[26px] max-w-[496px] w-full  lg:pl-[63px] sm:pl-[23px] rounded-[12px] ${section.category === "Operational Times" ? "bg-black text-white" : ""

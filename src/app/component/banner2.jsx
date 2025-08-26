@@ -5,7 +5,7 @@ import Button from "./play";
 
 export default function Banner2() {
   return (
-    <div className=" relative sm:max-w-[calc(100vw_-_22px)] lg:max-w-[1528px]  mx-auto w-full  sm:min-h-[524px] lg:min-h-[611px]  mt-[94px] rounded-[12px] border-[1px] bg-[#E0E1DC] border-[#00000033] ">
+    <div className=" relative sm:max-w-[calc(100vw_-_22px)] lg:max-w-[calc(100vw_-_22px)]  2xl:max-w-[1528px]   mx-auto w-full  sm:min-h-[524px] lg:min-h-[611px]  mt-[94px] rounded-[12px] border-[1px] bg-[#E0E1DC] border-[#00000033] ">
       <Image
         width={720}
         height={600}

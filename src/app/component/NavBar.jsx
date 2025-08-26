@@ -10,7 +10,7 @@ const Navs = ["Home", "Browser Menu", "Special Offer", "Restaurants", "Track Ord
 export default function NavBar() {
   const [seletedTab, setselectedTab] = useState("Home")
   return (
-    <div className="  sm:hidden lg:flex max-w-[1528px] w-full mx-auto mt-[38px] flex flex-row  justify-between items-center">
+    <div className=" w-full  flex  justify-center mx-auto"><div className=" lg: mx-[22px] sm:hidden lg:flex max-w-[1528px] w-full mt-[38px] flex flex-row  justify-between items-center">
       <Image width={25} height={25} src={"/assets/icons/LOGO 1.svg"} alt="" className=' w-[215px] h-[53px]' />
 
 
@@ -36,5 +36,8 @@ export default function NavBar() {
 
 
     </div>
+
+    </div>
+
   );
 }

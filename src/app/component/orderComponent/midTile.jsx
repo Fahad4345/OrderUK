@@ -1,15 +1,26 @@
 "use client"
 import React, { useState, useContext } from 'react'
-import { FaPepperHot } from "react-icons/fa";
+
 import Image from 'next/image';
 import { MyContext } from "../../context/MyContext";
 import { restaurants } from '../../lib/restaurants';
 
 export default function MidTile() {
-  const { index, selectedCategory, setIndex } = useContext(MyContext);
+  const { index, setIndex, cart, setCart, selectedCategory } = useContext(MyContext);
   const [size, setSize] = useState("Small");
+  const [price, setPrice] = useState("Price");
   const max = 5;
   const SpiceLevel = 2;
+
+
+  function addtoCart(item) {
+    const itemWithRestName = {
+      Name: item.name, Restaurant: restaurants[index].name, Description: item.description, Size: size, Price: price
+    };
+
+    setCart((Prev) => [...Prev, itemWithRestName])
+    alert("added")
+  }
 
 
   return (
@@ -70,7 +81,7 @@ export default function MidTile() {
           <div className='sm:flex lg:hidden flex-col '>
             <div className=' flex justify-between '>
               <div className=''>
-                <h1 className="font-[Poppins]  font-[600] text-[24px] leading-[100%] tracking-[0em] text-[#03081F]">{item.name}</h1>
+                <h1 className="font-[Poppins]  font-[600] text-[24px] leading-[200%] tracking-[0em] text-[#03081F]">{item.name}</h1>
                 <div className="flex items-center">
                   {[...Array(max)].map((_, i) => (
                     <Image
@@ -89,29 +100,48 @@ export default function MidTile() {
               <div className=' rounded-full'><Image src="/assets/icons/Pizza1.png" width={191} height={191} alt="" className=' w-[117px] h-[117px]' /></div>
             </div>
           </div>
+          <div className=' flex flex-row w-full  gap-[20px] items-end justify-between  mt-[31px]'>
+            <div className=' flex   w-fit flex-wrap  gap-x-[6px] gap-y-[19px] flex-row  mt-[31px]  '>
+              {item.sizes.map((s, id) => (
+                <div key={id} onClick={() => { setSize(s.label); setPrice(s.price); }} className={`flex flex-row  h-fit  py-[10px] px-[8px]  gap-x-[21px] items-center rounded-[4px] border-[1px] border-[#03081F] ${s.label === size ? "bg-[#03081F]" : ""}`}>
+                  <div className='flex justify-center items-center'> <h1 className={`font-[Poppins] font-[700] text-[14px] leading-[25px] tracking-[0em] ${s.label === size ? "text-white" : "text-[#03081F]"
+                    }`}>{s.label}</h1></div>
+                  <div className='  min-h-[39px] min-w-[90px] bg-[#028643] flex justify-center items-center'><h1 className="font-[Poppins]  font-[700] text-[14px] leading-[25px] tracking-[0em] text-[#FFFFFF] ">{s.price}</h1></div>
+                </div >
+              ))}
 
-          <div className=' flex flex-wrap  gap-x-[6px] gap-y-[19px] flex-row  mt-[31px]'>
-            {item.sizes.map((s, id) => (
-              <div key={id} onClick={() => setSize(s.label)} className={`flex flex-row   py-[10px] px-[8px]  gap-x-[21px] items-center rounded-[4px] border-[1px] border-[#03081F] ${s.label === size ? "bg-[#03081F]" : ""}`}>
-                <div className='flex justify-center items-center'> <h1 className={`font-[Poppins] font-[700] text-[14px] leading-[25px] tracking-[0em] ${s.label === size ? "text-white" : "text-[#03081F]"
-                  }`}>{s.label}</h1></div>
-                <div className='  min-h-[39px] min-w-[90px] bg-[#028643] flex justify-center items-center'><h1 className="font-[Poppins]  font-[700] text-[14px] leading-[25px] tracking-[0em] text-[#FFFFFF] ">{s.price}</h1></div>
-              </div >
-            ))}
 
+            </div>
+            <div className=" flex justify-center item-center w-[100px] h-[100px] z-50  bg-amber-500 rounded-tl-[46px] rounded-br-[46px]"
+
+              onClick={() => { addtoCart(item); }}
+            >
+              <Image
+                width={49}
+                height={49}
+                src="/assets/icons/Plus.svg"
+                alt=""
+              />
+            </div>
           </div>
+
+
+
         </div>
 
       </div>
 
 
-      ))}
+
+
+      ))
+      }
       <div
 
         style={{
           backgroundImage: ` linear-gradient(245.7deg, rgba(255, 255, 255, 0) 0.94%, rgba(3, 8, 31, 0.19) 51.68%, rgba(3, 8, 31, 0.89) 87.9%),
                           url('/assets/icons/Rectangle8.png')` }}
-        className=" relative mt-[27px] sm:max-w-[388px] sm:min-h-[325px]  mx-auto  sm:flex lg:hidden  bg-cover bg-center  rounded-[12px] flex flex-col   "
+        className=" relative mt-[27px] sm:max-w-[388px] sm:min-h-[325px]  mx-auto  sm:flex xl:flex 2xl:hidden bg-cover bg-center  rounded-[12px] flex flex-col   "
       >
         {" "}
         <div className="   z-50 lg:w-[88px] sm:w-[68.84px] lg:ml-[22px] sm:ml-[23.26px]  lg:h-[66px] sm:h-[66px] h-full bg-[#03081F]   lg:rounded-b-[12px] sm:rounded-b-[4px] lg:mr-[20px] sm:mr-[16px]  flex justify-center items-center">
@@ -140,7 +170,7 @@ export default function MidTile() {
       </div>
 
 
-    </div>
+    </div >
 
   )
 }

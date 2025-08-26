@@ -7,7 +7,7 @@ import Image from "next/image.js";
 export default function Banner() {
     const { index, setIndex } = useContext(MyContext);
     return (
-        <div className='sm:max-w-[calc(100vw_-_22px)]  lg:max-w-[1528px]  mt-[41px] w-full   sm:mx-auto rounded-[12px]'
+        <div className='sm:max-w-[calc(100vw_-_22px)] lg:max-w-[calc(100vw_-_22px)]  2xl:max-w-[1528px]  mt-[41px] w-full   sm:mx-auto rounded-[12px]'
             style={{ backgroundImage: ` url("/assets/icons/Rectangle 43.png")` }}>
 
             <div className='max-w-[1528px] flex-wrap  relative  sm:justify-center lg:justify-start flex flex-row w-full lg:h-[477px] sm:h-[593px] mx-auto rounded-[12px] bg-[#E2E2E2E5]/90 dark:bg-[#03081F]/90 '>
@@ -25,12 +25,12 @@ export default function Banner() {
                 <div className=" lg:ml-[57px] lg:pt-[171px] "><p className=" font-[Poppins] font-[400] lg:text-[20px] sm:text-[13px]  sm:text-center lg:text-start   text-[#000000] dark:text-white">Desi Flavours with a blend of Italian aesthetics!</p>
                     <h1 className=" font-[Poppins] font-[700] lg:text-[44px] sm:text-[28px] sm:text-center lg:text-start leading-[66px] tracking-[0em] text-[#000000] dark:text-white">{restaurants[index].name}</h1>
                     <div className=" flex lg:flex-row sm:flex-col lg:items-start sm:items-center gap-[17px] lg:mt-[31px] sm:mt-[14px] ">
-                        <div className=" w-[330px]   flex flex-row  lg:gap-[17px] sm:gap-[15px] justify-center items-center rounded-[120px] bg-[#03081F]">
+                        <div className=" max-w-[330px] w-full  min-w-[300px]  flex flex-row  lg:gap-[17px] sm:gap-[15px] justify-center items-center rounded-[120px] bg-[#03081F]">
                             <Image alt="" src="/assets/icons/Order Completed.svg" width={34} height={34} />
                             <p className=" font-[Poppins] font-[600] text-[18px] leading-[66px] tracking-[0%] text-white ">Minimum Order: 12 GBP </p>
 
                         </div>
-                        <div className=" w-[330px]  flex flex-row  gap-[17px] justify-center items-center rounded-[120px] bg-[#03081F]">
+                        <div className=" max-w-[330px] min-w-[300px] w-full flex flex-row  gap-[17px] justify-center items-center rounded-[120px] bg-[#03081F]">
                             <Image alt="" src="/assets/icons/Order Completed.svg" width={34} height={34} />
                             <p className=" font-[Poppins] font-[600] text-[18px] leading-[66px] tracking-[0%] text-white ">Minimum Order: 12 GBP </p>
 

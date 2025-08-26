@@ -18,7 +18,7 @@ export default function Menu() {
 
 
   return (
-    <div className=" sm:max-w-[calc(100vw_-_22px)] lg:max-w-[1528px]  mx-auto flex flex-col flex-wrap">
+    <div className=" sm:max-w-[calc(100vw_-_22px)] lg:max-w-[calc(100vw_-_22px)]  2xl:max-w-[1528px]   mx-auto flex flex-col flex-wrap">
       {Object.keys(restaurants[index].menu).map((category, catindex) => (
         <div
           className=" flex flex-wrap gap-[40px]  max-w-[1528px] w-full mx-auto  "
