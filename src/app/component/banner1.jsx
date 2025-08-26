@@ -33,7 +33,7 @@ export default function Banner1() {
               <Image
                 width={34}
                 height={34}
-                src={"/assets/icons/Next Page.svg"}
+                src={"/assets/icons/NextPage.svg"}
                 alt=""
                 className="  lg:hidden sm:flex w-[34px] h-[34px]"
               />
