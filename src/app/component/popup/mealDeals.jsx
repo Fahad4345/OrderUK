@@ -75,8 +75,8 @@ export default function MealDeals({ onClose }) {
   const [step, setStep] = useState(1);
 
   return (
-    <div className="fixed inset-0 overflow-y-scroll z-70 flex items-center justify-center bg-black/50">
-      <div className="relative  sm:max-w-[392px] sm:max-h-[1099px] lg:max-w-[1270px] lg:max-h-[1986px] w-full  rounded-[12px] bg-white ">
+    <div onClick={(e) => onClose()} className="fixed inset-0 overflow-y-scroll z-70 flex items-center justify-center bg-black/50">
+      <div onClick={(e) => e.stopPropagation()} className="relative  sm:max-w-[392px] sm:max-h-[1099px] lg:max-w-[1270px] lg:max-h-[1986px] w-full  rounded-[12px] bg-white ">
         <button
           onClick={() => onClose()}
           className="absolute z-50 -top-10 -right-14 lg:w-[116px] lg:h-[116px] sm:w-[80px] sm:h-[80px] bg-[#FC8A06] rounded-full flex items-center justify-center rotate-180"

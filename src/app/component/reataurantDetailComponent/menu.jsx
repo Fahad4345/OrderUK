@@ -61,7 +61,7 @@ export default function Menu() {
                     alt=""
                     className=" w-[232px] h-[199px]"
                   />
-                  <div className="absolute flex justify-center item-center w-[97px] h-[89px] right-[0px] bottom-[-1px] z-50 bg-[#FFFFFF]/90 rounded-tl-[46px]"
+                  <div className="absolute flex justify-center item-center w-[97px] h-[89px] right-[0px] bottom-[-1px] z-20 bg-[#FFFFFF]/90 rounded-tl-[46px]"
 
                     onClick={() => { setSelectedItem(items); setIsOpen(true); }}
                   >
