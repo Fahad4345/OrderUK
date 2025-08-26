@@ -45,7 +45,7 @@ export default function Header() {
         <Image
           width={43}
           height={43}
-          src={"/assets/icons/Full Shopping Basket.svg"}
+          src={"/assets/icons/FullShoppingBasket.svg"}
           alt=""
           className=" w-[43px] h-[43px] mx-auto"
           onClick={() => setIsOpen(true)}
