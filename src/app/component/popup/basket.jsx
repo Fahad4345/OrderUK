@@ -47,7 +47,7 @@ export default function PopUpBasket({ onBasketClose }) {
 
             <div onClick={(e) => e.stopPropagation()} className=' max-w-[378px]  bg-white  w-full border-[#BCBCBC] border-[1px] rounded-[12px] flex flex-col'>
                 <div className='pl-[34px] pb-[48px] items-center flex gap-[20px] pt-[49px] bg-[#028643] rounded-t-[12px] '>
-                    <Image src="/assets/icons/Full shopping Basket.svg" width={55} height={55} alt="" />
+                    <Image src="/assets/icons/FullshoppingBasket.svg" width={55} height={55} alt="" />
                     <h1 className=' font-[Poppins] font-[600]  text-[32px]  leading-[100%] tracking-[0em] text-white'> My Basket</h1>
                 </div>
 

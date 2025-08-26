@@ -10,12 +10,12 @@ export default function Banner() {
         <div className='sm:max-w-[calc(100vw_-_22px)]  lg:max-w-[1528px]  mt-[41px] w-full   sm:mx-auto rounded-[12px]'
             style={{ backgroundImage: ` url("/assets/icons/Rectangle 43.png")` }}>
 
-            <div className='max-w-[1528px] flex-wrap   sm:justify-center lg:justify-start flex flex-row w-full lg:h-[477px] sm:h-[593px] mx-auto rounded-[12px] bg-[#E2E2E2E5]/90 dark:bg-[#03081F]/90 '>
-                <div className=" sm:flex lg:hidden relative items-center justify-center flex">
+            <div className='max-w-[1528px] flex-wrap  relative  sm:justify-center lg:justify-start flex flex-row w-full lg:h-[477px] sm:h-[593px] mx-auto rounded-[12px] bg-[#E2E2E2E5]/90 dark:bg-[#03081F]/90 '>
+                <div className=" sm:flex lg:hidden relative  sm:mt-[43px] lg:mt-[0px] flex">
                     <Image alt="" src="/assets/icons/Rectangle 44.png" className=" lg:w-[581] lg:h-[361px] sm:w-[228px] sm:h-[142px]" width={581} height={361} />
                     <Image width={153} height={178} src="/assets/icons/Review bar.png" alt="" className="  lg:w-[153px] lg:h-[178px] sm:w-[53px] sm:h-[62px]  absolute   lg:top-[250px] lg:right-[501px]" />
                 </div>
-                <div className=" w-full ">
+                <div className=" w-full  sm:flex lg:hidden ">
                     <div className=" items-center  justify-center flex gap-[13px] mr-[62px] h-[61px]  sm:flex lg:hidden w-[335px]  bg-[#FC8A06] rounded-r-[12px] mt-[34px]">
                         <Image alt="" src="/assets/icons/Clock (1).svg" className=" w-[29px] h-[29px]" width={581} height={361} />
                         <p className=" text-white font-[Poppins] font-[600] lg:text-[20px] sm:text-[18px]  sm:text-center lg:text-start    leading-[66px] tracking-[0em] ">Open at 3:00 am</p></div>
@@ -38,11 +38,11 @@ export default function Banner() {
 
                     </div>
                 </div>
-                <div className="pt-[57px] ml-[137px] sm:hidden lg:flex relative">
+                <div className="pt-[57px] ml-[137px] sm:hidden  xl:hidden  2xl:flex relative">
                     <Image alt="" src="/assets/icons/Rectangle 44.png" className=" lg:w-[581] lg:h-[361px] sm:w-[228px] sm:h-[142px]" width={581} height={361} />
                     <Image width={153} height={178} src="/assets/icons/Review bar.png" alt="" className="  lg:w-[153px] lg:h-[178px] sm:w-[53px] sm:h-[62px]  absolute   lg:top-[250px] lg:right-[501px]" />
                 </div>
-                <div className=" items-center  justify-center flex gap-[13px] mr-[62px] h-[61px]  sm:hidden lg:flex w-[335px]  bg-[#FC8A06] rounded-r-[12px] mt-[34px]">
+                <div className=" items-center  bottom-[-26px]  left-0  absolute justify-center flex gap-[13px] mr-[62px] h-[61px]  sm:hidden lg:flex w-[335px]  bg-[#FC8A06] rounded-r-[12px] mt-[34px]">
                     <Image alt="" src="/assets/icons/Clock (1).svg" className=" w-[29px] h-[29px]" width={581} height={361} />
                     <p className=" text-white font-[Poppins] font-[600] lg:text-[20px] sm:text-[18px]  sm:text-center lg:text-start   leading-[66px] tracking-[0em] ">Open at 3:00 am</p></div>
 
