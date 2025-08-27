@@ -113,34 +113,35 @@ export default function AboutUs() {
   ];
 
   return (
-    <div className=" sm:max-w-[calc(100vw_-_22px)] lg:max-w-[calc(100vw_-_22px)]  2xl:max-w-[1528px]  h-full w-full lg:bg-[#D9D9D9]/30 rounded-[12px] flex flex-col  mx-auto">
+    <div className=" lg:mt-[53px] sm:max-w-[calc(100vw_-_22px)] lg:max-w-[calc(100vw_-_22px)]  2xl:max-w-[1528px]  h-full w-full lg:bg-[#D9D9D9]/30 rounded-[12px] flex flex-col sm:shadow-[5px_5px_34px_0px_rgba(0,0,0,0.25)] mx-auto sm:mt-[44px] ">
       <div className="max-w-[1290px] w-full  flex flex-col justify-center items-center lg:mt-[124px] sm:mx-auto">
-        <div className="flex flex-row lg:justify-between sm: justify-center w-full ">
-          <h1 className="font-[700] font-[poppins] lg:text-[32px] sm:text-[26px] leading-[100%]  text-[#000000]">
+        <div className="flex flex-row  lg:justify-between sm: justify-center w-full ">
+          <h1 className="font-[700] font-[poppins] lg:text-[32px] sm:text-[26px] leading-[100%] sm:mt-[30px] lg:mt-[0px] text-[#000000]">
             Know more about us!
           </h1>
-          <div className="max-w-[643px] w-full flex justify-between sm:hidden lg:flex sm:mx-auto lg:mx-[0px]">
-            {["Frequent Questions", "Who we are?", "Partner Program", "Help & Support"].map((option) => (
-              <button
-                key={option}
-                onClick={() => setseletedTab(option)}
-                className={`font-[Poppins] font-[400] text-[16px]  leading-[100%]   ${selectedTab == option ? " rounded-[120px] text-black font-[700] px-[10px] py-[18px]  border-[1px] border-[#FC8A06]  flex justify-center items-center" : ""}`}
-              >
-                {option}
-              </button>
-            ))}
+          <div className="  sm:hidden lg:flex  justify-end   flex   ">
+            <div className=" flex justify-between  ">
+              {["Frequent Questions", "Who we are?", "Partner Program", "Help & Support"].map((tab, id) => (
+                <button key={id} className={`font-[Poppins]  cursor-pointer w-auto font-[400] text-[16px] leading-[100%] tracking-[0em] px-[22px] py-[17px]  ${selectedTab == tab ? " rounded-[120px]   text-black font-[700]  border-[1px] border-[#FC8A06]  flex justify-center items-center" : ""}`}
+                  onClick={() => setseletedTab(tab)}>
+                  {tab}
+                </button>
+              ))}
+
+            </div>
           </div>
+
         </div>
 
 
         <div className="lg:mt-[69px] sm:mt-[46px]  lg:mb-[115px] flex flex-row lg:dark:bg-[#03081F] justify-center items-center  flex-wrap  max-w-[1290px]   w-full rounded-[12px] ">
 
-          <div className="flex  flex-col items-center justify-center  lg:mt-[78px] lg:mb-[115px]  sm:mb-[53px] gap-[10px]  max-w-[474px]  w-full ">
+          <div className="flex  flex-col items-center justify-center  lg:mt-[78px] lg:mb-[115px]  sm:mb-[53px] gap-[10px]  max-w-[397px]  w-full ">
             {questions.map((q, index) => (
               <button
                 key={index}
                 onClick={() => setSelected(index)}
-                className={`items-center max-w-[352px] w-full  h-[62px] rounded-[120px] font-[Poppins] font-[700] text-[18px] tracking-[-0.02em] leading-[100%] ${selected === index
+                className={`items-center  cursor-pointer w-auto px-[18px] py-[18px]  h-[62px] rounded-[120px] font-[Poppins] font-[700] text-[18px] tracking-[-0.02em] leading-[100%] ${selected === index
                   ? "bg-[#FC8A06] dark: text-black  "
                   : "bg-transparent text-black lg:dark:text-white hover:bg-[#FC8A06]/40"
                   }`}
@@ -155,7 +156,7 @@ export default function AboutUs() {
               {questions[selected].answer.map((ans, index) => (
                 <div
                   key={index}
-                  className="flex flex-col p-[25px] lg:mt-[88px] bg-[#D9D9D9] items-center justify-between rounded-[12px]  max-w-[238px] w-full h-[285px] text-center "
+                  className="flex cursor-pointer flex-col p-[25px] lg:mt-[88px] bg-[#D9D9D9] items-center justify-between rounded-[12px]  max-w-[238px] w-full h-[285px] text-center "
                 >   <h3 className=" font-[Poppins] font-[700] text-[18px] tracking-[-0.02em] leading-[100%] dark:text-[#03081F]">{ans.title}</h3>
                   <Image
                     src={ans.icon}
@@ -170,7 +171,7 @@ export default function AboutUs() {
 
               ))}
 
-            </div> <p className="text-[#000000] font-[Poppins] font-[400] text-[18px] tracking-[-0.02em]  mt-[25px]  max-w-[700px] text-center dark:text-white sm:px-[37px] lg:px-[0px]  sm:pb-[43px] lg:pb-[0px]">Order.UK simplifies the food ordering process. Browse through our diverse menu, select your favorite dishes, and proceed to checkout. Your delicious meal will be on its way to your doorstep in no time!</p>
+            </div> <p className="text-[#000000] cursor-pointer font-[Poppins] font-[400] text-[18px] tracking-[-0.02em]  mt-[25px]  max-w-[700px] text-center dark:text-white sm:px-[37px] lg:px-[0px]  sm:pb-[43px] lg:pb-[0px]">Order.UK simplifies the food ordering process. Browse through our diverse menu, select your favorite dishes, and proceed to checkout. Your delicious meal will be on its way to your doorstep in no time!</p>
           </div>
 
         </div>

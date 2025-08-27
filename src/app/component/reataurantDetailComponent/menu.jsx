@@ -7,7 +7,7 @@ import { restaurants } from '../../lib/restaurants';
 import Menupopup from "../popup/menupopup";
 
 export default function Menu() {
-  const { index } = useContext(MyContext);
+  const { index, cart, setCart } = useContext(MyContext);
   const [isOpen, setIsOpen] = useState(false);
   const [selecteditem, setSelectedItem] = useState(null);
   console.log(index)

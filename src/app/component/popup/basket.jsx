@@ -10,13 +10,14 @@ export default function PopUpBasket({ onBasketClose }) {
     const [isOpen, setIsOpen] = useState(true);
     const [opendeal, setopendeal] = useState(false)
     const { cart, setCart } = useContext(MyContext)
+    console.log(cart)
 
 
 
     const subTotal = calSubTotal(cart)
 
     function calSubTotal(cart) {
-        console.log(cart)
+
 
         let sum = 0;
         cart.forEach((item) => {
@@ -42,7 +43,7 @@ export default function PopUpBasket({ onBasketClose }) {
         onBasketClose();
     }} >
 
-        {isOpen && !opendeal && (<div className=' lg:flex  fixed inset-0 items-center z-50 overflow-scroll flex flex-col  bg-black/50 '>
+        {isOpen && !opendeal && (<div className=' lg:flex  fixed inset-0 items-center justify-center z-50 overflow-scroll flex flex-col  bg-black/50 '>
 
 
             <div onClick={(e) => e.stopPropagation()} className=' max-w-[378px]  bg-white  w-full border-[#BCBCBC] border-[1px] rounded-[12px] flex flex-col'>
@@ -54,11 +55,11 @@ export default function PopUpBasket({ onBasketClose }) {
 
                 <div></div>
                 {cart.map((item, id) => (<div key={id} className=' flex flex-row justify-center items-center  pt-[25px] border-b-[1px]  border-[#00000033]'>
-                    <button className=" w-[45px] h-[45px]  justify-center bg-[#FC8A06] rounded-full items-center  font-[Poppins] font-[700]  text-[24px]  leading-[100%] tracking-[0em]  text-white  flex ">1x</button>
+                    <button className=" w-[45px] h-[45px]  justify-center bg-[#FC8A06] rounded-full items-center  font-[Poppins] font-[700]  text-[24px]  leading-[100%] tracking-[0em]  text-white  flex ">{`${item.quantity}X `}</button>
                     <div className=' ml-[27px] flex flex-col gap-y-[6px] max-w-[178px] mb-[24px]'>
-                        <h1 className=' font-[Poppins] font-[600]  text-[20px]  leading-[25px] tracking-[0em] text-[#028643]'>{item.Price}</h1>
-                        <h1 className=' font-[Poppins] font-[600]  text-[16px]  leading-[100%] tracking-[0em]'>{item.Name}</h1>
-                        <h1 className=' font-[Poppins] font-[400]  text-[15px]  leading-[18px] tracking-[0em] '>{item.Description}</h1>
+                        <h1 className=' font-[Poppins] font-[600]  text-[20px]  leading-[25px] tracking-[0em] text-[#028643]'>{item.price}</h1>
+                        <h1 className=' font-[Poppins] font-[600]  text-[16px]  leading-[100%] tracking-[0em]'>{item.name}</h1>
+                        <h1 className=' font-[Poppins] font-[400]  text-[15px]  leading-[18px] tracking-[0em] '>{item.description}</h1>
                     </div>
 
                     <Image src="/assets/icons/Remove.svg" className='ml-[42px]' width={35} height={35} alt="" onClick={() => removeItemfromCart(id)} />

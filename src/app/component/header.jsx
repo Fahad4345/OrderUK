@@ -7,7 +7,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className=" sm:hidden lg:flex max-w-[1528px]  xl:justify-between     mx-auto  max-h-[70px]  flex  flex-row bg-[#FAFAFA] border-[1px]  rounded-bl-[12px] rounded-br-[12px] border-[#0000001A] items-center">
-      <div className=" flex flex-row items-center  min-w-[400px] gap-[12px] ml-[37px] ">
+      <div className=" flex cursor-pointer flex-row items-center  min-w-[400px] gap-[12px] ml-[37px] ">
         <p className="font-[Poppins] font-[500] text-[25px] leading-[100%] tracking-[0em]">
           🌟
         </p>
@@ -28,7 +28,7 @@ export default function Header() {
             alt=""
             className=" w-[25px] h-[25px]"
           />
-          <p className="font-[Poppins] font-[500] text-[15px] leading-[100%] tracking-[0em] ml-[14px] mr-[13px]">
+          <p className="font-[Poppins] cursor-pointer font-[500] text-[15px] leading-[100%] tracking-[0em] ml-[14px] mr-[13px]">
             Regent Street,{" "}
             <span className="font-[500px] text-[15px] leading-[100%] tracking-[0em] underline">
               A4
@@ -37,36 +37,49 @@ export default function Header() {
           </p>
           <a
             href=""
-            className="font-[Poppins] font-[500] text-[14px] leading-[100%] tracking-[0em] underline  text-[#FC8A06] "
+            className="font-[Poppins]  cursor-pointer font-[500] text-[14px] leading-[100%] tracking-[0em] underline  text-[#FC8A06] "
           >
             Change Location
           </a>
         </div>
-        <div className="bg-[#028643]  flex flex-row items-center   min-w-[381px]   rounded-bl-[12px] rounded-br-[12px] ">
-          <Image
-            width={43}
-            height={43}
-            src={"/assets/icons/FullShoppingBasket.svg"}
-            alt=""
-            className=" w-[43px] h-[43px] mx-auto"
-            onClick={() => setIsOpen(true)}
-          />
+        <div className="bg-[#028643] cursor-pointer flex flex-row items-center    min-w-[378px]   rounded-bl-[12px] rounded-br-[12px] ">
+
+          <div className=" flex justify-center  items-center  min-w-[88px] ">
+            <Image
+              width={43}
+              height={43}
+              src={"/assets/icons/FullShoppingBasket.svg"}
+              alt=""
+              className=" w-[43px] h-[43px]   "
+              onClick={() => setIsOpen(true)}
+            />
+          </div>
           <div className="w-[0px] h-[70px] border-[1px] opacity-[30%] border-[#FFFFFF]"></div>
-          <p className="font-[Poppins] font-[600] text-[16px] leading-[100%] tracking-[0em] text-[#FFFFFF] mx-auto ">
-            23 Items
-          </p>
+          <div className=" flex justify-center  items-center min-w-[112px]">
+            <p className="font-[Poppins] font-[600] text-[16px] leading-[150%] tracking-[0em] text-[#FFFFFF]  ">
+              23 Items
+            </p>
+          </div>
+
           <div className="w-[0px] h-[70px] border-[1px] opacity-[30%] border-[#FFFFFF]"></div>
-          <p className=" font-[Poppins] font-[600] text-[16px] leading-[100%] tracking-[0em] text-[#FFFFFF] mx-auto">
-            GBP 79.89
-          </p>
+
+          <div className="flex justify-center  items-center  min-w-[116px]">
+            <p className=" font-[Poppins] font-[600] text-[16px] leading-[150%] tracking-[0em] text-[#FFFFFF]  mx-[18px]">
+              GBP 79.89
+            </p>
+          </div>
+
           <div className="w-[0px] h-[70px] border-[1px] opacity-[30%] border-[#FFFFFF]"></div>
-          <Image
-            width={720}
-            height={600}
-            src={"assets/icons/ForwardButtonWhite.svg"}
-            alt=""
-            className=" w-[38px] h-[38px] mx-auto"
-          />
+          <div className=" flex justify-center  items-center min-w-[62px]">
+            <Image
+              width={720}
+              height={600}
+              src={"assets/icons/ForwardButtonWhite.svg"}
+              alt=""
+              className=" w-[38px] h-[38px] "
+            />
+          </div>
+
         </div>
       </div>
 

@@ -11,17 +11,42 @@ import { MyContext } from "../../context/MyContext";
 export default function Menupopup({ item, onMenuPopupClose }) {
     const { index, setIndex, cart, setCart } = useContext(MyContext);
     const [size, setSize] = useState("Small");
-    const [price, setPrice] = useState("Price");
+    const [price, setPrice] = useState("£5.99");
     const max = 5;
     const SpiceLevel = 3;
-    const sizes = item.sizes
+    const sizes = item.sizes;
+
+
+
+
+
 
 
     function addtoCart(items) {
         const itemWithRestName = {
-            Name: items.name, Restaurant: restaurants[index].name, Description: item.description, Size: size, Price: price
+            name: items.name, restaurant: restaurants[index].name, description: item.description, size: size, price: price
         };
-        setCart((Prev) => [...Prev, itemWithRestName])
+        console.log(price)
+        setCart((Prev) => {
+
+            const existing = Prev.find(
+                (i) => i.name === itemWithRestName.name && i.size === itemWithRestName.size
+            );
+
+            if (existing) {
+
+                return Prev.map((i) =>
+                    i.name === itemWithRestName.name && i.size === itemWithRestName.size
+                        ? { ...i, quantity: i.quantity + 1 }
+                        : i
+                );
+            } else {
+
+                return [...Prev, { ...itemWithRestName, quantity: 1 }];
+            }
+        });
+
+
         alert("added")
     }
     return (
@@ -82,7 +107,7 @@ export default function Menupopup({ item, onMenuPopupClose }) {
 
                     <div className=' flex flex-wrap lg:gap-x-[20px] lg:gap-y-[19px] sm:gap-x-[6px] sm:gap-y-[19px] flex-row  mt-[31px] '>
                         {sizes.map((s, id) => (
-                            <div key={id} onClick={() => { setSize(s.label); setPrice(s.price); }} className={`flex flex-row  sm:py-[10px] sm:px-[8px] lg:py-[30px] lg:px-[30px] sm:gap-x-[21px] lg:gap-x-[30px] items-center rounded-[4px] border-[1px] border-[#03081F] ${s.label === size ? "bg-[#03081F]" : ""}`}>
+                            <div key={id} onClick={() => { setSize(s.label); setPrice(s.price); console.log(s.price) }} className={`flex flex-row  sm:py-[10px] sm:px-[8px] lg:py-[30px] lg:px-[30px] sm:gap-x-[21px] lg:gap-x-[30px] items-center rounded-[4px] border-[1px] border-[#03081F] ${s.label === size ? "bg-[#03081F]" : ""}`}>
                                 <div className='flex justify-center items-center'> <h1 className={`font-[Poppins] font-[700] lg:text-[24px] sm:text-[14px] leading-[25px] tracking-[0em] ${s.label === size ? "text-white" : "text-[#03081F]"
                                     }`}>{s.label}</h1></div>
                                 <div className='  min-h-[39px] min-w-[90px] bg-[#028643] flex justify-center items-center'><h1 className="font-[Poppins]  font-[700] lg:text-[24px] sm:text-[14px]  leading-[25px] tracking-[0em] text-[#FFFFFF] ">{s.price}</h1></div>

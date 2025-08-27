@@ -32,7 +32,7 @@ export default function Banner2() {
           ing is more
         </h1>
       </div>
-        <div className="   flex flex-row  rounded-[120px]  lg:min-w-[878px] lg:min-h-[90px] gap-[3px]   sm:justify-center sm:items-center lg:items-center lg:justify-end lg:bg-[#03081F]">
+        <div className="  cursor-pointer  flex flex-row  rounded-[120px]  lg:min-w-[878px] lg:min-h-[90px] gap-[3px]   sm:justify-center sm:items-center lg:items-center lg:justify-end lg:bg-[#03081F]">
           <p className="font-[Poppins] font-[500] lg:text-[54px]  sm:text-[24px] leading-[150%] tracking-[-0.06em] text-[#FC8A06] underline">
             Personalized
           </p>
@@ -43,7 +43,7 @@ export default function Banner2() {
         <p className="    font-[poppins]  font-[400] lg:text-[24px]  sm:text-[16px] leading-[150%] tracking-[-0.06em] text-[#03081F] lg:mr-[68px] sm:mt-[13px] ">
           Download the Order.uk app for faster ordering
         </p>
-        <Button className="  lg:mr-[112px]  sm:justify-center sm:items-center sm:mt-[13px] lg:mt-[0px]  " />
+        <Button className=" lg:mr-[112px]  sm:justify-center sm:items-center sm:mt-[13px] lg:mt-[0px]  cursor-pointer" />
       </div>
 
     </div>

@@ -9,8 +9,8 @@ export default function MyProvider({ children }) {
   const [popopen, setpopopen] = useState(false)
 
   useEffect(() => {
-
-    setCart(JSON.parse(localStorage.getItem("cart") || "[]"));
+    const storedCart = JSON.parse(localStorage.getItem("cart") || "[]")
+    setCart(storedCart);
   }, []);
 
 

@@ -14,7 +14,7 @@ export default function Popular({ heading }) {
   return (
     <div className=" sm:max-w-[calc(100vw_-_22px)] lg:max-w-[calc(100vw_-_22px)]  2xl:max-w-[1528px] mt-[63px] w-full mx-auto flex flex-col">
       <div>
-        <h1 className=" font-[Poppins] font-[700] lg:text-[32px] sm:text-[16px] leading-[100%] tracking-[0%] text-[#000000]">
+        <h1 className=" font-[Poppins] cursor-pointer font-[700] lg:text-[32px] sm:text-[16px] leading-[100%] tracking-[0%] text-[#000000]">
           {heading}
         </h1>
       </div>
@@ -29,7 +29,7 @@ export default function Popular({ heading }) {
             {" "}
             <div
 
-              className=" border-b-[1px]  border-[#0000001A] flex flex-col lg:w-[238px] lg:h-[266px]  sm:w-[122px] sm:h-[156px]  w-full bg-cover bg-center relative rounded-[12px] overflow-hidden "
+              className=" border-b-[1px]  cursor-pointer border-[#0000001A] flex flex-col lg:w-[238px] lg:h-[266px]  sm:w-[122px] sm:h-[156px]  w-full bg-cover bg-center relative rounded-[12px] overflow-hidden "
             >
               <div>
                 <Image
@@ -41,7 +41,7 @@ export default function Popular({ heading }) {
                 />
               </div>
               <div className=" bg-[#FC8A06] w-full h-full flex  items-center justify-center px-[10px] ">
-                <h1 className="font-[Poppins] text-center font-[700] lg:text-[18px] lg:leading-[100%] sm:text-[13px] sm:leading-[16px] items-center flex justify-center  tracking-[0%] text-white">
+                <h1 className="font-[Poppins] text-center font-[600] lg:text-[18px] lg:leading-[100%] sm:text-[13px] sm:leading-[16px] items-center flex justify-center  tracking-[0%] text-white">
                   {rest.name}
                 </h1>
               </div>

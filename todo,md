@@ -1,17 +1,16 @@
 OrderUK:
 Integrated :
 
-- Added functionalty for menu order popup that add selected item into cart and local storage
-- Adjusted responsiveness for restaurantsdetail page Banner
-- Added functionality of order page cart that store selected item in local storage
-- Added Buttons in tile menu popup for item addition
-- Added functionality to calculate total of cart item price
+- Adjusted UI of Homescreen
+- Added Cursor pointer for Home screen
+- Added functionality of order page cart that store item with same name and size get one item and show quantity of item like 1X, 2X, 3X
+- Adjusted all nav button on Home screen
 
 Next:
 
 - Popups functionalities
 - Functionality for order page tile which is selecting all tile size on selecting specific item size
-- Some other functionalities
+- Adjustement of Remaining Pages
 
-Loom : (https://www.loom.com/share/472524240fd94ae2ac2282c14bfdd4d3?sid=608a2b47-7a3d-4c59-8508-5aecce8c1935)
-Preview : ()
+Loom : (https://www.loom.com/share/628269b034b94471921cf0959f7ff08c?sid=68f4412a-59f5-47c8-ae27-0ac3a5f45e5b)
+Preview : (https://order-uk-ten.vercel.app/)

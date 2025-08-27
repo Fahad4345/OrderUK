@@ -17,8 +17,8 @@ export default function NavBar() {
 
       <div className="2xl:ml-[168px] mr-[53px]  xl:hidden 2xl:flex  overflow-hidden  sm:flex  w-full flex  justify-between">
         {Navs.map((tab, index) => (
-          <div key={index} className="items-center justify-center flex ">
-            <button className={`font-[Poppins]  w-[160px] h-[45px]  px-3 py-4 font-[500px] text-[18px] leading-[100%] tracking-[0%]  ${seletedTab == tab ? " rounded-[120px] text-white  px-3 py-2 bg-[#FC8A06]  flex justify-center items-center" : ""}`}
+          <div key={index} className="items-center justify-center flex  ">
+            <button className={`font-[Poppins] cursor-pointer w-[160px] h-[45px]  px-3 py-4 font-[500px] text-[18px] leading-[100%] tracking-[0%]  ${seletedTab == tab ? " rounded-[120px] text-white  px-3 py-2 bg-[#FC8A06]  flex justify-center items-center" : ""}`}
               onClick={() => setselectedTab(tab)}
             >{tab}</button>
           </div>
