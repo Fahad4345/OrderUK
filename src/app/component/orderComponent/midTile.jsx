@@ -1,5 +1,7 @@
 "use client"
 import React, { useState, useContext } from 'react'
+import { toast } from "react-hot-toast";
+
 
 import Image from 'next/image';
 import { MyContext } from "../../context/MyContext";
@@ -19,7 +21,7 @@ export default function MidTile() {
     };
 
     setCart((Prev) => [...Prev, itemWithRestName])
-    alert("added")
+
   }
 
 
@@ -114,7 +116,20 @@ export default function MidTile() {
             </div>
             <div className=" flex justify-center  item-center cursor-pointer w-[100px] h-[100px] z-50  bg-amber-500 rounded-tl-[46px] rounded-br-[46px]"
 
-              onClick={() => { addtoCart(item); }}
+              onClick={() => {
+                addtoCart(item);
+                toast.success("Added to your Cart", {
+                  icon: '👏',
+                  style: {
+                    fontFamily: "Poppins",
+                    fontSize: "18px",
+
+                    borderRadius: '10px',
+                    background: '#333',
+                    color: '#fff',
+                  },
+                })
+              }}
             >
               <Image
                 width={49}

@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-
+import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
 
@@ -344,7 +344,17 @@ export default function MealDeals({ onClose }) {
                 if (step < 3)
                   setStep(step + 1)
                 else {
-                  alert("added");
+                  toast.success("Done!", {
+                    icon: '👏',
+                    style: {
+                      fontFamily: "Poppins",
+                      fontSize: "18px",
+
+                      borderRadius: '10px',
+                      background: '#333',
+                      color: '#fff',
+                    },
+                  })
 
                   onClose();
                 }

@@ -6,6 +6,7 @@ import React, { useContext, useState, useEffect } from "react";
 import Image from "next/image";
 import { restaurants } from '../../lib/restaurants';
 import { MyContext } from "../../context/MyContext";
+import toast from "react-hot-toast";
 
 
 export default function Menupopup({ item, onMenuPopupClose }) {
@@ -47,7 +48,7 @@ export default function Menupopup({ item, onMenuPopupClose }) {
         });
 
 
-        alert("added")
+
     }
     return (
         <div className='fixed inset-0  overflow-y-scroll z-70 flex items-center justify-center bg-black/10'
@@ -120,7 +121,20 @@ export default function Menupopup({ item, onMenuPopupClose }) {
                     <div className=" flex w-full justify-end">
                         <div className=" flex justify-center item-center lg:w-[150px] lg:h-[140px] sm:w-[120px] sm:h-[100px]  z-50  bg-amber-500 rounded-tl-[46px] rounded-br-[46px]"
 
-                            onClick={() => { addtoCart(item); onMenuPopupClose(); }}
+                            onClick={() => {
+                                addtoCart(item); onMenuPopupClose();
+                                toast.success("Added to your Cart", {
+                                    icon: '👏',
+                                    style: {
+                                        fontFamily: "Poppins",
+                                        fontSize: "18px",
+
+                                        borderRadius: '10px',
+                                        background: '#333',
+                                        color: '#fff',
+                                    },
+                                })
+                            }}
                         >
                             <Image
                                 width={49}
@@ -134,7 +148,7 @@ export default function Menupopup({ item, onMenuPopupClose }) {
                 </div>
 
             </div>
-        </div>
+        </div >
 
 
     );

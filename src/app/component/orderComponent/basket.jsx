@@ -11,6 +11,7 @@ import { MyContext } from '@/app/context/MyContext';
 
 
 
+
 export default function PopUpBasket({ onBasketClose }) {
   const [isOpen, setIsOpen] = useState(true);
   const [opendeal, setopendeal] = useState(false)
@@ -123,6 +124,7 @@ export default function PopUpBasket({ onBasketClose }) {
           <div onClick={() => {
             setIsOpen(false);
             setopendeal(true);
+
           }} className=' w-[342px] h-[70px] cursor-pointer items-center  mb-[10px] mx-auto flex rounded-[8px] mt-[17px] bg-[#028643]'>
 
             <Image
