@@ -10,20 +10,38 @@ import { restaurants } from '../../lib/restaurants';
 export default function MidTile() {
   const { index, setIndex, cart, setCart, selectedCategory } = useContext(MyContext);
   const [size, setSize] = useState("Small");
-  const [price, setPrice] = useState("Price");
+  const [price, setPrice] = useState("£5.99");
   const max = 5;
   const SpiceLevel = 2;
 
 
-  function addtoCart(item) {
+  function addtoCart(items) {
     const itemWithRestName = {
-      Name: item.name, Restaurant: restaurants[index].name, Description: item.description, Size: size, Price: price
+      name: items.name, restaurant: restaurants[index].name, description: items.description, size: size, price: price
     };
+    console.log(price)
+    setCart((Prev) => {
 
-    setCart((Prev) => [...Prev, itemWithRestName])
+      const existing = Prev.find(
+        (i) => i.name === itemWithRestName.name && i.size === itemWithRestName.size
+      );
+
+      if (existing) {
+
+        return Prev.map((i) =>
+          i.name === itemWithRestName.name && i.size === itemWithRestName.size
+            ? { ...i, quantity: i.quantity + 1 }
+            : i
+        );
+      } else {
+
+        return [...Prev, { ...itemWithRestName, quantity: 1 }];
+      }
+    });
+
+
 
   }
-
 
   return (
     <div className='sm:max-w-[calc(100vw_-_22px)] lg:min-w-[754px]  '>
