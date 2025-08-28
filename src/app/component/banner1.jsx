@@ -29,7 +29,7 @@ export default function Banner1() {
               className="pl-[28px] font-[Poppins] font-[400] text-[15px]
                overflow-hidden text-[#000000CC] focus:outline-none focus:ring-0 focus:border-transparent"
             />
-            <button className=" items-center justify-center flex  cursor-pointer absolute right-[-1.2px] top-[-1px]  lg:max-w-[188px] sm:max-w-[57px] w-full h-[55px] rounded-[120px]  bg-[#FC8A06] ">
+            <button className=" items-center justify-center flex  cursor-pointer absolute right-[-1.2px] top-[-1px]  lg:max-w-[188px] sm:max-w-[57px] w-full h-[57px] rounded-[120px]  bg-[#FC8A06] ">
               <p className=" sm:hidden lg:flex font-[700] text-[16px] leading-[66px] font-[Poppins]  text-[#FFFFFF]">Search</p>
               <Image
                 width={34}
@@ -138,7 +138,7 @@ export default function Banner1() {
             height={600}
             src={"/assets/icons/Untitled-1 1.png"}
             alt=""
-            className="   bottom-[0px] right-[460px] absolute  w-[805px] h-[537px]"
+            className="   bottom-[0px] right-[460px] absolute object-cover  w-[805px] h-[537px]"
           />
         </div>
       </div>
