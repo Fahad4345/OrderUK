@@ -3,21 +3,23 @@ import React, { useState } from 'react'
 
 import Image from 'next/image'
 import SmBasket from './popup/basket';
+import SmMenuPop from './popup/menu';
 
 export default function SmHeader() {
     const [isOpen, setIsOpen] = useState(false);
+    const [isOpenMenu, setIsOpenMenu] = useState(false);
     return (
         <div className='lg:hidden sm:flex flex flex-col'>
             <div className='flex  justify-between w-full'>
                 <Image width={154} height={38} src={"/assets/icons/LOGO 1.svg"} alt="" className=' flex justify-start ml-[16px] mt-[27px] w-[154px] h-[38px]' />
                 <div className='flex '>
                     <div className="h-[91px]   w-[1px] bg-[#D9D9D9]"></div>
-                    <Image width={65} height={65} src={"/assets/icons/MenuBar.svg"} alt="" className=' cursor-pointer mt-[14px] mr-[20px]  ml-[22px] w-[65px] h-[65px]' />
+                    <Image width={65} height={65} src={"/assets/icons/MenuBar.svg"} alt="" className=' cursor-pointer mt-[14px] mr-[20px]  ml-[22px] w-[65px] h-[65px]' onClick={() => setIsOpenMenu(true)} />
 
                 </div>
             </div>
             <div className='flex w-full'>
-                <div className=' bg-[#FC8A06] flex   max-w-[210px] w-full min-h-[77px]'>
+                <div className='dark:bg-[#FC8A06]  bg-[#E9E9E9] flex   max-w-[210px] w-full min-h-[77px]'>
                     <Image width={154} height={38} src={"/assets/icons/User.svg"} alt="" className=' ml-[30px] mt-[18px] w-[44px] h-[44px] cursor-pointer' />
                     <h1 className="font-[Poppins]   mt-[30px] ml-[11px] items-center font-[600] text-[14px] leading-[100%] tracking-[0em]">Ayan</h1>
 
@@ -55,6 +57,9 @@ export default function SmHeader() {
             {isOpen && (
 
                 <SmBasket onBasketClose={() => { setIsOpen(false) }} />
+            )}
+            {isOpenMenu && (
+                <SmMenuPop onSmMenuPopupClose={() => { setIsOpenMenu(false); }} />
             )}
 
 

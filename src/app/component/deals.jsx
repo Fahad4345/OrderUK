@@ -30,7 +30,7 @@ export default function Deals() {
       <div className=" flex  justify-between items-center">
         <div>
           <h1 className=" cursor-pointer font-[Poppins] font-[700] lg:text-[32px]  sm:text-[16px] leading-[100%] tracking-[0em] text-[#000000]">
-            Up to -40% 🎊 Order.uk exclusive deals
+            Up to -40% Discount Offers 🎊
           </h1>
         </div>
         <div className="  sm:hidden lg:flex  justify-end   flex   ">

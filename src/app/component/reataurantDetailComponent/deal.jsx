@@ -62,7 +62,7 @@ export default function deal() {
                 </h1>
               </div>
 
-              <div className="absolute flex justify-center cursor-pointer item-center w-[97px] h-[97px] right-[0px] bottom-[-1px] z-20 bg-[#FFFFFF]/90 rounded-tl-[45px]"
+              <div className="absolute flex justify-center cursor-pointer item-center lg:w-[97px] lg:h-[97px] sm:w-[50px] sm:h-[50px] lg:right-[0px] lg:bottom-[-1px] sm:right-[0px] sm:bottom-[40px] z-20 bg-[#FFFFFF]/90 rounded-tl-[25px]"
 
                 onClick={() => { setSelectedItem(items); setIsOpen(true); }}
               >
@@ -71,6 +71,7 @@ export default function deal() {
                   height={49}
                   src="/assets/icons/Plus.svg"
                   alt=""
+                  className=' sm: w-[38px] lg:w-[49px] '
                 />
               </div>
             </div>

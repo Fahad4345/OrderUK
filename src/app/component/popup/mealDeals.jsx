@@ -75,7 +75,7 @@ export default function MealDeals({ onClose }) {
   const [step, setStep] = useState(1);
 
   return (
-    <div onClick={(e) => onClose()} className="fixed inset-0 overflow-y-scroll z-70 flex items-center justify-center bg-black/50">
+    <div onClick={() => onClose()} className="fixed inset-0 overflow-y-scroll z-70 flex items-center justify-center bg-black/50">
       <div onClick={(e) => e.stopPropagation()} className="relative  sm:max-w-[392px] sm:max-h-[1099px] lg:max-w-[900px] lg:max-h-[1986px] w-full  rounded-[12px] bg-white ">
         <button
           onClick={() => onClose()}
