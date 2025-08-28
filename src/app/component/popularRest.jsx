@@ -12,7 +12,7 @@ export default function Popular({ heading }) {
 
 
   return (
-    <div className=" sm:max-w-[calc(100vw_-_22px)] lg:max-w-[calc(100vw_-_22px)]  2xl:max-w-[1528px] mt-[63px] w-full mx-auto flex flex-col">
+    <div className=" sm:max-w-[calc(100vw_-_22px)] lg:max-w-[calc(100vw_-_22px)]  2xl:max-w-[1528px]  sm:mt-[29px] lg:mt-[63px] w-full mx-auto flex flex-col">
       <div>
         <h1 className=" font-[Poppins] cursor-pointer font-[700] lg:text-[32px] sm:text-[16px] leading-[100%] tracking-[0%] text-[#000000]">
           {heading}

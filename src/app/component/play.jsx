@@ -9,7 +9,7 @@ export default function Button({ className }) {
       <button>
         <div className="flex lg:min-w-[206px]  sm:min-w-[140px] w-full items-center gap-3 bg-black text-white lg:px-4 lg:py-2 sm:px-2 sm:py-1 border-[2px] border-[#A6A6A6] rounded-xl">
           <FaApple className="text-[20px] lg:text-[40px]" />
-          <div className=" leading-tight">
+          <div className=" leading-tight cursor-pointer">
             <h1 className=" block  font-[poppins] text-xs">
               Download on the{" "}
             </h1>
@@ -20,7 +20,7 @@ export default function Button({ className }) {
         </div>
       </button>
       <button>
-        <div className="flex lg:min-w-[206px]  sm:min-w-[140px] w-full items-center gap-3 bg-black text-white lg:px-4 lg:py-2 sm:px-2 sm:py-1 border-[2px] border-[#A6A6A6] rounded-xl">
+        <div className="flex lg:min-w-[206px] cursor-pointer sm:min-w-[140px] w-full items-center gap-3 bg-black text-white lg:px-4 lg:py-2 sm:px-2 sm:py-1 border-[2px] border-[#A6A6A6] rounded-xl">
           <AppleIcon classname="lg:w-[30px] lg:h-[30px] sm:w-[20px] sm:h-[20px]" />
           <div className="leading-tight flex flex-col items-start">
             <span className="text-xs font-[poppins]">GET IT ON</span>

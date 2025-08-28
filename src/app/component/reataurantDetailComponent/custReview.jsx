@@ -60,8 +60,8 @@ export default function CustReview() {
   const swiperRef = useRef(null);
 
   return (
-    <div className="bg-[#D9D9D9] max-w-[1728px] relative  mx-auto mt-[130px]">
-      <div className=" sm:max-w-[calc(100vw_-_22px)] lg:max-w-[1528px] mx-auto flex-row">
+    <div className="bg-[#D9D9D9] w-full   mx-auto mt-[130px]">
+      <div className=" sm:max-w-[calc(100vw_-_22px)] lg:max-w-[1528px] relative  mx-auto flex-row">
 
         <div className="flex   sm:flex-col lg:flex-row lg:justify-between justify-center  sm:pt-[56px] lg:pt-[92px]">
           <h1 className="font-[Poppins] font-[700] text-center lg:text-[44px] sm:text-[32px] leading-[100%] tracking-[0em] text-black">
@@ -77,7 +77,7 @@ export default function CustReview() {
           <div className="flex  lg:flex sm:hidden  flex-row gap-[22px]">
 
             <button
-              className="w-[75px] h-[75px] bg-[#FC8A06] rounded-full items-center justify-center flex rotate-180"
+              className="w-[75px] h-[75px] bg-[#FC8A06] cursor-pointer rounded-full items-center justify-center flex rotate-180"
               onClick={() => swiperRef.current?.slidePrev()}
             >
               <Image
@@ -90,7 +90,7 @@ export default function CustReview() {
 
 
             <button
-              className="w-[75px] h-[75px] bg-[#FC8A06] rounded-full items-center justify-center flex"
+              className="w-[75px] h-[75px] bg-[#FC8A06] rounded-full  cursor-pointer items-center justify-center flex"
 
             >
               <Image
@@ -123,9 +123,9 @@ export default function CustReview() {
           className=" w-full  justify-items-center flex justify-center items-center"
         >
           {reviews.map((review, idx) => (
-            <SwiperSlide key={idx} className="flex items-center justify-center sm:mt-[57px] lg:mt-[35px] lg:mb-[129px] sm:mb-[0px] ">
+            <SwiperSlide key={idx} className="flex cursor-pointer items-center justify-center sm:mt-[57px] lg:mt-[35px] lg:mb-[129px] sm:mb-[0px] ">
               <article className=" sm:min-h-[295px] bg-white flex flex-col px-[20px] pt-[44px] ">
-                <div className="flex flex-row justify-between">
+                <div className="flex cursor-pointer flex-row justify-between">
                   <div className="flex flex-row gap-[10px]">
                     <div className="w-[54px] h-[54px] rounded-full overflow-hidden">
                       <Image
@@ -208,15 +208,16 @@ export default function CustReview() {
           </button>
         </div>
 
+        <Image
+          width={153}
+          height={178}
+          src="/assets/icons/Review bar.png"
+          alt="Review Bar"
+          className="absolute bottom-[-70px] left-[786px] lg:flex sm:hidden "
+        />
+
       </div>
 
-      <Image
-        width={153}
-        height={178}
-        src="/assets/icons/Review bar.png"
-        alt="Review Bar"
-        className="absolute bottom-[-70px] left-[786px] lg:flex sm:hidden "
-      />
     </div>
   );
 }

@@ -46,7 +46,7 @@ export default function Deals() {
         </div>
       </div>
 
-      <div className="  flex-row  lg:gap-[20px] sm:gap-[14px] mt-[60px]   flex overflow-x-auto overflow-hidden">
+      <div className="  flex-row  lg:gap-[20px] sm:gap-[14px] lg:mt-[60px] sm:mt-[30px]  flex overflow-x-auto overflow-hidden">
         {deals.map((deal, index) => (
           <div key={index}>
             <div

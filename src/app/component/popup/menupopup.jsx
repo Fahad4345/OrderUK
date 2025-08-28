@@ -53,7 +53,7 @@ export default function Menupopup({ item, onMenuPopupClose }) {
         <div className='fixed inset-0  overflow-y-scroll z-70 flex items-center justify-center bg-black/10'
             onClick={() => { onMenuPopupClose(); }
             }>
-            <div className=' bg-white mx-[50px]  sm:min-w-[350px] w-full lg:py-[28px] sm:py-[25px] lg:px-[32px] sm:px-[25px] shadow-[5px_5px_34px_0px_#00000040] rounded-tl-[46px] rounded-br-[46px] mt-[31px]  ' onClick={(e) => e.stopPropagation()}>
+            <div className=' bg-white mx-[50px]  lg:max-w-[1300px] sm:min-w-[350px] w-full lg:py-[28px] sm:py-[25px] lg:px-[32px] sm:px-[25px] shadow-[5px_5px_34px_0px_#00000040] rounded-tl-[46px] rounded-br-[46px] mt-[31px]  ' onClick={(e) => e.stopPropagation()}>
 
                 <div className='sm:hidden lg:flex   w-full'>
                     <div className=' flex justify-between w-full'>

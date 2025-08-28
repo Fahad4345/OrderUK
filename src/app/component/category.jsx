@@ -38,7 +38,7 @@ export default function Category() {
     },
   ];
   return (
-    <div className=" sm:max-w-[calc(100vw_-_22px)] lg:max-w-[calc(100vw_-_22px)]  2xl:max-w-[1528px]   mt-[63px] w-full mx-auto flex flex-col  sm:bg-[#D9D9D980]/50  lg:bg-transparent">
+    <div className=" lg:max-w-[calc(100vw_-_22px)]  2xl:max-w-[1528px]   lg:mt-[63px] sm:mt-[23px] w-full mx-auto flex flex-col  sm:bg-[#D9D9D9]/50  lg:bg-transparent">
       <div>
         <h1 className=" font-[Poppins]  cursor-pointer font-[700] lg:text-[32px] sm:text-[16px]   sm:ml-[21px] lg:ml-[0px] sm:mt-[28px] lg:mt-[0px] leading-[100%] tracking-[0em] text-[#000000]">
           Order.uk Popular Categories 🤩

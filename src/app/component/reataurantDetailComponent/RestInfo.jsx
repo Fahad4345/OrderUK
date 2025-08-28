@@ -7,14 +7,14 @@ export default function RestInfo() {
       category: "Delivery Information",
       icon: "/assets/icons/Tracking.svg",
       details: [
-        { day: "Monday", hours: "12:00 AM–3:00 AM, 8:00 AM–3:00 AM" },
+        { day: "Monday", hours: "12:00 AM–3:00 AM" },
         { day: "Tuesday", hours: "8:00 AM–3:00 AM" },
         { day: "Wednesday", hours: "8:00 AM–3:00 AM" },
         { day: "Thursday", hours: "8:00 AM–3:00 AM" },
         { day: "Friday", hours: "8:00 AM–3:00 AM" },
         { day: "Saturday", hours: "8:00 AM–3:00 AM" },
         { day: "Sunday", hours: "8:00 AM–12:00 AM" },
-        { note: "Estimated time until delivery: 20 min" },
+        { day: "Estimated time until delivery:", hours: "20 min" },
       ],
     },
     {
@@ -49,17 +49,17 @@ export default function RestInfo() {
             }`}>
             <div className="flex items-center  mb-[42px]">
               <Image src={section.icon} alt={section.category} width={45} height={45} />
-              <h2 className={`font-[Poppins]  ml-[11px] font-[700] text-[24px] text-[#000000] ${section.category === "Operational Times" ? "bg-black text-white" : ""}`}>{section.category}</h2>
+              <h2 className={`font-[Poppins]  ml-[11px] font-[700] lg:text-[32px] sm:text-[20px] leading-[48px] text-[#000000] ${section.category === "Operational Times" ? "bg-black text-white" : ""}`}>{section.category}</h2>
             </div>
 
-            <div className="flex flex-col gap-[20px]">
+            <div className="flex flex-col ">
               {section.details.map((item, idx) => (
                 <div key={idx} className="flex ">
-                  {item.day && <span className="font-[Poppins] font-[700] text-[14px]">{item.day}:</span>}
-                  {item.hours && <span className="font-[Poppins] text-[14px]">{item.hours}</span>}
-                  {item.note && <span className="font-[Poppins] text-[14px]">{item.note}</span>}
-                  {item.phone && <span className="font-[Poppins] text-[14px]">Phone: {item.phone}</span>}
-                  {item.website && <span className="font-[Poppins] font-[700] text-[16px]">Website: {item.website}</span>}
+                  {item.day && <span className="font-[Poppins] font-[700]  cursor-pointer text-[18px] leading-[46px]">{item.day}:</span>}
+                  {item.hours && <span className="font-[Poppins] cursor-pointer font-[400] text-[18px] leading-[46px]">{item.hours}</span>}
+                  {item.note && <span className="font-[Poppins] cursor-pointer font-[400] text-[18px] leading-[46px]">{item.note}</span>}
+                  {item.phone && <span className="font-[Poppins] cursor-pointer font-[400] text-[24px] leading-[48px]"><p className=' font-[700]  leading-[46px] text-[18px]'>Phone:</p> {item.phone}</span>}
+                  {item.website && <span className="font-[Poppins] cursor-pointer font-[400] text-[24px] leading-[48px]"><p className=' font-[700]  leading-[46px] text-[18px]'>Website:</p> {item.website}</span>}
                 </div>
               ))}
             </div>

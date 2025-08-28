@@ -5,7 +5,7 @@ import Button from "./play";
 
 export default function Banner2() {
   return (
-    <div className=" relative sm:max-w-[calc(100vw_-_22px)] lg:max-w-[calc(100vw_-_22px)]  2xl:max-w-[1528px]   mx-auto w-full  sm:min-h-[524px] lg:min-h-[611px]  mt-[94px] rounded-[12px] border-[1px] bg-[#E0E1DC] border-[#00000033] ">
+    <div className=" relative sm:max-w-[calc(100vw_-_22px)] lg:max-w-[calc(100vw_-_22px)]  2xl:max-w-[1528px]   mx-auto w-full  sm:min-h-[524px] lg:min-h-[611px]  sm:mt-[39px] lg:mt-[94px] rounded-[12px] border-[1px] bg-[#E0E1DC] border-[#00000033] ">
       <Image
         width={720}
         height={600}
@@ -43,7 +43,7 @@ export default function Banner2() {
         <p className="    font-[poppins]  font-[400] lg:text-[24px]  sm:text-[16px] leading-[150%] tracking-[-0.06em] text-[#03081F] lg:mr-[68px] sm:mt-[13px] ">
           Download the Order.uk app for faster ordering
         </p>
-        <Button className=" lg:mr-[112px]  sm:justify-center sm:items-center sm:mt-[13px] lg:mt-[0px]  cursor-pointer" />
+        <Button className=" lg:mr-[112px]  sm:justify-center sm:items-center sm:mt-[13px] lg:mt-[0px] " />
       </div>
 
     </div>

@@ -26,13 +26,13 @@ export default function MidTile() {
   return (
     <div className='sm:max-w-[calc(100vw_-_22px)] lg:min-w-[754px]  '>
       <div className="  justify-between flex sm:max-w-[calc(100vw_-_22px)] lg:max-w-[754px] max-w-[754px] ">
-        <h1 className="font-[Poppins] lg:ml-[32px] font-[600] text-[32px] leading-[100%] tracking-[0em] text-[#03081F]">{selectedCategory}
+        <h1 className="font-[Poppins] cursor-pointer lg:ml-[32px] font-[600] text-[32px] leading-[100%] tracking-[0em] text-[#03081F]">{selectedCategory}
         </h1>
         <div className=" px-4 py-3 flex flex-row lg:w-[274px]  justify-between sm:w-[207px] lg:mr-[19px]  rounded-l-full  rounded-r-full border-[1px]  border-[#00000066]  border-opacity-[20%]">
           <input
             type="text"
             placeholder="Sort by Pricing"
-            className=" lg:w-[274px]  sm:w-[114px] text-[#000000CC]"
+            className=" lg:w-[274px] cursor-pointer sm:w-[114px] text-[#000000CC] focus:outline-none focus:ring-0 focus:border-transparent"
           />  <Image src="/assets/icons/Forward Button (1).svg" className=" rotate-y-180 " width={30} height={30} alt="" />
 
         </div>
@@ -65,7 +65,7 @@ export default function MidTile() {
                         alt=""
                         width={720}
                         height={600}
-                        className="w-[20px] h-[20px]"
+                        className="w-[20px] cursor-pointer h-[20px]"
                       />
                     ))}
                   </div>
@@ -74,7 +74,7 @@ export default function MidTile() {
 
                 <h1 className="font-[Poppins] mt-[27.96px] font-[400] text-[14px] leading-[25px] tracking-[0em] text-[#03081F]">{item.description}</h1>
               </div>
-              <div className=' rounded-full'><Image src="/assets/icons/Pizza1.png" width={191} height={191} alt="" className=' w-[117px] h-[117px]' /></div>
+              <div className=' cursor-pointer rounded-full'><Image src="/assets/icons/Pizza1.png" width={191} height={191} alt="" className=' w-[117px] h-[117px]' /></div>
             </div>
           </div>
 
@@ -90,20 +90,20 @@ export default function MidTile() {
                       alt=""
                       width={720}
                       height={600}
-                      className="w-[20px] h-[20px]"
+                      className="w-[20px] h-[20px] cursor-pointer"
                     />
                   ))}
                 </div>
                 <h1 className="font-[Poppins] mt-[19px] mb-[19px] font-[400] text-[14px] leading-[25px] tracking-[0em] text-[#03081F]">{item.description}</h1>
 
               </div>
-              <div className=' rounded-full'><Image src="/assets/icons/Pizza1.png" width={191} height={191} alt="" className=' w-[117px] h-[117px]' /></div>
+              <div className='cursor-pointer rounded-full'><Image src="/assets/icons/Pizza1.png" width={191} height={191} alt="" className=' w-[117px] h-[117px]' /></div>
             </div>
           </div>
           <div className=' flex flex-row w-full  gap-[20px] items-end justify-between  mt-[31px]'>
             <div className=' flex   w-fit flex-wrap  gap-x-[6px] gap-y-[19px] flex-row  mt-[31px]  '>
               {item.sizes.map((s, id) => (
-                <div key={id} onClick={() => { setSize(s.label); setPrice(s.price); }} className={`flex flex-row  h-fit  py-[10px] px-[8px]  gap-x-[21px] items-center rounded-[4px] border-[1px] border-[#03081F] ${s.label === size ? "bg-[#03081F]" : ""}`}>
+                <div key={id} onClick={() => { setSize(s.label); setPrice(s.price); }} className={`flex  cursor-pointer flex-row  h-fit  py-[10px] px-[8px]  gap-x-[21px] items-center rounded-[4px] border-[1px] border-[#03081F] ${s.label === size ? "bg-[#03081F]" : ""}`}>
                   <div className='flex justify-center items-center'> <h1 className={`font-[Poppins] font-[700] text-[14px] leading-[25px] tracking-[0em] ${s.label === size ? "text-white" : "text-[#03081F]"
                     }`}>{s.label}</h1></div>
                   <div className='  min-h-[39px] min-w-[90px] bg-[#028643] flex justify-center items-center'><h1 className="font-[Poppins]  font-[700] text-[14px] leading-[25px] tracking-[0em] text-[#FFFFFF] ">{s.price}</h1></div>
@@ -112,7 +112,7 @@ export default function MidTile() {
 
 
             </div>
-            <div className=" flex justify-center item-center w-[100px] h-[100px] z-50  bg-amber-500 rounded-tl-[46px] rounded-br-[46px]"
+            <div className=" flex justify-center  item-center cursor-pointer w-[100px] h-[100px] z-50  bg-amber-500 rounded-tl-[46px] rounded-br-[46px]"
 
               onClick={() => { addtoCart(item); }}
             >
@@ -157,8 +157,8 @@ export default function MidTile() {
             First Order Discount
           </h1>
         </div>
-        <div className="absolute flex justify-center item-center w-[71.77px] h-[89px] right-[0px] bottom-[-1px] z-50 bg-[#FFFFFF]/90 rounded-tl-[46px]"
-          onClick={() => addtoCart(items)}>
+        <div className="absolute flex justify-center cursor-pointer item-center w-[75px] h-[89px] right-[0px] bottom-[-1px] z-50 bg-[#FFFFFF]/90 rounded-tl-[46px]"
+        >
           <Image
             width={36.26}
             height={49}

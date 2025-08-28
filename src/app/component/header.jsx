@@ -74,7 +74,7 @@ export default function Header() {
             <Image
               width={720}
               height={600}
-              src={"assets/icons/ForwardButtonWhite.svg"}
+              src={"/assets/icons/ForwardButtonWhite.svg"}
               alt=""
               className=" w-[38px] h-[38px] "
             />

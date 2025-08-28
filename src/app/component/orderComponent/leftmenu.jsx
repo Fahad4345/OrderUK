@@ -16,7 +16,7 @@ export default function Leftmenu() {
                     <h1 className=' font-[Poppins] fonty-[600]  text-[32px]  leading-[100%] tracking-[0em] '>Menu</h1>
                 </div>
                 {Object.keys(restaurants[index].menu).map((category, index) => (
-                    <div key={index} className={`  ${category === selectedCategory ? " bg-[#03081F]  text-white" : ""}`} onClick={() => setCategory(category)}>
+                    <div key={index} className={` cursor-pointer  ${category === selectedCategory ? " bg-[#03081F]  text-white" : ""}`} onClick={() => setCategory(category)}>
                         <h1 className='font-[Poppins] ml-[34px]  font-[700] text-[22px] leading-[83px] tracking-[0em]'>{category}</h1>
 
                     </div>

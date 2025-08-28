@@ -31,7 +31,7 @@ export default function Menu() {
                      ${category === "Fries" ? "mt-[124px]" : ""}
                      ${category === "ColdDrink" ? "mt-[119px]" : ""}
                      ${category === "Pizza" ? "mt-[119px]" : ""}
-                     font-[700] text-[44px] leading-[100px] tracking-[0em] text-[#FC8A06]`}
+                     font-[700]  cursor-pointer text-[44px] leading-[100px] tracking-[0em] text-[#FC8A06]`}
           >
             {category}
           </h1></Link>
@@ -39,13 +39,13 @@ export default function Menu() {
             {restaurants[index].menu[category].map((items, idx) => (
               <div key={idx}
 
-                className=" flex-row flex    items-center max-w-[496px] w-full  max-h-[245px] rounded-[12px] h-full shadow-[5px_5px_34px_0px_rgba(0,0,0,0.25)] px-[25px] py-[25px] "
+                className=" flex-row flex    cursor-pointer items-center max-w-[496px] w-full  max-h-[245px] rounded-[12px] h-full shadow-[5px_5px_34px_0px_rgba(0,0,0,0.25)] px-[25px] py-[25px] "
               >
-                <div className="flex flex-col gap-[10px] max-w-[220px] w-full">
+                <div className="flex flex-col gap-[40px] max-w-[220px] w-full">
                   <h1 className="font-[Poppins] font-[600] text-[20px] leading-[23px] tracking-[0em] text-[#000000]">
                     {items.name}
                   </h1>
-                  <h1 className="font-[Poppins] font-[400] text-[14px] leading-[25px] tracking-[0em] text-[#000000]">
+                  <h1 className="font-[Poppins] font-[400] text-[14px]  tracking-[0em] text-[#000000]">
                     {items.description}
                   </h1>
 

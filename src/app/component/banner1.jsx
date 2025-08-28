@@ -4,7 +4,7 @@ import NavBar from "@/app/component/NavBar";
 
 export default function Banner1() {
   return (
-    <div className=" xl:max-w-[calc(100vw_-_35px)] sm:max-w-[calc(100vw_-_22px)]  2xl:max-w-[calc(1540px_-_22px)] max-w-[1528px] dark:bg-[#03081F] w-full max-h-[610px]  rounded-[12px] border-[1px] lg:bg-[#FBFBFB] sm:bg-[#E2E2E2] border-[#00000033] lg:mx-auto flex flex-row lg:justify-between sm:justify-center items-center sm:mx-auto mt-[41px]">
+    <div className=" xl:max-w-[calc(100vw_-_35px)] sm:max-w-[calc(100vw_-_22px)]  2xl:max-w-[calc(1540px_-_22px)] max-w-[1528px] dark:bg-[#03081F] w-full max-h-[610px]  rounded-[12px]  dark:border-none border-[1px] lg:bg-[#FBFBFB] sm:bg-[#E2E2E2] border-[#00000033] lg:mx-auto flex flex-row lg:justify-between sm:justify-center items-center sm:mx-auto mt-[41px]">
       <div className="lg:ml-[57px] ">
         <div>
           <p className="font-[Poppins] font-[400] lg:text-[16px] dark:text-white sm:text-[12px] leading-[66px]  text-[#03081F]">
@@ -18,25 +18,25 @@ export default function Banner1() {
           </p>
         </div>
         <div className="sm:mb-[43px]">
-          <p className="font-[Poppins] font-[400] dark:text-white text-[13px]  text-[#03081F]  mt-[28px] mb-[12px]">
+          <p className="font-[Poppins] font-[400] dark:text-white text-[13px] cursor-pointer text-[#03081F]  mt-[28px] mb-[12px]">
             Enter a postcode to see what we deliver
           </p>
 
-          <div className="flex  relative sm: bg-white flex-row   justify-between lg:max-w-[397px] sm:max-w-[293px] min-h-[57px]   rounded-l-full  rounded-r-full  border-[1px]  border-[#00000066]  border-opacity-[20%]">
+          <div className="flex cursor-pointer relative sm: bg-white flex-row   justify-between lg:max-w-[397px] sm:max-w-[293px] min-h-[57px]   rounded-l-full  rounded-r-full  border-[1px]  border-[#00000066]  border-opacity-[20%]">
             <input
               type="text"
               placeholder="e.g. EC4R 3TE"
               className="pl-[28px] font-[Poppins] font-[400] text-[15px]
                overflow-hidden text-[#000000CC] focus:outline-none focus:ring-0 focus:border-transparent"
             />
-            <button className=" items-center justify-center flex  absolute right-[-0.7px] top-[-0.5px]  lg:max-w-[188px] sm:max-w-[57px] w-full h-[57px] rounded-[120px]  bg-[#FC8A06] ">
+            <button className=" items-center justify-center flex  cursor-pointer absolute right-[-0.7px] top-[-0.5px]  lg:max-w-[188px] sm:max-w-[57px] w-full h-[57px] rounded-[120px]  bg-[#FC8A06] ">
               <p className=" sm:hidden lg:flex font-[700] text-[16px] leading-[66px] font-[Poppins]  text-[#FFFFFF]">Search</p>
               <Image
                 width={34}
                 height={34}
                 src={"/assets/icons/NextPage.svg"}
                 alt=""
-                className="  lg:hidden sm:flex w-[34px] h-[34px]"
+                className="  lg:hidden sm:flex w-[34px] h-[34px] cursor-pointer"
               />
             </button>
           </div>
